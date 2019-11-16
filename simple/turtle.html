@@ -1,0 +1,122 @@
+<!doctype>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/joy.css">
+	<style>
+	body{
+		margin: 0;
+		font-size: 20px;
+		font-family: 'FuturaHandwritten';
+		font-weight: 100;
+		line-height: 1.7em;
+	}
+	#turtle, #joy{
+		width:400px; height:400px;
+		float:left;
+	}
+	#joy{
+		background: #eee;
+		overflow: scroll;
+	}
+	hr{
+		border: none;
+		border-bottom: 2px dashed #ccc;
+		margin: 1.5em 0;
+	}
+	.cursor-grab{
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+		cursor: -ms-grab;
+		cursor: grab;
+	}
+	.cursor-grabbing{
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: -ms-grabbing;
+		cursor: grabbing;
+	}
+	</style>
+</head>
+<body>
+<div id="turtle"></div>
+<div id="joy"></div>
+</body>
+</html>
+
+<script src="../js/joy.js"></script>
+<script src="Turtle.js"></script>
+<script>
+
+// TURTLE
+var data = Joy.loadFromURL();
+window.turtle = new Turtle({
+	width:400, height:400,
+	data: data
+});
+document.querySelector("#turtle").appendChild(turtle.canvas);
+
+// JOY ACTIONS
+Joy.add({
+	name: "Move",
+	type: "turtle/forward",
+	tags: ["turtle", "action"],
+
+	// What the action does is EMBEDDED IN A PLAIN-LANGUAGE SENTENCE
+	init: "Move forward {id:'steps', type:'number', placeholder:50} steps",
+
+	// Callback
+	onact: function(my){
+		my.target.forward(my.data.steps); // "my.target" will be the turtle
+	}
+});
+
+Joy.add({
+	name: "Turn",
+	type: "turtle/turn",
+	tags: ["turtle", "action"],
+	init: "Turn {id:'angle', type:'number', placeholder:10} degrees",
+	onact: function(my){
+		my.target.turn(my.data.angle);
+	}
+});
+
+Joy.add({
+	name: "Change color",
+	type: "turtle/color",
+	tags: ["turtle", "action"],
+	init: "Change color to {id:'color', type:'color'}",
+	onact: function(my){
+		my.target.setColor(my.data.color);
+	}
+});
+
+// JOY
+window.joy = Joy({
+	// Where the Joy editor goes:
+	container: "#joy",
+
+	// The words &amp; widgets inside the editor:
+	init: "I'm a turtle! I do the following: "+
+		  "{id:'turtleInstructions', type:'actions'} "+ // a list of actions
+		  "<hr> {type:'save'}", // a save button!
+    
+    // Load data from URL, otherwise blank:
+	data: data,
+
+	// Other actions to include, beyond turtle actions:
+	modules: ["instructions", "math"],
+
+	// What to do when the user makes a change:
+	onupdate: function(my){
+		turtle.start();
+		my.turtleInstructions.act(turtle);
+		turtle.draw();
+	}
+});
+
+// P.S: Dragging the turtle around...
+turtle.ondrag = function(){
+	joy.update();
+};
+
+</script>

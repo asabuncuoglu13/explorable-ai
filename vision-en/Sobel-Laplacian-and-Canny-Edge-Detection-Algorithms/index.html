@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- Mirrored from cse442-17f.github.io/Sobel-Laplacian-and-Canny-Edge-Detection-Algorithms/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Nov 2019 11:44:41 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>
+    Stepping Into the Filter
+  </title>
+  <meta property="og:title" content="Stepping Into the Filter">
+  <meta charset="utf-8">
+  <meta property="og:type" content="article">
+
+  <meta property="og:description" content="Understanding the Edge Detection Algorithms in Your Smartphone">
+  <meta property="description" content="Understanding the Edge Detection Algorithms in Your Smartphone">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+  <div id="idyll-mount">
+    <div class="idyll-root" data-reactroot="">
+      <div class="article-header">
+        <h1 class="hed">Stepping Into the Filter</h1>
+        <h2 class="dek">Understanding the Edge Detection Algorithms in Your Smartphone</h2>
+        <div class="byline">By: <a>Bryce Martz, Katherine Van Koevering, Madeline Wessels, and Ryan Grose</a></div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content"><img src="images/cover_photo.png"
+                width="1024" />
+              <h3>What Is Edge Detection?</h3>
+              <p>Have you ever wondered how Facebook can recommend who to tag in a photo you just posted? Or how
+                smartphones sharpen the image around your face when you take a selfie? The answer is a little magic, a
+                tad mundane, and a bit of math.</p>
+              <p>Edge Detection is a process which takes an image as input and spits out the edges of objects in the
+                photo. The algorithm has crossed domains, and is used in areas from computer vision to robotics. The
+                family of Edge Detection algorithms is large and still growing. We will take you through some of the
+                core algorithms used today. Sit back, relax, and Step Into the Filter.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Representation of a Picture</h3>
+              <div class="aside-container">
+                <div class="aside">
+                  <div>
+                    <div
+                      style="width:250;padding:10px 10px 0;box-sizing:initial;background:#fff;-ms-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;-ms-box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);-moz-box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);-o-box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);-webkit-box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)"
+                      class="sketch-picker ">
+                      <div style="width:100%;padding-bottom:75%;position:relative;overflow:hidden">
+                        <div
+                          style="position:absolute;top:0px;right:0px;bottom:0px;left:0px;background:hsl(0,100%, 50%)">
+                          <style>
+                            .saturation-white {
+                              background: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+                              background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+                            }
+
+                            .saturation-black {
+                              background: -webkit-linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+                              background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+                            }
+                          </style>
+                          <div style="position:absolute;top:0px;right:0px;bottom:0px;left:0px" class="saturation-white">
+                            <div style="position:absolute;top:0px;right:0px;bottom:0px;left:0px"
+                              class="saturation-black"></div>
+                            <div style="position:absolute;top:100%;left:0%;cursor:default">
+                              <div
+                                style="width:4px;height:4px;-ms-box-shadow:0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4);-moz-box-shadow:0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4);-o-box-shadow:0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4);-webkit-box-shadow:0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4);box-shadow:0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4);-ms-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;cursor:hand;-ms-transform:translate(-2px, -2px);-moz-transform:translate(-2px, -2px);-o-transform:translate(-2px, -2px);-webkit-transform:translate(-2px, -2px);transform:translate(-2px, -2px)">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="display:flex" class="flexbox-fix">
+                        <div style="padding:4px 0;-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1">
+                          <div style="position:relative;height:10px;overflow:hidden">
+                            <div style="position:absolute;top:0px;right:0px;bottom:0px;left:0px">
+                              <div class="hue-horizontal" style="padding:0 2px;position:relative;height:100%">
+                                <style>
+                                  .hue-horizontal {
+                                    background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+                                    background: -webkit-linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+                                  }
+
+                                  .hue-vertical {
+                                    background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,
+                                        #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+                                    background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,
+                                        #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+                                  }
+                                </style>
+                                <div style="position:absolute;left:0%">
+                                  <div
+                                    style="margin-top:1px;width:4px;-ms-border-radius:1px;-moz-border-radius:1px;-o-border-radius:1px;-webkit-border-radius:1px;border-radius:1px;height:8px;-ms-box-shadow:0 0 2px rgba(0, 0, 0, .6);-moz-box-shadow:0 0 2px rgba(0, 0, 0, .6);-o-box-shadow:0 0 2px rgba(0, 0, 0, .6);-webkit-box-shadow:0 0 2px rgba(0, 0, 0, .6);box-shadow:0 0 2px rgba(0, 0, 0, .6);background:#fff;-ms-transform:translateX(-2px);-moz-transform:translateX(-2px);-o-transform:translateX(-2px);-webkit-transform:translateX(-2px);transform:translateX(-2px)">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="position:relative;height:10px;margin-top:4px;overflow:hidden">
+                            <div style="position:absolute;top:0px;right:0px;bottom:0px;left:0px">
+                              <div style="position:absolute;top:0px;right:0px;bottom:0px;left:0px;overflow:hidden">
+                                <div
+                                  style="position:absolute;top:0px;right:0px;bottom:0px;left:0px;background:url(null.html) center left">
+                                </div>
+                              </div>
+                              <div style="position:absolute;top:0px;right:0px;bottom:0px;left:0px;background:linear-gradient(to right, rgba(0,0,0, 0) 0%,
+           rgba(0,0,0, 1) 100%)"></div>
+                              <div style="position:relative;height:100%;margin:0 3px">
+                                <div style="position:absolute;left:100%">
+                                  <div
+                                    style="width:4px;-ms-border-radius:1px;-moz-border-radius:1px;-o-border-radius:1px;-webkit-border-radius:1px;border-radius:1px;height:8px;-ms-box-shadow:0 0 2px rgba(0, 0, 0, .6);-moz-box-shadow:0 0 2px rgba(0, 0, 0, .6);-o-box-shadow:0 0 2px rgba(0, 0, 0, .6);-webkit-box-shadow:0 0 2px rgba(0, 0, 0, .6);box-shadow:0 0 2px rgba(0, 0, 0, .6);background:#fff;margin-top:1px;-ms-transform:translateX(-2px);-moz-transform:translateX(-2px);-o-transform:translateX(-2px);-webkit-transform:translateX(-2px);transform:translateX(-2px)">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          style="width:24px;height:24px;position:relative;margin-top:4px;margin-left:4px;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px">
+                          <div
+                            style="position:absolute;top:0px;right:0px;bottom:0px;left:0px;background:url(null.html) center left">
+                          </div>
+                          <div
+                            style="position:absolute;top:0px;right:0px;bottom:0px;left:0px;-ms-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;background:rgba(0,0,0,1);-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)">
+                          </div>
+                        </div>
+                      </div>
+                      <div style="display:flex;padding-top:4px" class="flexbox-fix">
+                        <div style="-webkit-box-flex:2;-moz-box-flex:2;-webkit-flex:2;-ms-flex:2;flex:2">
+                          <div style="position:relative"><input
+                              style="width:80%;padding:4px 10% 3px;border:none;-ms-box-shadow:inset 0 0 0 1px #ccc;-moz-box-shadow:inset 0 0 0 1px #ccc;-o-box-shadow:inset 0 0 0 1px #ccc;-webkit-box-shadow:inset 0 0 0 1px #ccc;box-shadow:inset 0 0 0 1px #ccc;font-size:11px"
+                              value="000000" spellcheck="false" /><span
+                              style="display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize">hex</span>
+                          </div>
+                        </div>
+                        <div
+                          style="-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-left:6px">
+                          <div style="position:relative"><input
+                              style="width:80%;padding:4px 10% 3px;border:none;-ms-box-shadow:inset 0 0 0 1px #ccc;-moz-box-shadow:inset 0 0 0 1px #ccc;-o-box-shadow:inset 0 0 0 1px #ccc;-webkit-box-shadow:inset 0 0 0 1px #ccc;box-shadow:inset 0 0 0 1px #ccc;font-size:11px"
+                              value="0" spellcheck="false" /><span
+                              style="display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize;cursor:ew-resize">r</span>
+                          </div>
+                        </div>
+                        <div
+                          style="-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-left:6px">
+                          <div style="position:relative"><input
+                              style="width:80%;padding:4px 10% 3px;border:none;-ms-box-shadow:inset 0 0 0 1px #ccc;-moz-box-shadow:inset 0 0 0 1px #ccc;-o-box-shadow:inset 0 0 0 1px #ccc;-webkit-box-shadow:inset 0 0 0 1px #ccc;box-shadow:inset 0 0 0 1px #ccc;font-size:11px"
+                              value="0" spellcheck="false" /><span
+                              style="display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize;cursor:ew-resize">g</span>
+                          </div>
+                        </div>
+                        <div
+                          style="-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-left:6px">
+                          <div style="position:relative"><input
+                              style="width:80%;padding:4px 10% 3px;border:none;-ms-box-shadow:inset 0 0 0 1px #ccc;-moz-box-shadow:inset 0 0 0 1px #ccc;-o-box-shadow:inset 0 0 0 1px #ccc;-webkit-box-shadow:inset 0 0 0 1px #ccc;box-shadow:inset 0 0 0 1px #ccc;font-size:11px"
+                              value="0" spellcheck="false" /><span
+                              style="display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize;cursor:ew-resize">b</span>
+                          </div>
+                        </div>
+                        <div
+                          style="-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-left:6px">
+                          <div style="position:relative"><input
+                              style="width:80%;padding:4px 10% 3px;border:none;-ms-box-shadow:inset 0 0 0 1px #ccc;-moz-box-shadow:inset 0 0 0 1px #ccc;-o-box-shadow:inset 0 0 0 1px #ccc;-webkit-box-shadow:inset 0 0 0 1px #ccc;box-shadow:inset 0 0 0 1px #ccc;font-size:11px"
+                              value="100" spellcheck="false" /><span
+                              style="display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize;cursor:ew-resize">a</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style="margin:0 -10px;padding:10px 0 0 10px;border-top:1px solid #eee;display:flex;flex-wrap:wrap;position:relative"
+                        class="flexbox-fix">
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#D0021B;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#D0021B" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#F5A623;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#F5A623" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#F8E71C;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#F8E71C" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#8B572A;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#8B572A" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#7ED321;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#7ED321" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#417505;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#417505" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#BD10E0;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#BD10E0" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#9013FE;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#9013FE" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#4A90E2;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#4A90E2" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#50E3C2;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#50E3C2" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#B8E986;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#B8E986" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#000000;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#000000" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#4A4A4A;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#4A4A4A" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#9B9B9B;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#9B9B9B" tabindex="0"></div>
+                          </span></div>
+                        <div style="width:16px;height:16px;margin:0 10px 10px 0"><span>
+                            <div
+                              style="background:#FFFFFF;height:100%;width:100%;cursor:pointer;position:relative;outline:none;-ms-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-ms-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-moz-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-o-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)"
+                              title="#FFFFFF" tabindex="0"></div>
+                          </span></div>
+                      </div>
+                    </div>
+                    <p></p>
+                    <h4> intensity:
+                      <!-- -->0
+                      <!-- -->
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <p>People say, “A picture is worth a thousand words.” And pictures are made of thousands of pixels. So
+                let’s devote some words to talking about pixels!</p>
+              <p>Pixels are tiny boxes full of color which you cannot see with the naked eye. A pixel’s color is defined
+                by it’s <strong>RGB</strong> (Red, Green, Blue) tuple. Each color you see is a combination of red,
+                green, and blue. And each element in the tuple ranges from 0 to 255: 0 is no color, 255 is full
+                saturation. Each unique tuple can also be identified by its hexadecimal (Hex) value. Try out the color
+                selector to see what the <strong>RGB</strong> tuple is for a variety of colors. If you are curious, the
+                fourth channel, A, stands for “Alpha” which is a measure of transparency. Our edge detection algorithms
+                do not use this fourth channel.</p>
+              <p>Notice how the intensity value below the color picker changes as you select different colors. We will
+                talk more about intensity and how it is calculated in the next section.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Color Intensity</h3>
+              <div class="aside-container">
+                <div class="aside"><span style="display:inline-block"><span> <span class="katex"><span
+                          class="katex-mathml"><math>
+                            <semantics>
+                              <mrow>
+                                <mi>i</mi>
+                                <mi>n</mi>
+                                <mi>t</mi>
+                                <mi>e</mi>
+                                <mi>n</mi>
+                                <mi>s</mi>
+                                <mi>i</mi>
+                                <mi>t</mi>
+                                <mi>y</mi>
+                                <mo>=</mo>
+                                <mn>0</mn>
+                                <mi mathvariant="normal">.</mi>
+                                <mn>3</mn>
+                                <mn>0</mn>
+                                <mi>R</mi>
+                                <mo>+</mo>
+                                <mn>0</mn>
+                                <mi mathvariant="normal">.</mi>
+                                <mn>5</mn>
+                                <mn>9</mn>
+                                <mi>G</mi>
+                                <mo>+</mo>
+                                <mn>0</mn>
+                                <mi mathvariant="normal">.</mi>
+                                <mn>1</mn>
+                                <mn>1</mn>
+                                <mi>B</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex"> intensity = 0.30 R + 0.59 G + 0.11 B
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                            style="height:0.68333em;"></span><span class="strut bottom"
+                            style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span
+                            class="base textstyle uncramped"><span class="mord mathit">i</span><span
+                              class="mord mathit">n</span><span class="mord mathit">t</span><span
+                              class="mord mathit">e</span><span class="mord mathit">n</span><span
+                              class="mord mathit">s</span><span class="mord mathit">i</span><span
+                              class="mord mathit">t</span><span class="mord mathit"
+                              style="margin-right:0.03588em;">y</span><span class="mrel">=</span><span
+                              class="mord mathrm">0</span><span class="mord mathrm">.</span><span
+                              class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mord mathit"
+                              style="margin-right:0.00773em;">R</span><span class="mbin">+</span><span
+                              class="mord mathrm">0</span><span class="mord mathrm">.</span><span
+                              class="mord mathrm">5</span><span class="mord mathrm">9</span><span
+                              class="mord mathit">G</span><span class="mbin">+</span><span
+                              class="mord mathrm">0</span><span class="mord mathrm">.</span><span
+                              class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathit"
+                              style="margin-right:0.05017em;">B</span></span></span></span> </span></span><img
+                    src="images/kitten.png" width="256" /><img src="images/kitten_grayscale.png" width="256" /></div>
+              </div>
+              <p>The first step in Edge Detection algorithms is to determine the <strong>intensity</strong> of an
+                <strong>RGB</strong> tuple. <strong>Intensity</strong> is a measure of a pixel’s saturation. Which is
+                more <strong>intense</strong>, a pixel which is full red (255, 0, 0) or a pixel which is full green (0,
+                255, 0)? Trick question (we hate those too)! They are the same <strong>intensity</strong>!</p>
+              <p>We need a way to map from <strong>RGB</strong> tuples to a single measure of
+                <strong>intensity</strong>. So to simplify the problem, we will convert our images to black and white
+                (grayscale). The scale from black to white is a measure of <strong>intensity</strong>. The standard
+                equation for converting to grayscale uses some magic (<a
+                  href="https://en.wikipedia.org/wiki/Grayscale#Luma_coding_in_video_systems">but standard</a>) numbers
+                which allows you to differentiate between colors.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Graphing Intensity</h3>
+              <div class="aside-container">
+                <div class="aside">
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+              <p>Let’s start with a rectangular picture that contains a smooth gradient from black to white. Pretend
+                that the image is 1 pixel high and 1000 pixels long- in our example we have enlarged the picture so you
+                can see it.</p>
+              <p>Next, we draw a graph of the <strong>intensity</strong> of each pixel -- black has the lowest
+                <strong>intensity</strong> and white has the highest <strong>intensity</strong>. Run your cursor over
+                the graph to the right. Notice how in the middle of the gradient, the <strong>intensity</strong>
+                suddenly changes. This change represents an edge! We’ll make a proper Edge Detector out of you in no
+                time.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Sobel Edge Detection</h3>
+              <div class="aside-container">
+                <div class="aside">
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+              <p>But how can we easily find where the <strong>intensity</strong> changes? One solution is to graph the
+                slope of our <strong>intensity</strong> curve. For those readers who know calculus, this is the first
+                derivative.</p>
+              <p>When we graph the slope of the <strong>intensity</strong> curve, we see a peak. This peak tells us
+                where the edge is! In particular, this method of edge detection is how the <strong>Sobel
+                  algorithm</strong> works.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Kernels</h3>
+              <p>
+                <div class="aside-container">
+                  <div class="aside"><var name="vertical_sobel" __expr__="[object Object]"
+                      value="-1,-2,-1,0,0,0,1,2,1"></var>
+                    <h3>Vertical Sobel Kernel</h3>
+                    <div style="width:100%"></div>
+                  </div>
+                </div>
+                We run into a problem when we try to directly convert the theory from our edge detection algorithms to
+                real world applications. Our graphs assumed <strong>continuous</strong> functions. However, images are
+                series of <strong>discrete</strong> pixel values.
+              </p>
+              <p>A list of pixel <strong>intensity</strong> is not a continuous function, so we’ll have to approximate
+                the derivative. But how do we approximate a derivative over a 2D plane? We use a
+                <strong>convolution</strong>.</p>
+              <p>Before we dive into <strong>convolutions</strong> we need to explain a helpful tool, the
+                <strong>kernel</strong>. We can think of a <strong>kernel</strong> as a small matrix. The center-most
+                box of the matrix is the anchor. Look at the matrix on the right, this is the <strong>kernel</strong>
+                used for the vertical portion of the sobel algorithm. The anchor is 0. We’ll use this
+                <strong>kernel</strong> to do some calculations on an image.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Convolutions</h3>
+              <p>
+                <div class="aside-container">
+                  <div class="aside"><var name="first_matrix" __expr__="[object Object]"
+                      value="1,1,1,1,1,100,150,150,150,1,1,1,1,100,150,150,150,255,1,1,1,100,150,150,150,255,255,1,1,100,150,150,150,255,255,1,1,100,150,150,150,255,255,1,1,100,150,150,150,255,255,1,1,1,150,150,150,255,255,1,1,1,1,150,150,255,255,1,1,1,1,1,150,255,255,1,1,1,255,255,255"></var><var
+                      name="selection_matrix" __expr__="[object Object]" value="0,0,0,0,0,0,0,0,0"></var>
+                    <h3>Pixel Data</h3>
+                    <div style="width:100%"></div>
+                  </div>
+                </div>
+                Now, imagine an image where the pixels are numbers in a matrix. Each pixel value represents the
+                <strong>intensity</strong> for that point. We’re going to do a <strong>convolution</strong>. To do a
+                convolution, take a section of the matrix the same size as your <strong>kernel</strong> (3x3 in our
+                case). Now, multiply each cell of the <strong>kernel</strong> with the overlapping cell in your matrix,
+                and add your products. Then, take your total sum and put that in the cell overlapping your kernel’s
+                anchor.
+              </p>
+              <p>Dealing with the edges and corners of images can be difficult, because of missing pixels around the
+                anchor. Above, we ignore edges and corners for simplicity and continue with our convolution. Advanced
+                techniques for handling these edge cases include mirroring the image across the edge, using pixels from
+                the other side of the image, and duplicating the edge pixels. The edge detection algorithms at the end
+                of this article (for you to play with) mirror the pixels across all edges and corners.</p>
+              <div><span style="display:inline-block"><span> <span class="katex"><span class="katex-mathml"><math>
+                          <semantics>
+                            <mrow>
+                              <mi>C</mi>
+                              <mi>h</mi>
+                              <mi>a</mi>
+                              <mi>n</mi>
+                              <mi>g</mi>
+                              <mi>e</mi>
+                              <mo>=</mo>
+                              <mo>∑</mo>
+                              <mi>R</mi>
+                              <mi>e</mi>
+                              <mi>s</mi>
+                              <mi>u</mi>
+                              <mi>l</mi>
+                              <mi>t</mi>
+                              <mi>M</mi>
+                              <mi>a</mi>
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                              <mi>x</mi>
+                              <mo>(</mo>
+                              <mi>i</mi>
+                              <mo>)</mo>
+                            </mrow>
+                            <annotation encoding="application/x-tex"> Change = \sum ResultMatrix(i) </annotation>
+                          </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                          style="height:0.75em;"></span><span class="strut bottom"
+                          style="height:1.00001em;vertical-align:-0.25001em;"></span><span
+                          class="base textstyle uncramped"><span class="mord mathit"
+                            style="margin-right:0.07153em;">C</span><span class="mord mathit">h</span><span
+                            class="mord mathit">a</span><span class="mord mathit">n</span><span class="mord mathit"
+                            style="margin-right:0.03588em;">g</span><span class="mord mathit">e</span><span
+                            class="mrel">=</span><span class="mop op-symbol small-op"
+                            style="top:-0.0000050000000000050004em;">∑</span><span class="mord mathit"
+                            style="margin-right:0.00773em;">R</span><span class="mord mathit">e</span><span
+                            class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord mathit"
+                            style="margin-right:0.01968em;">l</span><span class="mord mathit">t</span><span
+                            class="mord mathit" style="margin-right:0.10903em;">M</span><span
+                            class="mord mathit">a</span><span class="mord mathit">t</span><span class="mord mathit"
+                            style="margin-right:0.02778em;">r</span><span class="mord mathit">i</span><span
+                            class="mord mathit">x</span><span class="mopen">(</span><span
+                            class="mord mathit">i</span><span class="mclose">)</span></span></span></span>
+                  </span></span></div>
+              <div class="float left" style="float:left;width:600px">
+                <div class="float left" style="float:left;width:120px">
+                  <h3>Selection</h3>
+                  <div style="width:100%"></div>
+                </div>
+                <div class="float left" style="float:left;width:30px">
+                  <h4>*</h4>
+                </div>
+                <div class="float left" style="float:left;width:120px">
+                  <h3>Kernel</h3>
+                  <div style="width:100%"></div>
+                </div>
+                <div class="float left" style="float:left;width:30px">
+                  <h4>=</h4>
+                </div><var name="result_end" __expr__="[object Object]" value="0,0,0,0,0,0,0,0,0"></var>
+                <div class="float left" style="float:left;width:120px">
+                  <h3>Result</h3>
+                  <div style="width:100%"></div>
+                </div>
+                <div class="float left" style="float:left;width:150px">
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <div style="background-color:#FFFFFF;border:2px;border-color:#FFFFFF;border-width:2px;width:80%">
+                <p>Take a look at the example &quot;picture&quot; to the right. Hover your mouse over the pixel data to
+                  see the convolution calculations. In the above matrixes, the left is a view of your convolution
+                  selection, the middle is our kernel, and the right is the resultant matrix. Our algorithms at the end
+                  of the article start the convolution in the upper left corner and move left to right, top to bottom,
+                  through each pixel in the image.</p>
+              </div>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Sobel Returns</h3>
+              <p>
+                <div class="aside-container">
+                  <div class="aside">
+                    <h3>Horizontal Sobel Kernel</h3><var name="horizontal_sobel" __expr__="[object Object]"
+                      value="-1,0,1,-2,0,2,-1,0,1"></var>
+                    <div style="width:100%"></div><br /><br /><br /><br /><br />
+                    <h3>Vertical Sobel Kernel</h3><var name="vertical_sobel" __expr__="[object Object]"
+                      value="-1,-2,-1,0,0,0,1,2,1"></var>
+                    <div style="width:100%"></div>
+                  </div>
+                </div>
+                So why do we need convolutions? The <strong>kernel</strong> we use for the <strong>sobel</strong> edge
+                detector has a special property. Remember how we were having issues calculating a derivative across a
+                non-continuous series of pixels? This special <strong>kernel</strong> approximates that derivative! The
+                <strong>kernel</strong> to the right can be used to approximate the change <em>horizontally</em> in the
+                picture. To calculate <em>vertically</em> we need the vertical Sobel kernel.
+              </p>
+              <p>Now that we have those derivatives, we can use them to find edges. Using the <strong>Sobel</strong>
+                method, we can define the <strong>strength</strong> of the edge as a combination of the horizontal and
+                vertical derivatives. We can also find the <strong>orientation</strong> of that edge using the
+                arctangent. With this information, you can then find the <strong>strength</strong> and
+                <strong>orientation</strong> of edges in a picture.</p>
+              <p>To draw the edges detected by the Sobel algorithm, your canvas should reflect how
+                <strong>strong</strong> the edges are with a darker color and which direction the edges are going via
+                the <strong>orientation</strong>. </p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Laplacian Method</h3>
+              <div class="aside-container">
+                <div class="aside">
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+              <p>So far our edge detection method is simple. Every time we see a peak in the slope of the
+                <strong>intensity</strong>, we mark that as an edge. But what about small peaks, are those edges or just
+                small color changes due to shadows? How can we determine whether a peak represents an edge or noise?</p>
+              <p>One solution is to graph the slope of our first derivative curve. The key idea is that when the first
+                derivative curve is rising, the slope is positive. When the curve is descending, the slope is negative.
+              </p>
+              <p>In our first derivative curve, the slope slowly increases at the start of the gradient. Halfway through
+                the rise to our peak, the slope sharply increases. Then, as it approaches the peak, the slope decreases
+                again.</p>
+              <p>At the very peak of our first derivative, the slope is 0. We have stopped ascending the mountain and
+                are resting before descent.</p>
+              <p>On the way down the peak, we start with a slow descent, the slope decreasing more quickly around the
+                middle. Then, as we approach the last pixel, the slope slows.</p>
+              <p>Now we have a graph of what is called the second derivative. The point where the graph crosses 0 marks
+                our edge. This method of detecting edges is how the <strong>Laplacian algorithm</strong> works. Back to
+                our initial question of what makes a peak an edge or noise, we set an arbitrary threshold value to
+                separate edges from the background noise. If the magnitude of the second derivative (for both sides
+                surrounding 0) is large enough, we have an edge.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <div class="aside-container">
+                <div class="aside">
+                  <h3>Laplacian kernel</h3><var name="laplacian" __expr__="[object Object]"
+                    value="-1,-1,-1,-1,8,-1,-1,-1,-1"></var>
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+              <p>In practice, the <strong>Laplacian</strong> method uses a <strong>kernel</strong> which can approximate
+                the second derivative. The <strong>Laplacian</strong> method only requires one <strong>kernel</strong>
+                because rotating the <strong>Laplacian kernel</strong> gives you the same kernel back. Thanks symmetry!
+              </p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <div class="aside-container">
+                <div class="aside"><var name="selection_matrix_end" __expr__="[object Object]"
+                    value="0,0,0,0,0,0,0,0,0"></var>
+                  <h3>Pixel Data</h3>
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+              <p>Try out the three kernels we’ve defined so far: <strong>Horizontal Sobel</strong>, <strong>Vertical
+                  Sobel</strong>, and <strong>Laplacian</strong>.</p>
+              <div><var name="choice" __expr__="[object Object]" value="1,2,1,0,0,0,-1,-2,-1"></var><select
+                  __vars__="[object Object]" __expr__="[object Object]"
+                  options="[object Object],[object Object],[object Object]">
+                  <option value="-1,0,1,-2,0,2,-1,0,1">Horizontal Sobel</option>
+                  <option value="-1,-2,-1,0,0,0,1,2,1">Vertical Sobel</option>
+                  <option value="-1,-1,-1,-1,8,-1,-1,-1,-1">Laplacian</option>
+                </select></div>
+              <div class="float left" style="float:left;width:600px">
+                <div class="float left" style="float:left;width:120px">
+                  <h3>Selection</h3>
+                  <div style="width:100%"></div>
+                </div>
+                <div class="float left" style="float:left;width:30px">
+                  <h4>*</h4>
+                </div>
+                <div class="float left" style="float:left;width:120px">
+                  <h3>Kernel</h3>
+                  <div style="width:100%"></div>
+                </div>
+                <div class="float left" style="float:left;width:30px">
+                  <h4>=</h4>
+                </div>
+                <div class="float left" style="float:left;width:120px">
+                  <h3>Result</h3>
+                  <div style="width:100%"></div>
+                </div>
+                <div class="float left" style="float:left;width:150px">
+                  <div style="width:100%"></div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Sobel vs Laplacian</h3>
+              <div class="aside-container">
+                <div class="aside"><img src="images/cover_photo.png" />
+                  <caption><strong>Sobel</strong></caption><img src="images/kitten_laplacian_compare.png" />
+                  <caption><strong>Laplacian</strong></caption>
+                </div>
+              </div>
+              <p>We have two methods for detecting edges: <strong>Sobel</strong> and <strong>Laplacian</strong>. Sobel
+                uses horizontal and vertical kernels, while Laplacian uses one symmetrical kernel.</p>
+              <p>If images could talk, I bet they would have great stories -- full of colorful language and loud noises.
+                <strong>Noise</strong> is a feature of all images. Noise could be a cat’s fur -- all those soft pieces
+                of hair define edges against each other. Noise could also be a function of an image’s compression,
+                picking up <a href="https://en.wikipedia.org/wiki/Compression_artifact">artifacts and other products of
+                  encoding</a>. Both the Laplacian and Sobel methods are impacted by <strong>noise</strong> in the
+                image. </p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Gaussian Smoothing</h3>
+              <div class="aside-container">
+                <div class="aside"><img src="images/kitten_laplacian_gaussian_compare.png" /><strong>Laplacian of
+                    Gaussian</strong></div>
+              </div>
+              <p>One way to deal with <strong>noise</strong> is to <strong>smooth</strong> out the image. We can do a
+                convolution using a kernel of Gaussian values to blur or <strong>smooth</strong> the image. By blurring
+                the image, we reduce the level of detail -- so it looks fuzzy. Our Laplacian and Sobel methods will pick
+                up fewer edges, but also less noise.</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh">
+        <div
+          style="position:relative;z-index:1;pointer-events:none;transition:background 0.5s;min-height:75vh;margin-left:0;margin-right:0">
+          <div style="flex-direction:row;display:flex;height:100%">
+            <div style="display:flex;flex:0.5"></div>
+            <div style="align-self:center;pointer-events:all" class="screen-content">
+              <h3>Canny Edge Detector</h3>
+              <div class="aside-container">
+                <div class="aside"><img src="images/kitten.png" /><img src="images/kitten_canny.png" /><strong>Canny
+                    Edge Detection</strong></div>
+              </div>
+              <p>The <strong>Canny</strong> edge detector combines many different optimizations. It involves four steps:
+              </p>
+              <ol>
+                <li>Smooth the image using a <strong>Gaussian filter</strong> to reduce noise.</li>
+                <li>Figure out where the intensity changes the quickest.</li>
+                <li>Filter out the local maximum and minimum values with a high and low pass filter thresholds.</li>
+                <li>Determine <strong>strong</strong> edges from weak ones, using values of intensity, and link the
+                  <strong>strong</strong> edges together.</li>
+              </ol>
+              <p>
+                (If you are curious, you can <a
+                  href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html">read
+                  more here</a>).</p>
+            </div>
+            <div style="display:flex;flex:0.5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:800px; margin:0 auto;">
+
+
+    <h1>Summary</h1>
+    <p><em>Edge Detection is a little magic, a tad mundane, and a bit of math.</em></p>
+    <p>If you've stuck with this article so far, hopefully you've learned a little bit about what goes on inside
+      Facebook's algorithms and those inside your smartphone. Now comes the fun part, you get to apply what you learned!
+      A test (not really)!</p>
+
+    <h1>Play With Edge Detection Algorithms</h1>
+    <p>Click on "Browse..." and select a <strong>.jpg file</strong>. Then pick a filter you would like to apply. See how
+      the filters handle noise and are impacted by the overall structure of the image? Pretty cool! How do angled edges
+      work with horizontal and vertical sobel filters?</p>
+    <p>The variables you have to play with are for the Canny Edge Detection Algorithm. The Gaussian Blur determines how
+      much the input image is <strong>smoothed</strong> via a Guassian kernel. The Low Pass and High Pass filters are
+      techniques for <a href="https://en.wikipedia.org/wiki/Filter_(signal_processing)">reducing low and high frequency
+        noise</a>.</p>
+    <div>
+      <input id="Horizontal_Sobel" type="button" value="Horizontal Sobel" onclick="horizontal_sobel();" />
+      <input id="Vertical_Sobel" type="button" value="Vertical Sobel" onclick="vertical_sobel();" />
+      <input id="Sobel" type="button" value="Horizontal + Vertical Sobel" onclick="sobel();" />
+      <input id="Laplacian" type="button" value="Laplacian" onclick="laplacian();" />
+      <input id="Canny" type="button" value="Canny" onclick="canny(gBlur.value,lowThresh.value,highThresh.value);" />
+    </div>
+
+    <div id="ranges">
+      <h2>Variables to Affect Canny Edge Detection Algorithm</h2>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Gaussian Blur</td>
+            <td>Low Pass Filter Threshold</td>
+            <td>High Pass Filter Threshold</td>
+          </tr>
+          <tr>
+            <td><input id="gBlur" value="2" type="range" min="1" max="3" step=".06" /></td>
+            <td><input id="lowThresh" value="40" type="range" min="0" max="100" step="2" /></td>
+            <td><input id="highThresh" value="70" type="range" min="0" max="100" step="2" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <input type="file" id='imageLoader' name="imageLoader" />
+
+    <canvas id="imageCanvas" width="400" height="300"></canvas>
+    <canvas id="editCanvas" width="400" height="300"></canvas>
+
+  </div>
+  </div>
+
+  <script src="Filters/mwe/main.js"></script>
+  <script type="text/javascript" src="Filters/mwe/jsfeat.js"> </script>
+  <script type="text/javascript" src="Filters/mwe/jsfeat_imgproc.js"> </script>
+
+  <script src="index.js"></script>
+</body>
+
+<!-- Mirrored from cse442-17f.github.io/Sobel-Laplacian-and-Canny-Edge-Detection-Algorithms/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Nov 2019 11:44:45 GMT -->
+
+</html>

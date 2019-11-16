@@ -1,0 +1,44 @@
+<!doctype>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/joy.css">
+	<style>
+	@font-face{
+		font-family: 'FuturaHandwritten';
+		font-style: normal;
+		src: url('FuturaHandwritten.ttf') format('truetype');
+	}
+	body{
+		margin: 0;
+		font-size: 20px;
+		font-family: sans-serif;
+		font-weight: 100;
+		font-family: 'FuturaHandwritten';
+	}
+	#box{
+		margin-left: 1.5em;
+	}
+	</style>
+</head>
+<body>
+<div id="joy"></div>
+<div id="box"></div>
+</body>
+</html>
+
+<script src="../js/joy.js"></script>
+
+<script>
+window.joy = Joy({
+	init: "Make the box {id:'width', type:'number', placeholder:50}px wide, "+
+		  "{id:'height', type:'number', placeholder:50}px tall, "+
+		  "and colored {id:'color', type:'color'}",
+	container: "#joy",
+	onupdate: function(my){
+		var box = document.getElementById("box");
+        box.style.width = my.data.width;
+        box.style.height = my.data.height;
+        box.style.background = my.data.color;
+	}
+});
+</script>

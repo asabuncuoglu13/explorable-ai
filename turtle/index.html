@@ -1,0 +1,107 @@
+<!doctype>
+<html>
+<head>
+
+
+	<title>The Joy of Turtle</title>
+	<meta name="description" content="make happy little turtles"/>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="../../favicon.png">
+
+
+	<!-- Social Card Shtuff -->
+	<meta itemprop="name" content="The Joy of Turtle">
+	<meta itemprop="description" content="make happy little turtles">
+	<meta itemprop="image" content="http://ncase.me/joy/social/turtle.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ncasenmare">
+	<meta name="twitter:title" content="The Joy of Turtle">
+	<meta name="twitter:description" content="make happy little turtles">
+	<meta name="twitter:creator" content="@ncasenmare">
+	<meta name="twitter:image" content="http://ncase.me/joy/social/turtle.png">
+	<meta property="og:title" content="The Joy of Turtle">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://ncase.me/joy/demo/turtle">
+	<meta property="og:image" content="http://ncase.me/joy/social/turtle.png">
+	<meta property="og:description" content="make happy little turtles">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/joy.css">
+
+	<style>
+	@font-face{
+		font-family: 'FuturaHandwritten';
+		font-style: normal;
+		src: url('FuturaHandwritten.ttf') format('truetype');
+	}
+	body{
+		font-family: 'FuturaHandwritten';
+	}
+	.cursor-grab{
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+		cursor: -ms-grab;
+		cursor: grab;
+	}
+	.cursor-grabbing{
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: -ms-grabbing;
+		cursor: grabbing;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="container">
+			<div id="player"></div>
+			<div id="editor"></div>
+		</div>
+		<div id="footer">
+			<div id="more-shtuff">
+			<span style="font-size:2em;">more turtle drawings &rarr;</span>
+
+			<br>
+			play with other demos: 
+			<a href="../music">music</a> | 
+			<a href="../nonlinear">nonlinear</a>
+			<br>
+			learn more <a href="../../">about Joy.js</a>
+			<br><br>
+			want more?
+			<a href="https://www.patreon.com/ncase" target="_blank">check out and/or support my work!</a>
+
+			</div>
+			<div id="demos">
+				<a href="?drawing=star">
+					<img src="thumbs/star.png"/>
+					<span>star</span>
+				</a>
+				<a href="?drawing=spiral">
+					<img src="thumbs/spiral.png"/>
+					<span>spiral</span>
+				</a>
+				<a href="?drawing=spiral2">
+					<img src="thumbs/spiral2.png"/>
+					<span>spiral 2</span>
+				</a>
+				<a href="?drawing=flower">
+					<img src="thumbs/flower.png"/>
+					<span>flower</span>
+				</a>
+				<a href="?drawing=blank">
+					<img src="thumbs/blank.png"/>
+					<span>blank</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script src="../js/joy.js"></script>
+<script src="Turtle.js"></script>
+<script src="turtle-demo.js"></script>
