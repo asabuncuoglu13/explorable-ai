@@ -68,6 +68,26 @@ window.onload = function(){
 Joy.module("turtle", function(){
 
 	Joy.add({
+		name: "Get Image",
+		type: "ai/getImage",
+		tags: ["ai", "action"],
+		init: "Get the image with the name {id:'imageID', type:'string', placeholder:'spiderman'}",
+		onact: function(my){
+			my.target.getImage(my.data.imageID);
+		}
+	});
+
+	Joy.add({
+		name: "Get Pixel Value",
+		type: "ai/getPxVal",
+		tags: ["ai", "action"],
+		init: "Get color of x: {id:'imgX', type:'number', placeholder:100} and y: {id:'imgY', type:'number', placeholder:100}",
+		onact: function(my){
+			my.target.getPixelVal(my.data.imgX, my.data.imgY);
+		}
+	});
+
+	Joy.add({
 		name: "Move",
 		type: "turtle/forward",
 		tags: ["turtle", "action"],

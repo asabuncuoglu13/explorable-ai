@@ -49,7 +49,7 @@ function Joy(options){
 	Joy.ui.init(self);
 	Joy.modal.init(self);
 
-	// Update!
+	// Update!color
 	self.onupdate = self.onupdate || function(my){};
 	self.update = function(){
 
@@ -89,12 +89,7 @@ function Joy(options){
 ACTORS help the Player, Editor & Data talk to each other.
 
 To create an Actor, you need to pass it a "options" object like so:
-(ALL the parameters are optional, btw)
-{
-	id: "steps", // by default, this is actorID AND dataID
-	dataID: "steps", // ONLY if actorID=/=dataID. (e.g. two actors modify same data)
-	type: "number", // what Actor Template to inherit from, if any
-	placeholder: 50 // if no data, what should be the placeholder?
+(ALL the parameters are optional, btw)colorbe the placeholder?
 }
 
 *****************/
@@ -2156,6 +2151,46 @@ Joy.add({
 
 /****************
 
+A widget to type Object!
+
+Widget Options:
+{name:'name', type:'object', prefix:'&ldquo;', suffix:'&rdquo;', color:"whatever"}
+
+****************/
+Joy.add({
+	type: "object",
+	tags: ["ui"],
+	initWidget: function(self){
+
+		// String *IS* DOM
+		var o = self.options;
+		self.stringUI = new Joy.ui.String({
+			prefix: o.prefix,
+			suffix: o.suffix,
+			color: o.color,
+			value: self.getData("value"),
+			onchange: function(value){
+				self.setData("value", value);
+			}
+		});
+		self.dom = self.stringUI.dom;
+
+		// When data's changed, externally
+		self.onDataChange = function(){
+			var value = self.getData("value");
+			self.stringUI.setString(value);
+		};
+
+	},
+	onget: function(my){
+		return my.data.value;
+	},
+	placeholder: "???"
+});
+
+
+/****************
+
 A widget to save data as hash!
 
 Widget Options:
@@ -2739,7 +2774,7 @@ Joy.add({
 							}
 						});
 
-					}else{
+					} else {
 
 						// Make a new reference? Either way, set refID
 						if(newRefID=="NEW"){
@@ -3276,13 +3311,36 @@ Joy.module("math", function(){
 		}
 	});
 
+	Joy.add({
+		name: "Set [object]",
+		type: "text/set",
+		tags: ["text", "action"],
+		init: "Set {id:'varname', type:'variableName', variableType:'object'} to {id:'value', type:'object'}",
+		onact: function(my){
+			var _variables = my.target._variables;
+			var varname = my.data.varname; // it's just a synchronized string
+			_variables[varname] = my.data.value; // Set the variable
+		}
+	});
+
+	Joy.add({
+		name: "Set [color]",
+		type: "colour/set",
+		tags: ["colour", "action"],
+		init: "Set {id:'varname', type:'variableName', variableType:'color'} to {id:'value', type:'color'}",
+		onact: function(my){
+			var _variables = my.target._variables;
+			var varname = my.data.varname; // it's just a synchronized string
+			_variables[varname] = my.data.value; // Set the variable
+		}
+	});
+
 	/****************
 
 	Do math on some variable
 
 	****************/
 	Joy.add({
-	
 		name: "Do math to [number]",
 		type: "math/operation",
 		tags: ["math", "action"],
@@ -3322,12 +3380,12 @@ Joy.module("math", function(){
 
 	****************/
 	Joy.add({
-		name: "If [math] then...",
-		type: "math/if",
+		name: "If [comparison] then...",
+		type: "structure/if",
 		tags: ["math", "action"],
-		init: "If {id:'value1', type:'number'} "+
+		init: "If {id:'value1', type:'object'} "+
 			  "{id:'test', type:'choose', options:['<','≤','=','≥','>'], placeholder:'='} "+
-			  "{id:'value2', type:'number'}, then: "+
+			  "{id:'value2', type:'object'}, then: "+
 			  "{id:'actions', type:'actions', resetVariables:false}",
 		onact: function(my){
 
