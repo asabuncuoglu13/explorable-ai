@@ -3,7 +3,7 @@ var slider;
 var threshold = 0;
 
 function preload() {
-    originalImage = loadImage("../../media/pixel_pikachu.png");
+    originalImage = loadImage("../../img/pixel_pikachu.png");
 }
 
 function setup() {
