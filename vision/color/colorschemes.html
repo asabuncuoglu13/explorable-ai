@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=700">
+    <title>Color Schemes</title>
+    <meta name="description" content="Data Literacy, Interactive Contents">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../js/d3/d3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="./colorschemes.css">
+    <style>
+        .ramp {
+            position: absolute;
+        }
+
+        .ramp div {
+            position: absolute;
+            top: 0;
+            right: 20px;
+        }
+
+        .ramp[name='Reversed'] div {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Different Color Schemes</h1>
+<p>
+    From previous reading, we experienced how RGB representation of the color is used to define different palettes.
+    As it has many different application areas, it has many different schemes.
+</p>
+<p>
+    One representation of the color is HSL. Which corresponds to HUE, SATURATION and LIGHTNESS.
+    It is much easier read and undersand, since it uses our natural way of reading colors.
+    Hue defines the color wheel, which is between 0-360.
+</p>
+<p>
+    More color schematics are defined day by day. For example, in 2011 another color representation called
+    "Cubehelix" is designed specifically for astronomic applications.
+    The problem of using old color schemes can be defined as follow:
+</p>
+<blockquote>
+    Images in astronomy often, but not always, represent the intensity of some source.
+    However, the colour schemes used to display images are not perceived as increasing monotonically in
+    brightness, which does not aid the interpretation of the images.
+    The perceived brightness of red, green and blue are not the same, with green being seen as the brightest,
+    then red, then blue.
+    For example a bright yellow (i.e. full intensity red and green) is perceived as being very much brighter
+    than a bright blue.
+    So if a colour scheme has yellow for intermediate intensities, but blue or red for higher intensities, then
+    the blue or red is perceived at lower brightness.
+    This can be also seen when such colour images are printed in black and white, when increasing intensity in
+    the image does not correspond to a greyscale with monotonically increasing brightness.
+</blockquote>
+<p>
+    The scheme is same components with HSL representatiton but values from HSL is processed with a different
+    function.
+</p>
+
+<div class="channel" id="h">
+    <canvas width="600" height="1"></canvas>
+    <svg width="540" height="20">
+        <g class="axis" transform="translate(30,.5)"></g>
+    </svg>
+</div>
+<div class="channel" id="s">
+    <canvas width="600" height="1"></canvas>
+    <svg width="540" height="20">
+        <g class="axis" transform="translate(30,.5)"></g>
+    </svg>
+</div>
+<div class="channel" id="l">
+    <canvas width="600" height="1"></canvas>
+    <svg width="540" height="20">
+        <g class="axis" transform="translate(30,.5)"></g>
+    </svg>
+</div>
+</body>
+
+<script>
+    var white = d3.rgb("white"),
+        black = d3.rgb("black"),
+        width = d3.select("canvas").property("width");
+
+    var channels = {
+        h: {scale: d3.scaleLinear().domain([0, 360]).range([0, width]), x: width / 2},
+        s: {scale: d3.scaleLinear().domain([0, 1]).range([0, width]), x: width / 2},
+        l: {scale: d3.scaleLinear().domain([0, 1]).range([0, width]), x: width / 2}
+    };
+
+    var channel = d3.selectAll(".channel")
+        .data(d3.entries(channels));
+
+    channel.select(".axis")
+        .each(function (d) {
+            d3.select(this).call(d3.axisBottom(d.value.scale));
+        })
+        .append("text")
+        .attr("x", width)
+        .attr("y", 9)
+        .attr("dy", ".72em")
+        .style("text-anchor", "middle")
+        .style("text-transform", "uppercase")
+        .text(function (d) {
+            return d.key;
+        });
+
+    var canvas = channel.select("canvas")
+        .call(d3.drag().on("drag", dragged))
+        .each(render);
+
+    function dragged(d) {
+        d.value.x = Math.max(0, Math.min(this.width - 1, d3.mouse(this)[0]));
+        canvas.each(render);
+    }
+
+    function render(d) {
+        var width = this.width,
+            context = this.getContext("2d"),
+            image = context.createImageData(width, 1),
+            i = -1;
+
+        var current = d3.hsl(
+            channels.h.scale.invert(channels.h.x),
+            channels.s.scale.invert(channels.s.x),
+            channels.l.scale.invert(channels.l.x)
+        );
+
+        for (var x = 0, v, c; x < width; ++x) {
+            if (x === d.value.x) {
+                c = white;
+            } else if (x === d.value.x - 1) {
+                c = black;
+            } else {
+                current[d.key] = d.value.scale.invert(x);
+                c = d3.rgb(current);
+            }
+            image.data[++i] = c.r;
+            image.data[++i] = c.g;
+            image.data[++i] = c.b;
+            image.data[++i] = 255;
+        }
+
+        context.putImageData(image, 0, 0);
+    }
+
+</script>

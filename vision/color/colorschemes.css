@@ -1,0 +1,37 @@
+.slider {
+  fill: hsla(0, 0%, 75%, 1);
+}
+
+.slider:hover, .slider.dragging {
+  fill-opacity: 0.5;
+}
+
+.tLine {
+  stroke-width: 1px;
+  stroke: hsla(0, 0%, 10%, 1);
+}
+
+.colorBarTitle, .colorBarValue {
+  fill: #3c3c3c;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+#s .tick:last-of-type text, #l .tick:last-of-type text {
+  display: none;
+}
+
+.channel canvas {
+  float: left;
+  margin: 20px 10px 0 10px;
+  width: 540px;
+  height: 60px;
+}

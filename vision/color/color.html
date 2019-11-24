@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=700">
+    <title>What is Color?</title>
+    <meta name="description" content="Data Literacy, Interactive Contents">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../js/d3/d3.min.js"></script>
+    <script src="../../js/d3/d3-simple-slider.min.js"></script>
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+    <h1 id="page_title">What is color?</h1>
+    <p id="_1">
+        From the kindergarten years, we learn sea is blue, grass is green and flamingos are pink.
+        But, if someone asks you "What is color?" we cannot easily answer with a concrete definition.
+        Dictionary definition says that, <i>color is the aspect of things that is caused by differing qualities of light
+            being reflected or emitted by them.</i>
+    </p>
+    <p id="_2">
+        To see color, you need light. When light shines on an object some colors bounce off the object and others
+        are absorbed by it. Our eyes only see the colors that are bounced off or reflected.
+    </p>
+    <img src="../../img/color_light_reflection.png">
+    <p id="_3">
+        In the image, you see a red apple, because only red lightwave is reflected from the apple's surface. Other
+        wavelengths are absorbed by the apple.
+        <br>
+        Human eye perception.
+    </p>
+    <p>
+        We can see colors thanks to our perception. But, how might we represent colors to tell computers?
+    </p>
+    <p>
+        We use different color schemes and representation techniques to represent colors. One technique is to use RGB
+        color
+        scheme.
+        All visible colors can be represented as a combination of three primary colors.
+        In the below, three sliders allow you to change RED, GREEN and BLUE values. So, you can easily change colors.
+    </p>
+    <p>
+        Below, the color is initally black, because all values are 0.
+        If you change the red value from 0 to 255, you will see how red color changes when the intensity increases.
+    </p>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-2">
+                <p id="value-color-picker"></p>
+            </div>
+            <div class="col-sm">
+                <div id="slider-color-picker"></div>
+            </div>
+            <div class="col-sm-2">
+                <p id="value-hsl-color-picker"></p>
+            </div>
+            <div class="col-sm">
+                <div id="slider-hsl-color-picker"></div>
+            </div>
+        </div>
+    </div>
+    <p>
+        Now, set the colors to RGB(120, 120, 120), then try RGB(150, 150, 150). Continue, increasing the values equal
+        between the slider.
+        Did you realize some pattern? Did you obtain shades of grey?
+    </p>
+    <p>
+        To read further about color:
+        <br>
+        <a href="http://web.mit.edu/abyrne/www/ColorRealism.html">Color Realism and Color Science</a>
+        <br>
+        <a href="https://www.canva.com/colors/color-wheel/">Play with Color Wheel</a>
+    </p>
+</body>
+
+<script>
+    var num2hex = rgb => {
+        return rgb
+            .map(color => {
+                let str = color.toString(16);
+                console.log(str);
+                if (str.length === 1) {
+                    str = '0' + str;
+                }
+
+                return str;
+            })
+            .join('');
+    };
+
+    var rgb = [0, 0, 0];
+    var colors = ['red', 'green', 'blue'];
+
+    var gColorPicker = d3
+        .select('div#slider-color-picker')
+        .append('svg')
+        .attr('width', 600)
+        .attr('height', 200)
+        .append('g')
+        .attr('transform', 'translate(0,20)');
+
+    var box = gColorPicker
+        .append('rect')
+        .attr('width', 100)
+        .attr('height', 100)
+        .attr('transform', 'translate(400,20)')
+        .attr('fill', `#${num2hex(rgb)}`);
+
+
+    rgb.forEach((color, i) => {
+        var slider = d3
+            .sliderBottom()
+            .min(0)
+            .max(255)
+            .step(1)
+            .width(300)
+            .default(rgb[i])
+            .displayValue(false)
+            .fill(colors[i])
+            .on('onchange', num => {
+                rgb[i] = num;
+                box.attr('fill', `#${num2hex(rgb)}`);
+                d3.select('p#value-color-picker').text(`RGB(${rgb})`);
+            });
+
+        gColorPicker
+            .append('g')
+            .attr('transform', `translate(30,${60 * i})`)
+            .call(slider);
+    });
+
+    d3.select('p#value-color-picker').text(`RGB(${rgb})`);
+</script>

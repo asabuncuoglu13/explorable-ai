@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=700">
+    <title>Convert Grayscale</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="../../js/Tangle.js"></script>
+    <script type="text/javascript" src="../../js/TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="../../js/TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="../../js/TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="../../js/TangleKit/TangleKit.js"></script>
+    <link rel="stylesheet" href="../../js/TangleKit/TangleKit.css" type="text/css">
+    <style>
+        code {
+            padding: 10px;
+            line-height: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body onload="setUpTangle();">
+    <h1>How to Calculate Grayscale?</h1>
+    <div class="codeclass">
+        <code id="grayscale">
+        for w (<span id="width-changable-span"></span>) in width
+        <br>&nbsp for h (<span id="height-changable-span"></span>) in height
+        <br>&nbsp &nbsp image[w(<span id="width-span"></span>), h(<span id="height-span"></span>)] --> <span
+            id="selection_color"></span>
+        <br>&nbsp &nbsp grey (<span data-var="intensity"></span>) =
+        <span data-var="red_comp" class="TKNumberField" data-min="0" data-max="1"></span> * red
+        <span data-var="green_comp" class="TKNumberField" data-min="0" data-max="1"></span> * green
+        <span data-var="blue_comp" class="TKNumberField" data-min="0" data-max="1"></span> * blue
+
+        <button onclick="applyFilter()">Apply</button>
+    </code>
+    </div>
+
+    <canvas width="660px" height="630px" id="picture_canvas"></canvas>
+
+    <script>
+
+        var red, green, blue, intensity = 0;
+        var shapeWidth = 30;
+        var s = new CanvasState(document.getElementById('picture_canvas'));
+
+        function setUpTangle() {
+
+            var element = document.getElementById("grayscale");
+
+            var tangle = new Tangle(element, {
+
+                initialize: function () {
+                    this.red_comp = 0.2126;
+                    this.blue_comp = 0.7152;
+                    this.green_comp = 0.0722;
+                },
+
+                update: function () {
+                    intensity = (red * this.red_comp) + (green * this.green_comp) + (blue * this.blue_comp);
+                }
+            });
+        }
+
+        function Shape(x, y, w, h, fill) {
+            this.x = x || 0;
+            this.y = y || 0;
+            this.w = w || 30;
+            this.h = h || 30;
+            this.fill = fill || '#AAAAAA';
+        }
+
+        Shape.prototype.draw = function (ctx) {
+            ctx.fillStyle = this.fill;
+            ctx.fillRect(this.x, this.y, this.w, this.h);
+        };
+
+        Shape.prototype.contains = function (mx, my) {
+
+            return (this.x <= mx) && (this.x + this.w >= mx) &&
+                (this.y <= my) && (this.y + this.h >= my);
+        };
+
+        function CanvasState(canvas) {
+
+
+            this.canvas = canvas;
+            this.width = canvas.width;
+            this.height = canvas.height;
+            this.ctx = canvas.getContext('2d');
+
+            var stylePaddingLeft, stylePaddingTop, styleBorderLeft, styleBorderTop;
+            if (document.defaultView && document.defaultView.getComputedStyle) {
+                this.stylePaddingLeft = parseInt(document.defaultView.getComputedStyle(canvas, null)['paddingLeft'], 10) || 0;
+                this.stylePaddingTop = parseInt(document.defaultView.getComputedStyle(canvas, null)['paddingTop'], 10) || 0;
+                this.styleBorderLeft = parseInt(document.defaultView.getComputedStyle(canvas, null)['borderLeftWidth'], 10) || 0;
+                this.styleBorderTop = parseInt(document.defaultView.getComputedStyle(canvas, null)['borderTopWidth'], 10) || 0;
+            }
+
+            var html = document.body.parentNode;
+            this.htmlTop = html.offsetTop;
+            this.htmlLeft = html.offsetLeft;
+
+            // **** Keep track of state! ****
+
+            this.valid = false;
+            this.shapes = [];
+            this.selection = null;
+            this.dragoffx = 0;
+            this.dragoffy = 0;
+
+            var myState = this;
+
+            //fixes a problem where double clicking causes text to get selected on the canvas
+            canvas.addEventListener('selectstart', function (e) {
+                e.preventDefault();
+                return false;
+            }, false);
+
+            canvas.addEventListener('mousedown', function (e) {
+                var mouse = myState.getMouse(e);
+                var mx = mouse.x;
+                var my = mouse.y;
+                var shapes = myState.shapes;
+                var l = shapes.length;
+                for (var i = l - 1; i >= 0; i--) {
+                    if (shapes[i].contains(mx, my)) {
+                        var mySel = shapes[i];
+                        myState.selection = mySel;
+                        document.getElementById("selection_color").innerHTML = mySel.fill;
+                        myState.valid = false;
+                        return;
+                    }
+                }
+                // havent returned means we have failed to select anything.
+                // If there was an object selected, we deselect it
+                if (myState.selection) {
+                    myState.selection = null;
+                    myState.valid = false; // Need to clear the old selection border
+                }
+            }, true);
+
+            this.selectionColor = '#CC0000';
+            this.selectionWidth = 2;
+            this.interval = 30;
+            setInterval(function () {
+                myState.draw();
+            }, myState.interval);
+        }
+
+        CanvasState.prototype.addShape = function (shape) {
+            this.shapes.push(shape);
+            this.valid = false;
+        };
+
+        CanvasState.prototype.clear = function () {
+            this.ctx.clearRect(0, 0, this.width, this.height);
+        };
+
+        CanvasState.prototype.draw = function () {
+            // if our state is invalid, redraw and validate!
+            if (!this.valid) {
+                var ctx = this.ctx;
+                var shapes = this.shapes;
+                this.clear();
+                // draw all shapes
+                var l = shapes.length;
+                for (var i = 0; i < l; i++) {
+                    var shape = shapes[i];
+                    // We can skip the drawing of elements that have moved off the screen:
+                    if (shape.x > this.width || shape.y > this.height ||
+                        shape.x + shape.w < 0 || shape.y + shape.h < 0) continue;
+                    shapes[i].draw(ctx);
+                }
+                // draw selection
+                this.drawSelection();
+                this.valid = true;
+            }
+        };
+
+        CanvasState.prototype.drawSelection = function () {
+            var ctx = this.ctx;
+            if (this.selection != null) {
+                ctx.strokeStyle = this.selectionColor;
+                ctx.lineWidth = this.selectionWidth;
+                var mySel = this.selection;
+                var i = mySel.x / shapeWidth - 1;
+                var j = mySel.y / shapeWidth - 1;
+                document.getElementById("width-span").innerHTML = i;
+                document.getElementById("width-changable-span").innerHTML = i;
+                document.getElementById("height-span").innerHTML = j;
+                document.getElementById("height-changable-span").innerHTML = j;
+                red = mySel.fill.substring(4, 8).toInt();
+                green = mySel.fill.substring(10, 14).toInt();
+                blue = mySel.fill.substring(16, 20).toInt();
+                intensity = .2126 * red + .7152 * green + .0722 * blue;
+                s.addShape(new Shape((i + 1) * shapeWidth, (j + 1) * shapeWidth, shapeWidth, shapeWidth, float2color(intensity)));
+                ctx.strokeRect(mySel.x, mySel.y, mySel.w, mySel.h);
+            }
+        };
+
+
+        // Creates an object with x and y defined, set to the mouse position relative to the state's canvas
+        // If you wanna be super-correct this can be tricky, we have to worry about padding and borders
+        CanvasState.prototype.getMouse = function (e) {
+            var element = this.canvas, offsetX = 0, offsetY = 0, mx, my;
+
+            // Compute the total offset
+            if (element.offsetParent !== undefined) {
+                do {
+                    offsetX += element.offsetLeft;
+                    offsetY += element.offsetTop;
+                } while ((element = element.offsetParent));
+            }
+
+            // Add padding and border style widths to offset
+            // Also add the <html> offsets in case there's a position:fixed bar
+            offsetX += this.stylePaddingLeft + this.styleBorderLeft + this.htmlLeft;
+            offsetY += this.stylePaddingTop + this.styleBorderTop + this.htmlTop;
+
+            mx = e.pageX - offsetX;
+            my = e.pageY - offsetY;
+
+            // We return a simple javascript object (a hash) with x and y defined
+            return { x: mx, y: my };
+        };
+
+        function float2color(intensity) {
+            var color_part_hex = Number(parseInt(intensity, 10)).toString(16);
+            return "#" + color_part_hex + color_part_hex + color_part_hex;
+        }
+
+        function getRandomColor() {
+            var o = Math.round, r = Math.random, s = 255;
+            return 'rgb( ' + o(r() * s) + ' , ' + o(r() * s) + ' , ' + o(r() * s) + ' )';
+        }
+
+        function init() {
+            for (var i = 1; i <= 20; i++) {
+                for (var j = 1; j <= 20; j++) {
+                    s.addShape(new Shape(i * shapeWidth, j * shapeWidth, shapeWidth, shapeWidth, getRandomColor()));
+                }
+            }
+        }
+
+        init();
+    </script>
+
+</body>
+
+</html>
