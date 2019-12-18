@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>wavesurfer.js | Waveform using rounded bars</title>
+
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/ribbon.css" />
+    <!-- wavesurfer.js -->
+    <script src="../../js/wavesurfer.js"></script>
+    <!-- Demo -->
+    <script src="main.js"></script>
+
+    <!-- highlight.js for syntax highlighting in this example -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+
+
+    <div id="demo">
+        <div id="waveform">
+            <!-- Here be the waveform -->
+        </div>
+
+        <div class="controls">
+            <div class="row">
+                <div class="col-sm-7">
+                    <button class="btn btn-primary" data-action="play">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Play /
+                        <i class="glyphicon glyphicon-pause"></i>
+                        Pause
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row marketing">
+        <h3>Rounded bars example</h3>
+        <hr />
+        <p>Draws a waveform with rounded bars.</p>
+
+        <p>
+            <pre><code>
+var wavesurfer = WaveSurfer.create({
+    container: document.querySelector('#waveform'),
+    waveColor: '#D9DCFF',
+    progressColor: '#4353FF',
+    cursorColor: '#4353FF',
+    barWidth: 3,
+    barRadius: 3,
+    cursorWidth: 1,
+    height: 200,
+    barGap: 3
+});
+</code></pre>
+        </p>
+    </div>
+
+</body>
+
+</html>
