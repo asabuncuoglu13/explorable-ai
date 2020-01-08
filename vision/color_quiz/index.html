@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>🤖 Color Matcher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Color Matcher" />
+    <meta name="keywords" content="yapay zeka, eğitim, twin" />
+    <meta name="author" content="Alpay Sabuncuoglu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link href="../../css/index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+</head>
+
+<body style="position: relative">
+    <h1>Renkleri tahmin et!</h1>
+
+    <p>Şimdi sana art arda rastgele renkler vereceğiz. Farklı renk tanımları için bu renkleri tanımlayabilecek misin?
+    </p>
+
+    <div class="card card-up">
+        <p>Aşağıdaki rengi slider'lar ile oluşturabilir misin?</p>
+        <div>
+            <div id="asked" style="width:500px;height:100px;border:1px solid #000;"></div>
+        </div>
+
+        <div id="rgb_color" hidden>
+            <input value="0" type="range" name="Rc" id="Rc" min="0" max="255" data-toggle="tooltip"
+                onmousemove="setToolTip(this)" onchange="setColour()">
+            <br>
+            <input value="0" type="range" name="Rc" id="Gc" min="0" max="255" data-toggle="tooltip"
+                onmousemove="setToolTip(this)" onchange="setColour()"> 255
+            <br>
+            <input value="0" type="range" name="Rc" id="Bc" min="0" max="255" data-toggle="tooltip"
+                onmousemove="setToolTip(this)" onchange="setColour()"> 255
+            <br>
+            <button id=rgb_submit>onayla</button>
+            <pre id="rgb_report"></pre>
+        </div>
+
+        <div id="hsl_color">
+            <input value="0" type="range" name="Rc" id="Hc" min="0" max="360" data-toggle="tooltip"
+                onmousemove="setToolTip(this)" onchange="setColourHSL()"> 360
+            <br>
+            <input value="0" type="range" name="Rc" id="Sc" min="0" max="100" data-toggle="tooltip"
+                onmousemove="setToolTip(this)" onchange="setColourHSL()"> 100
+            <br>
+            <input value="0" type="range" name="Rc" id="Lc" min="0" max="100" data-toggle="tooltip"
+                onmousemove="setToolTip(this)" onchange="setColourHSL()"> 100
+            <br>
+            <button id=hsl_submit>Onayla</button>
+            <pre id="hsl_report"></pre>
+        </div>
+        <div id="resultDiv" style="width:500px;height:100px;border:1px solid #000;"></div>
+        <button id="next_question" onclick="nextQuestion()" hidden>Sonraki Soru</button>
+    </div>
+
+    <script>
+        window.addEventListener('load', (event) => {
+            document.getElementById("hsl_submit").addEventListener('click', function () {
+                submitted("hsl_report");
+            });
+
+            document.getElementById("rgb_submit").addEventListener('click', function () {
+                submitted("rgb_report");
+            });
+
+        });
+
+        let inHSL = true;
+
+        function setColour() {
+            let x = resultDiv.style.backgroundColor = `rgb(${Rc.value},${Gc.value},${Bc.value})`;
+            console.log(x);
+        }
+
+        function setColourHSL() {
+            resultDiv.style.backgroundColor = `hsl(${Hc.value},${Sc.value}%,${Lc.value}%)`;
+        }
+
+        function getColour(target) {
+            let bc = target.style.backgroundColor;
+            let numArr = bc.slice(4, -1).split(",");
+            numArr = numArr.map(function (x) {
+                return parseInt(x, 10);
+            });
+            return numArr;
+        }
+
+        function arrToInt(arr) {
+            return arr.map(x => Number.parseInt(x, 10));
+        }
+
+        function compare(source, target, hata = 50, mode) {
+            let s = getColour(source)
+            let t = getColour(target)
+            if (mode == "hsl") {
+                s = rgbToHsl(...s);
+                t = rgbToHsl(...t);
+                s = s.map((x) => { return x * 100 })
+                t = t.map((x) => { return x * 100 })
+
+            }
+
+            let result = [];
+            let biRes = [];
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] < t[i] - hata) {
+                    result.push("up")
+                    biRes.push(false)
+                }
+                else if (s[i] > t[i] + hata) {
+                    result.push("down")
+                    biRes.push(false)
+                }
+                else {
+                    biRes.push(true)
+                    result.push(true)
+                }
+
+            }
+            // TODO move to JSon, better to understand.
+            return [result, biRes]
+        }
+
+        /**
+         * https://gist.github.com/mjackson/5311256
+         * Converts an RGB color value to HSL. Conversion formula
+         * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+         * Assumes r, g, and b are contained in the set [0, 255] and
+         * returns h, s, and l in the set [0, 1].
+         *
+         * @param   Number  r       The red color value
+         * @param   Number  g       The green color value
+         * @param   Number  b       The blue color value
+         * @return  Array           The HSL representation
+         */
+        function rgbToHsl(r, g, b) {
+            r /= 255, g /= 255, b /= 255;
+
+            var max = Math.max(r, g, b), min = Math.min(r, g, b);
+            var h, s, l = (max + min) / 2;
+
+            if (max == min) {
+                h = s = 0; // achromatic
+            } else {
+                var d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+
+                h /= 6;
+            }
+
+            return [h, s, l];
+        }
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        function setToolTip(target) {
+            // console.log(target)
+            //target.dataset.originalTitle=target.value
+            $(target)
+                .attr('data-original-title', target.value)
+                .tooltip('fixTitle')
+                .tooltip('show');
+            if (inHSL) {
+                setColourHSL()
+            } else {
+                setColour();
+            }
+        }
+
+        function submitted(report_id) {
+            let x = compare(resultDiv, asked, 10, "hsl")
+            let b = x[1][0] && x[1][1] && x[1][2]
+            let message = "";
+            if (b) {
+                message = "Tebrikler! 🥇\n"
+            } else {
+                message = "Bu renge tam olarak yaklaşamadın... \n"
+            }
+            document.getElementById(report_id).innerText = message + x[0].join("\n");
+            document.getElementById("next_question").hidden = false;
+        }
+
+        function nextQuestion() {
+            let hslDiv = document.getElementById("hsl_color");
+            let rgbDiv = document.getElementById("rgb_color");
+            if (hslDiv.hidden) {
+                rgbDiv.hidden = true;
+                hslDiv.hidden = false;
+                inHSL = true;
+            } else {
+                rgbDiv.hidden = false;
+                hslDiv.hidden = true;
+                inHSL = false;
+            }
+            document.getElementById("next_question").hidden = true;            
+            asked.style.backgroundColor = chroma.random();
+        }
+
+        document.getElementById("next_question").hidden = true;
+        asked.style.backgroundColor = chroma.random();
+
+    </script>
+
+
+</html>
