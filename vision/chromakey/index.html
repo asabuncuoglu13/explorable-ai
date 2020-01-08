@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chroma
+  </title>
+
+  <!-- Tangle -->
+  <script type="text/javascript" src="Tangle.js"></script>
+
+  <!-- TangleKit (optional) -->
+  <link rel="stylesheet" href="TangleKit/TangleKit.css" type="text/css">
+  <script type="text/javascript" src="TangleKit/mootools.js"></script>
+  <script type="text/javascript" src="TangleKit/sprintf.js"></script>
+  <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
+  <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
+
+  <!-- example -->
+  <script type="text/javascript">
+    let xStart, xEnd, yStart, yEnd;
+    function setUpTangle() {
+
+      var element = document.getElementById("codeText");
+
+      var tangle = new Tangle(element, {
+        initialize: function () {
+          this.xRatio = xEnd = 50;
+          this.yRatio = yEnd = 50;
+          this.xStartRatio = xStart = 0;
+          this.yStartRatio = yStart = 0;
+          this.red = 0;
+          this.green = 255;
+          this.blue = 0;
+
+        },
+        update: function () {
+          xEnd = this.xRatio;
+          yEnd = this.yRatio;
+          xStart = this.xStartRatio;
+          ySTart = this.yStartRatio;
+          colour.red = this.red;
+          colour.green = this.green;
+          colour.blue = this.blue;
+
+          clear(sourceLine)
+          drawPart(sourceLine, this.xStartRatio, this.yStartRatio, this.xRatio, this.yRatio)
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body onload="setUpTangle();">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+        <canvas class="img-thumbnail" id=source></canvas>
+        <canvas class="img-thumbnail" id=sourceLine style="transform: translate(-100%,0%);
+            position: absolute;    background-color: transparent;"></canvas>
+
+        <!-- <img id=source src="pizzaGree.jpg" class="img-thumbnail" alt="" srcset=""> -->
+      </div>
+      <div class="col-sm">
+        One of three columns
+        <canvas class="img-thumbnail" id=bg></canvas>
+
+        <!-- <img id=target src="bg.jpg"  class="img-thumbnail" alt="" srcset=""> -->
+
+      </div>
+      <div class="col-sm">
+        One of three columns
+        <canvas id=result class="img-thumbnail">
+          <!-- <img id=result src="mario.jpg" class="img-thumbnail" alt="" srcset="">           -->
+        </canvas>
+      </div>
+    </div>
+    <div class="row">
+
+      <pre id=codeText>
+              <label style="cursor:pointer; color: #007bff;" for="sourceUpload">getSource()</label>
+              <label style="cursor:pointer; color: #007bff;" for="targetUpload">getBackground()</label>
+              set RGB colour (<span data-var="red" class="TKAdjustableNumber" data-min="1" data-max="255"></span>, <span data-var="green" class="TKAdjustableNumber" data-min="1" data-max="255"></span>,<span data-var="blue" class="TKAdjustableNumber" data-min="1" data-max="255"></span>)
+              for x = <span data-var="xRatio" class="TKAdjustableNumber" data-min="1" data-max="100">%</span> <!-- from <span  data-var="xStartRatio" class="TKAdjustableNumber" data-min="1" data-max="100">%</span> to  -->
+              for y = <span data-var="yRatio" class="TKAdjustableNumber" data-min="1" data-max="100">%</span> <!-- from <span data-var="yStartRatio" class="TKAdjustableNumber" data-min="1" data-max="100">%</span> to  -->
+                 <a href="#" onclick="composite()">SwapPixels();</a>
+              fds
+                         
+           </pre>
+    </div>
+  </div>
+  <input hidden type="file" id="sourceUpload" style="opacity:0;" name="image_uploads" accept="image/*"
+    onchange="sourceSubmit()">
+  <input hidden type="file" id="targetUpload" style="opacity:0;" name="image_uploads" accept="image/*"
+    onchange="targetSubmit()">
+
+
+  <script>
+    function loadImg(targetID, src) {
+
+      let canvas = document.getElementById(targetID);
+      let ctx = canvas.getContext('2d');
+      let img = new Image();
+      img.src = src;
+      img.onload = function () {
+        ctx.drawImage(img, 0, 0, canvas.clientWidth, canvas.clientHeight);
+        img.style.display = 'none';
+      };
+    }
+
+    let colour = {
+      red: 0,
+      green: 255,
+      blue: 0,
+    }
+    function greenScreen() {
+      let src = document.getElementById("source");
+      let ctx = src.getContext("2d");
+      // interactive
+      let imageData = ctx.getImageData(src.width * xStart / 100, src.height * yStart / 100, src.width * xEnd / 100, src.height * yEnd / 100);
+      let data = imageData.data;
+      // // set colour based on the conrner.
+      // colour={
+      //     red: data[0],
+      //     green:data[1],
+      //     blue:data[2],
+      //   }   
+      // iterate over all pixels
+      let tolerance = 150;
+      for (var i = 0, n = data.length; i < n; i += 4) {
+        var diff = Math.abs(data[i] - colour.red) + Math.abs(data[i + 1] - colour.green) + Math.abs(data[i + 2] - colour.blue);
+        if (diff < tolerance) {
+          data[i + 3] = 1;
+        }
+      }
+
+      return imageData;
+    }
+
+    function composite() {
+      let ctx = result.getContext("2d")
+      ctx.drawImage(bg, 0, 0);
+
+      let imgData = greenScreen();
+      let TempCanvas = document.createElement('canvas');
+      let TempCtx = TempCanvas.getContext('2d');
+      TempCtx.putImageData(imgData, 0, 0);
+
+      ctx.drawImage(TempCanvas, xStart, yStart);
+      // result.drawImage();
+
+    }
+
+    function clear(canvasID) {
+      let ctx = canvasID.getContext("2d")
+      ctx.clearRect(0, 0, canvasID.width, canvasID.height)
+    }
+    function drawPart(canvasID, xStart, yStart, xEnd, yEnd) {
+      let ctx = canvasID.getContext("2d")
+      ctx.beginPath();
+      ctx.rect(canvasID.width * xStart / 100, canvasID.height * yStart / 100, canvasID.width * xEnd / 100, canvasID.height * yEnd / 100);
+      ctx.stroke();
+    }
+
+
+    loadImg("source", "pizzaGree.jpg")
+    loadImg("bg", "bg.jpg")
+
+    // Loading image script -- MDN
+    // return path to temp pic 
+    let tempPath = "";
+    function showImage(src, target) {
+      let x = target;
+      let fr = new FileReader();
+      fr.onload = function () {
+        tempPath = fr.result;
+        loadImg(x, fr.result);
+      }
+      fr.readAsDataURL(src.files[0]);
+    }
+
+    function imgUpload(source, toTarget) {
+      let src = document.getElementById(source);
+
+      showImage(src, toTarget);
+    }
+    function sourceSubmit() {
+      clear(source);
+
+      imgUpload("sourceUpload", "source")
+
+    }
+    function targetSubmit() {
+      clear(bg);
+
+      imgUpload("targetUpload", "bg");
+    }
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
