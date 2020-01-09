@@ -2,65 +2,101 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>AI Story</title>
+    <title>AI Story</title>
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/night.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel='stylesheet' href='css/dragula.css'/>
+    <link rel="stylesheet" href="css/dragula.css">
+    <link rel="stylesheet" href="css/custom.css">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>-->
-	<!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>-->
-	<script src="js/checktext.js"></script>
-	<script src="js/addtext.js"></script>
-
+    <!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/predict/text.js"></script>
+    <script src="js/checktext.js"></script>
+    <script src="js/addtext.js"></script>
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section id="1">
-				<p>what is artificial intelligence?</p>
-				<input type="text" id="ai_input" placeholder="is it something edible?">
-				<button id="ai_answer">check my answer</button>
-				<p class="small_text" id="ai_response"></p>
-			</section>
-			<section id="2">
-				<div id="text_field" class="text_field_container">
-					<button class="add_text_btn">Add New Field &nbsp;
-						<span style="font-size:16px; font-weight:bold;"></span>
-					</button>
-					<div class="horizontal_align"><input type="text" name="mytext[]"/><a href="#text_field"><img src="./media/close_white.png" class="add_text"></a></div>
-				</div>
-			</section>
-			<section>
 
-			</section>
-		</div>
-	</div>
+<section id="1" class="card card-up horizontal_align">
+    <h3>what is artificial intelligence?</h3>
+    <input type="text" id="ai_input" placeholder="is it something edible?">
+    <button id="ai_answer">check my answer</button>
+    <p class="small_text" id="ai_response"></p>
+    <p id='cont_btns' width='60%' hidden>
+        <a id='yes_btn' style="margin-right: 10%"> Yes </a>
+        <a id='no_btn' style="margin-left: 10%"> No </a>
+    </p>
+</section>
 
-	<script src="js/reveal.js"></script>
+<section id="2" class="card card-up horizontal_align" hidden>
+    <div><p>Thanks! To have an AI, I guess computer scientists develop models to solve some human-like understanding
+        problems. These models require:</p>
+        <div class="input-field col s12 m6">
+            <select>
+                <option value="1">dataset</option>
+                <option value="2">program</option>
+                <option value="3">users</option>
+            </select>
+        </div>
+    </div>
+</section>
 
-	<script>
-		Reveal.initialize({
-			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: 'plugin/highlight/highlight.js', async: true }
-			]
-		});
-		window.addEventListener('load', (event) => {
-			document.getElementById('ai_answer').addEventListener('click', function () {
-				responseWithText('ai_response', document.getElementById('ai_input').value);
-			});
-		})
-	</script>
+<section id="3" class="card card-up horizontal_align" hidden>
+    <p class='small_text'>I am sorry to hear that... My plan for conquering the eart has failed... But, I will make you a last favor. Here are the Google Search results for AI. Maybe, you would like to learn some:</p>
+    <a href="https://www.britannica.com/technology/artificial-intelligence"><u>Britannica:</u></a>
+    <p class="small_text">Artificial intelligence (AI), the ability of a digital computer or computer-controlled robot to perform tasks commonly associated with intelligent beings.</p>
+    <a href="https://en.wikipedia.org/wiki/Artificial_intelligence"><u>Wikipedia:</u></a>
+    <p class="small_text">In computer science, artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans.</p>
+    <a id="good_bye" href="javascript:window.close();" style="margin-bottom: 10px" hidden>Ok, thanks for visiting, good
+        bye...</a>
+</section>
+
+<section id="4" class="card card-up horizontal_align">
+    <p class="small_text">I found a dataset that might enable us to classify the topics: <br> "BOOK" and "RUN"</p>
+    <div id="training_text_cards" class='parent'>
+        <div class='wrapper'>
+            <div id='left-rollbacks' class='container'>
+                Book
+            </div>
+            <div id='right-rollbacks' class='container'>
+                Run
+                <div>Workout 15 minutes</div>
+                <div>Take a hike</div>
+                <div>Train your body</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="5" class="card card-up horizontal_align" hidden>
+    <p>Thanks! First, you need to know that I am hungry to data. To teach me I need to see many data as possible. Let's start with some text data.</p>
+    <div id="text_field" class="text_field_container">
+        <button class="add_text_btn">Add New Field &nbsp;
+            <span style="font-size:16px; font-weight:bold;"></span>
+        </button>
+        <div class="horizontal_align"><input type="text" name="mytext[]"/><a href="#text_field"><img
+                src="./media/close_white.png" class="add_text"></a></div>
+    </div>
+</section>
+
+<script>
+    window.addEventListener('load', () => {
+        document.getElementById('ai_answer').addEventListener('click', function () {
+            responseWithTextFirstQuestion('ai_response', document.getElementById('ai_input').value);
+        });
+    });
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+</script>
+<script src='js/dragula.js'></script>
+<script src="js/index.min.js"></script>
 </body>
 
 </html>

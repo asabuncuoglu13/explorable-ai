@@ -1,8 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+body {
+    font-family: 'Space Mono', monospace;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #e8eaf6;
+}
+
+p {
+    font-size: calc(0.7em + 0.6vw);
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    color: #1a237e;
+    cursor: pointer;
+}
+
+a:after {
+    cursor: pointer;
+    content: '';
+    display: block;
+    border-bottom: calc(0.3em + 0.3vw) solid #ffca28;
+    width: 0;
+    position: absolute;
+    left: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+a:hover:after {
+    width: 100%;
+}
+
+h1 {
+    font-size: calc(1.4em + 2vh);
+    color: #004d40;
+}
+
+h2 {
+    font-size: calc(1.2em + 1.8vh);
+    color: #00796b;
+}
+
+h3 {
+    font-size: calc(1em + 1.6vh);
+    color: #00897b;
+}
+
 input {
     margin: 5px;
     border-radius: 10px;
     background: #e3e3e3;
-    width: 60%;
+    width: 90%;
     height: 20%;
     padding: 10px;
     border-width: 0;
@@ -13,15 +65,13 @@ button {
     border-radius: 10px;
     border-width: 0;
     background: #5be649;
-    width: 40%;
+    width: 60%;
     height: 20%;
     padding: 10px;
 }
 
 .small_text {
     text-align: center;
-    display: inline-block;
-    margin: 10%;
     font-size: 18px;
 }
 
@@ -35,24 +85,7 @@ button {
     font-style: italic;
 }
 
-.card {
-    text-align: center;
-    display: inline-block;
-    background-color: #eee;
-    color: #111;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px 0 rgba(190, 190, 190, .80);
-    margin: 2%;
-    transition: all .2s ease-in-out;
-}
-
-.card:hover {
-    box-shadow: 0 5px 22px 0 rgba(0,0,0,.85);
-}
-
 .horizontal_align {
-    display: flex;
-    flex-direction: row;
     text-align:center;
     justify-content: center;
     align-items: center;
@@ -60,4 +93,282 @@ button {
 
 img{
     border-width: 0;
+}
+blockquote {
+    border-left: 3px solid black;
+    padding-left: 0.4rem;
+}
+
+code {
+    padding: 10px;
+    line-height: 30px;
+    color: white;
+}
+
+.codeclass{
+    background-color: #404040;
+}
+
+.card {
+    padding: 0.5em;
+    border-radius: 2px;
+    margin-bottom: 2em;
+}
+
+.card-up {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-up:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-normal {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.card-higher {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.exp_text {
+    background-color: #ffecb3;
+    border-radius: 0.5vh;
+    padding-left: 1%;
+}
+
+
+.image-area{
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    overflow:hidden;
+    object-fit: contain;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 0.5em;
+}
+
+.content-area{
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+    padding-left: 1em;
+}
+
+.top-logo{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.menubar {
+    position:absolute;
+    top:0;
+    right: 0;
+    cursor: pointer;
+    padding-right: 1em;
+}
+
+.hamnav {
+    position: absolute;
+    z-index: 1;
+    background: rgba(232,234,246, 0.9);
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    padding-bottom: 0.8em;
+    right: 3em;
+}
+
+p .link{
+    padding-top: calc(0.4em + 0.4vw);;
+}
+
+.flag-icon-background {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 1.33333333em;
+    line-height: 1em;
+}
+
+.flag-icon:before {
+    content: "\00a0";
+}
+
+.flag-icon.flag-icon-squared {
+    width: 1em;
+}
+
+.flag-icon-tr {
+    background-image: url(../media/tr.svg);
+}
+
+.flag-icon-tr.flag-icon-squared {
+    background-image: url(../media/tr_square.svg);
+}
+
+.flag-icon-gb {
+    background-image: url(../media/gb.svg);
+}
+
+.flag-icon-gb.flag-icon-squared {
+    background-image: url(../media/gb_square.svg);
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+html, body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.tagline {
+    position: relative;
+    margin-top: 0;
+}
+.tagline-text {
+    vertical-align: middle;
+}
+
+#superSecret {
+    opacity: 0.01;
+    background-color: rgb(0,0,0,0.3);
+    height: 60px;
+    width: 100%;
+    transition: 0.2s;
+    object-fit: cover;
+}
+
+#superSecret:hover {
+    animation: superSUPERSecret;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+    background-color: rgb(0,0,0,0.1);
+}
+
+@keyframes superSUPERSecret {
+    0%{transform: rotate(3deg)}
+    50%{transform: rotate(-3deg)}
+    100%{transform: rotate(3deg)}
+}
+
+
+.gh-fork {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+/* dragula-specific example page styles */
+.wrapper {
+    display: table;
+}
+.container {
+    display: table-cell;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+}
+.container:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/*
+ * note that styling gu-mirror directly is a bad practice because it's too generic.
+ * you're better off giving the draggable elements a unique class and styling that directly!
+ */
+.container > div,
+.gu-mirror {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease-in-out;
+}
+.container > div {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.gu-mirror {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+.container .ex-moved {
+    background-color: #e74c3c;
+}
+.container.ex-over {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#left-lovehandles > div,
+#right-lovehandles > div {
+    cursor: initial;
+}
+.handle {
+    padding: 0 5px;
+    margin-right: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: move;
+}
+
+#training_text_cards {
+    max-height: 540px;
+    overflow-y: scroll;
+}
+
+
+@media (min-width: 1320px) {
+
+}
+
+@media (min-width: 860px) and (max-width: 1319px) {
+
+}
+
+@media (min-width: 721px) and (max-width: 860px) {
+    body {
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+}
+
+@media (max-width: 720px) {
+    body {
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+
+    .image-area{
+        padding-top: 0.1em;
+        padding-right: 0.1em;
+        padding-left: 0.1em;
+    }
 }
