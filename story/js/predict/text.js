@@ -1,3 +1,10 @@
+// Created by Alpay Sabuncuoglu
+// Text Classification with RNN: https://www.tensorflow.org/tutorials/text/text_classification_rnn
+// TF-Hub: https://colab.research.google.com/github/tensorflow/hub/blob/master/docs/tutorials/text_classification_with_tf_hub.ipynb#scrollTo=AK3mz3JNMW8Y
+// Text Classification with tf.js tutorial:
+// https://www.curiousily.com/posts/todo-list-text-classification-using-embeddings-and-deep-neural-networks/
+
+
 $.getJSON("./js/predict/data/learn_todos.json", function (data) {
     let learnTodos = [];
     $(data).each(function (idx, obj) {
