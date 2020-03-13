@@ -8,6 +8,17 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a:hover {
+  background-color: #222;
+  color: var(--background);
+  transition: all 0.25s ease;
+}
+
+a {
+  transition: all 0.25s ease;
+  font-family: 'Space Mono', monospace;
+}
+
 .container {
   padding: 0 25px 25px 25px;
 }
@@ -38,6 +49,7 @@ body {
 
 .inner-title{
   font-size: 24px;
+  line-height: 32px;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -106,16 +118,6 @@ body {
   background-color: var(--background);
 }
 
-.item:hover {
-  background-color: #222;
-  color: var(--background);
-  transition: all 0.25s ease;
-}
-
-.item {
-  transition: all 0.25s ease;
-}
-
 @media (min-width: 1011px) {
   .grid {
     max-width: 1000px;
@@ -128,6 +130,24 @@ body {
     font-size: 80px;
     margin-top: 0;
   }
+
+  .info {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+  }
+  
+  .inner-text{
+    font-size:16px;
+    line-height: 20px;
+  }
+  
+  .inner-title{
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
   .item-a {
     grid-column-start: 1;
     grid-column-end: 5;
