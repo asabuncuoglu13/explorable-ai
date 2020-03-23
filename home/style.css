@@ -107,7 +107,7 @@ a {
 
 .item-a {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: span 4;
 }
 
 .item-b {
@@ -152,9 +152,7 @@ a {
 
 .item-j {
   grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column-end: span 4;
 }
 
 .border-interrupt {
