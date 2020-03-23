@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Twing AI Dersleri</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Twing Yapay Zeka Dersleri">
+    <meta name="keywords" content="Twing, Yapay Zeka, Dersler">
+    <meta name="author" content="Budgie">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link rel="stylesheet" href="twing.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .embed-container iframe, .embed-container object, .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=optional" rel="stylesheet">
+</head>
+
+<body>
+<div class="full yellow" id="mainScreen">
+    <div class="content">
+        <a href="index.html"> << Anasayfaya Geri Dön</a>
+        <h1 class="title">Twing ile Yapay Zeka Dersleri</h1>
+        <section id="section_1">
+            <div class="index" id="one">1</div>
+            <h2>Bilgisayarların Tarihi</h2>
+            <div id="section1Content">
+                <br><br>
+                Yapay zekanın gelişimi bilgisayarların gelişiminin önemli bir parçası. Çoğu bilgisayar bilimci,
+                makinelerin zeka geliştirebilmesi için bilgisayar bilimine yönelmiştir. Bu tarih, aslında şu anda
+                yapay zekanın konumunu ve olasılıkları gözler önüne seriyor.
+                <br><br>
+                Twing'in Gelecek Hakkında Öngörü Posterini Hazırla etkinliğinde öğrencilerin tıpkı yapay zekayı
+                geliştiren bilim insanları gibi hayallerini sistematik bir şekilde planlayıp, bu hayallerini
+                insanlara sunabilecekleri bir poster hazırlamalarını istedik.
+                <br><br>
+                Bu etkinliğe yardımcı olan quizde ise hayalleri olan bu bilim insanlarını tanıdık. Canlı yayında
+                anlattığımız bu quize aşağıdaki YouTube videosundan ulaşabilirsiniz:
+                <div class='embed-container'>
+                    <iframe src='https://www.youtube.com/embed/UwTv8o3feF0?start=4053' frameborder='0' allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="presentation1" class="button">📝 Sunumu İndir</button>
+            <button id="notes1" class="button">📝 Not Sayfasını İndir</button>
+        </section>
+    </div>
+</div>
+<script>
+    document.getElementById("presentation1").addEventListener('click', function () {
+        window.open("./docs/yz01_history_of_computers_and_intelligence.pdf");
+    });
+    document.getElementById("notes1").addEventListener('click', function () {
+        window.open("./img/notes/yz_notlar1.jpg");
+    });
+</script>
+</body>
+</html>

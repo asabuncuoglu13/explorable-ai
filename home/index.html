@@ -11,9 +11,6 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,8 +20,10 @@
             <div class="item-a">
                 <h1 class="title">Yapay Zekayı Keşdefelim</h1>
                 <a href="why-and-how.html">Bu Müfredatı Neden ve Nasıl Geliştirdik?</a>
+                <br><br>
+                <a href="twing.html">Twing ile Yapay Zeka Dersleri</a>
             </div>
-            <div class="card blue-grey darken-1 item item-b">
+            <div id="starter-card" class="card blue-grey darken-1 item item-b">
                 <div class="card-content white-text">
                     <p class="info">Başlangıç Dersi: 2 saat</p>
                     <h2 class="inner-title">Yapay Zeka Nedir?</h2>
@@ -95,7 +94,17 @@
             <div class="card blue-grey darken-1 item item-j">
                 <div class="card-content white-text">
                     <h2 class="inner-title">Lisans ve Paylaşım</h2>
+                    Bu websitesi içinde paylaşılan tüm içerik <a
+                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr">Creative Commons
+                        Atıf-GayriTicari-AynıLisansla Paylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</a> Lisansı ile
+                    paylaşılmıştır.
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById("starter-card").onclick = function(){
+            window.open("./starter.html");
+        }
+    </script>
+</body>

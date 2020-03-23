@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Quicksand:400,700&display=swap&subset=latin-ext');
+
 :root{
-  --background : #FFFF63;
-  --card-background: #000;
+  --background : #232946;
+  --card-bg: #f9bc60;
+  --buton-bg : #b8c1ec;
+  --font-color : #232946;
+  --headline : #fffffe;
+  --link : #b8c1ec;
 }
 
 body {
@@ -8,15 +14,50 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.google-slides-container{
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.google-slides-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  font-family: 'Quicksand', sans-serif;
+  color: var(--headline);
+  font-size: 40px;
+  margin: 20px auto;
+}
+
+.card a:hover {
+  background-color: var(--background);
+  color: var(--link);
+  transition: all 0.25s ease;
+}
+
+.card a {
+  color: var(--background);
+  transition: all 0.25s ease;
+  font-family: 'Quicksand', sans-serif;
+}
+
 a:hover {
-  background-color: #222;
+  background-color: var(--link);
   color: var(--background);
   transition: all 0.25s ease;
 }
 
 a {
+  color: var(--link);
   transition: all 0.25s ease;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -29,12 +70,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 50px auto;
   cursor: pointer;
-}
-
-.title {
-  font-family: 'Space Mono', monospace;
-  font-size: 40px;
-  margin-top: 0;
+  color: var(--font-color);
 }
 
 .info {
@@ -43,11 +79,13 @@ a {
 }
 
 .inner-text{
+  font-weight: 600;
   font-size:16px;
   line-height: 20px;
 }
 
 .inner-title{
+  font-family: 'Quicksand', sans-serif;
   font-size: 24px;
   line-height: 32px;
   margin-top: 8px;
@@ -60,6 +98,11 @@ a {
   border-radius: 5px;
   flex: auto;
   justify-content: center;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 10px;
 }
 
 .item-a {
@@ -123,29 +166,8 @@ a {
     max-width: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
     margin: 100px auto;
-  }
-  .title {
-    font-size: 80px;
-    margin-top: 0;
-  }
-
-  .info {
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-  }
-  
-  .inner-text{
-    font-size:16px;
-    line-height: 20px;
-  }
-  
-  .inner-title{
-    font-size: 24px;
-    line-height: 32px;
-    margin-top: 8px;
-    margin-bottom: 8px;
   }
 
   .item-a {
