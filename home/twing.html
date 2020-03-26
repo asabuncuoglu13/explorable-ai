@@ -63,6 +63,21 @@
             <button id="presentation1" class="button">📝 Sunumu İndir</button>
             <button id="notes1" class="button">📝 Not Sayfasını İndir</button>
         </section>
+
+        <section id="section_2">
+            <div class="index" id="two">2</div>
+            <h2>Yapay Zekaya Giriş</h2>
+            <div id="section2Content">
+                <br><br>
+                Bu içerikte, yapay zeka nedir? Yapay zekanın uygulama alanları nelerdir? Web üzerinden kolayca yapay
+                zeka oluşturabilir miyiz? gibi soruların cevabını bulacaksınız!
+                <div class='embed-container'>
+                    <iframe src="https://www.youtube.com/embed/sMz6Oi24S-s?start=2400"  frameborder='0' allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="presentation2" class="button">📝 Sunumu İndir</button>
+            <button id="notes2" class="button">📝 Not Sayfasını İndir</button>
+        </section>
     </div>
 </div>
 <script>
@@ -71,6 +86,12 @@
     });
     document.getElementById("notes1").addEventListener('click', function () {
         window.open("./img/notes/yz_notlar1.jpg");
+    });
+    document.getElementById("presentation2").addEventListener('click', function () {
+        window.open("./docs/yz02_introduction.pdf");
+    });
+    document.getElementById("notes1").addEventListener('click', function () {
+        window.open("./img/notes/yz_notlar2.jpg");
     });
 </script>
 </body>
