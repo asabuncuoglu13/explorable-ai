@@ -7,11 +7,22 @@
   --font-color : #232946;
   --headline : #fffffe;
   --link : #b8c1ec;
+  --light : #fffffe;
+}
+
+.light {
+  color: var(--light);
+  line-height: 24px;
+}
+
+.light h1 {
+  color: var(--card-bg);
 }
 
 body {
   background-color: var(--background);
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 .google-slides-container{
@@ -48,20 +59,33 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-a:hover {
-  background-color: var(--link);
-  color: var(--background);
-  transition: all 0.25s ease;
+a {
+  text-decoration: none;
+  position: relative;
+  color: var(--link);
+  font-family: 'Quicksand', sans-serif;
+  line-height: 5vh;
 }
 
-a {
-  color: var(--link);
-  transition: all 0.25s ease;
-  font-family: 'Quicksand', sans-serif;
+a:after {
+  content: '';
+  display: block;
+  border-bottom: calc(0.3em + 0.3vw) solid var(--card-bg);
+  width: 0;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+a:hover:after {
+  width: 100%;
 }
 
 .container {
   padding: 0 25px 25px 25px;
+  max-width: 1000px;
+  margin: 10px auto;
 }
 
 .grid {

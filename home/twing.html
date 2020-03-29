@@ -32,8 +32,6 @@
             height: 100%;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=optional" rel="stylesheet">
 </head>
 
 <body>
@@ -42,9 +40,9 @@
         <a href="index.html"> << Anasayfaya Geri Dön</a>
         <h1 class="title">Twing ile Yapay Zeka Dersleri</h1>
         <section id="section_1">
-            <div class="index" id="one">1</div>
+            <div class="index">1</div>
             <h2>Bilgisayarların Tarihi</h2>
-            <div id="section1Content">
+            <div>
                 <br><br>
                 Yapay zekanın gelişimi bilgisayarların gelişiminin önemli bir parçası. Çoğu bilgisayar bilimci,
                 makinelerin zeka geliştirebilmesi için bilgisayar bilimine yönelmiştir. Bu tarih, aslında şu anda
@@ -57,7 +55,8 @@
                 Bu etkinliğe yardımcı olan quizde ise hayalleri olan bu bilim insanlarını tanıdık. Canlı yayında
                 anlattığımız bu quize aşağıdaki YouTube videosundan ulaşabilirsiniz:
                 <div class='embed-container'>
-                    <iframe src='https://www.youtube.com/embed/UwTv8o3feF0?start=4053' frameborder='0' allowfullscreen></iframe>
+                    <iframe src='https://www.youtube.com/embed/UwTv8o3feF0?start=4053' frameborder='0'
+                            allowfullscreen></iframe>
                 </div>
             </div>
             <button id="presentation1" class="button">📝 Sunumu İndir</button>
@@ -65,14 +64,15 @@
         </section>
 
         <section id="section_2">
-            <div class="index" id="two">2</div>
+            <div class="index">2</div>
             <h2>Yapay Zekaya Giriş</h2>
-            <div id="section2Content">
+            <div>
                 <br><br>
                 Bu içerikte, yapay zeka nedir? Yapay zekanın uygulama alanları nelerdir? Web üzerinden kolayca yapay
                 zeka oluşturabilir miyiz? gibi soruların cevabını bulacaksınız!
                 <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/sMz6Oi24S-s?start=2400"  frameborder='0' allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/sMz6Oi24S-s?start=2400" frameborder='0'
+                            allowfullscreen></iframe>
                 </div>
             </div>
             <button id="presentation2" class="button">📝 Sunumu İndir</button>
@@ -80,34 +80,80 @@
         </section>
 
         <section id="section_3">
-            <div class="index" id="three">3</div>
+            <div class="index">3</div>
             <h2>Bilgisayarlı Görü ~ Yeşil Ekran</h2>
-            <div id="section3Content">
+            <div>
                 <br><br>
                 Bu bölümde ışık ve renk tanımlarından başlayıp, süper kahraman filmlerinin vazgeçilmezi yeşil ekran
                 tekniğinin arkasındaki algoritmanın nasıl çalıştığına kadar farklı bilgiayarlı görü bilgilerini
                 öğreneceğiz.
                 <div class='embed-container'>
-                    <iframe src="https://youtu.be/0z5j14F4F0Q?t=2429"  frameborder='0' allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/0z5j14F4F0Q?start=2439" frameborder='0'
+                            allowfullscreen></iframe>
                 </div>
             </div>
             <button id="presentation3" class="button">📝 Sunumu İndir</button>
             <button id="notes3" class="button">📝 Not Sayfasını İndir</button>
         </section>
+
+        <section id="section_4">
+            <div class="index">4</div>
+            <h2>Farklı Uygulama Alanları: Quick, Draw</h2>
+            <div>
+                <br><br>
+                Bu bölümde yapay zekanın iki farklı uygulaması üzerinden veri setleri üzerine konuşacağız. İkinci
+                bölümde tanıttığımız Teachable Machine uygulaması ile nasıl bir oyun kolu yapabileceğimizi ve Quick,
+                Draw ile farklı çizimleri bilgisayarların nasıl tanıyabildiğini tartışacağız.
+                <div class='embed-container'>
+                    <iframe src="https://www.youtube.com/embed/LacsN4H2gLs?start=2792" frameborder='0'
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="presentation4" class="button">📝 Sunumu İndir</button>
+            <button id="notes4" class="button">📝 Not Sayfasını İndir</button>
+        </section>
+
+        <section id="section_5">
+            <div class="index">5</div>
+            <h2>Google Arts and Culture: Teknoloji ve Sanat</h2>
+            <div>
+                <br><br>
+                Google, Arts and Culture projesi ile sanatı ve kültürü herkese daha erişilebilir sunmak için çok yoğun
+                bir çalışma yürütüyor. Bu çalışmanın paralelinde, bilgisayarlarları ve son nesil algoritmaları sanatın
+                ve deneyin bir deney malzemesi olarak kullanıyor!
+                <div class='embed-container'>
+                    <iframe src="https://www.youtube.com/embed/oXfBmMH2d9E?start=857" frameborder='0'
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="presentation5" class="button">📝 Sunumu İndir</button>
+            <button id="notes5" class="button">📝 Not Sayfasını İndir</button>
+        </section>
+
     </div>
 </div>
 <script>
     document.getElementById("presentation1").addEventListener('click', function () {
         window.open("./docs/yz01_history_of_computers_and_intelligence.pdf");
     });
-    document.getElementById("notes1").addEventListener('click', function () {
-        window.open("./img/notes/yz_notlar1.jpg");
-    });
     document.getElementById("presentation2").addEventListener('click', function () {
         window.open("./docs/yz02_introduction.pdf");
     });
+
     document.getElementById("notes1").addEventListener('click', function () {
+        window.open("./img/notes/yz_notlar1.jpg");
+    });
+    document.getElementById("notes2").addEventListener('click', function () {
         window.open("./img/notes/yz_notlar2.jpg");
+    });
+    document.getElementById("notes3").addEventListener('click', function () {
+        window.open("./img/notes/yz_notlar3.jpg");
+    });
+    document.getElementById("notes4").addEventListener('click', function () {
+        window.open("./img/notes/yz_notlar4.jpg");
+    });
+    document.getElementById("notes5").addEventListener('click', function () {
+        window.open("./img/notes/yz_notlar5.jpg");
     });
 </script>
 </body>

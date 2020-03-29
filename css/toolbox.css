@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background: var(--background);
+}
+
+body section button {
+    align-self: center;
+    background: transparent;
+    padding: calc(0.4em + 0.4vw) calc(0.4em + 0.4vw);
+    margin-top: calc(0.6em + 0.6vw);
+    transition: all 0.5s ease;
+    color: #41403e;
+    font-size: calc(1.2em + 0.6vw);
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, .2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    font-family: 'Catamaran', sans-serif;
+    cursor: pointer;
+}
+
+body section button.lined.thick:hover {
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
+}
+
+body section button.lined.thick {
+    border: solid 6px #41403e;
+}
+
+body section button.dotted.thick {
+    border: dotted 4px #41403e;
+}
+
+body section button.dashed.thick {
+    border: dashed 4px #41403e;
+}
+
+body section button.lined.thin {
+    border: solid 2px #41403e;
+}
+
+body section button.dotted.thin {
+    border: dotted 2px #41403e;
+}
+
+body section button.dashed.thin {
+    border: dashed 2px #41403e;
+}
+
+.card {
+    padding: 1em;
+    border-radius: 2px;
+    margin-bottom: 2em;
+}
+
+.card-up {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-up:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-normal {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-higher {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
