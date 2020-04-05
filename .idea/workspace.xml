@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/css/codelab-elements.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/module1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/starter.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/module0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/twing.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/twing.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/twing.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/twing.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +73,7 @@
       <workItem from="1585492823705" duration="3949000" />
       <workItem from="1585551446577" duration="3756000" />
       <workItem from="1585902104137" duration="8673000" />
+      <workItem from="1586117437945" duration="1608000" />
     </task>
     <servers />
   </component>
