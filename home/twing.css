@@ -42,6 +42,18 @@ a:hover {
     text-decoration: none;
 }
 
+section a:hover {
+    background-color: var(--background);
+    color: var(--link);
+    transition: all 0.25s ease;
+}
+
+section a {
+    color: var(--background);
+    transition: all 0.25s ease;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .full {
     position: absolute;
     top: 0;
