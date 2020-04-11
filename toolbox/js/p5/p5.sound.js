@@ -1,7 +1,7 @@
 /*! p5.sound.js v0.3.3 2017-01-28 */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define('p5.sound', ['p5'], function (p5) { (factory(p5));});
+    define('p5.sound', ['toolbox/js/p5/p5'], function (p5) { (factory(p5));});
   else if (typeof exports === 'object')
     factory(require('../p5'));
   else
