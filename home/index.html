@@ -29,7 +29,7 @@
             <p>Twing uygulaması ve diğer birçok etkileşimli uygulama ile yürüttüğümüz canlı Youtube videolarını
                 izleyin!</p>
         </div>
-        <div id="starter-card" class="card item item-b">
+        <div id="module0" class="card item item-b">
             <div class="card-content white-text">
                 <p class="info">Başlangıç Dersi: 2 saat</p>
                 <h2 class="inner-title">Yapay Zeka Nedir?</h2>
@@ -38,7 +38,7 @@
                     Doğal etkileşimi yakalayabilen tüm sistemler yapay zekanın ilgi alanındadır. </p>
             </div>
         </div>
-        <div id="module_iui" class="card item item-c">
+        <div id="module1" class="card item item-c">
             <div class="card-content white-text">
                 <p class="info">İlk Modül: 8 saat</p>
                 <h2 class="inner-title">Bugünlere Nasıl Geldik?<br>Tarih, Tasarım ve Teknoloji: Akıllı Arayüzler
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="card item item-d">
-            <div class="card-content white-text">
+            <div id="module2" class="card-content white-text">
                 <p class="info">İkinci Modül: 15 saat</p>
                 <h2 class="inner-title">Bilgisayarlar Nasıl Görür?<br>Kameradan Geleni Anlamlandırmak</h2>
                 <p class="inner-text">Yapay zeka (YZ) müfredatının ikinci aktivitesi bilgisayarlı görü ile
@@ -67,7 +67,7 @@
 
         </div>
         <div class="card item item-e">
-            <div class="card-content white-text">
+            <div id="module3" class="card-content white-text">
                 <p class="info">Son Modül: 12 saat</p>
                 <h2 class="inner-title">Bilgisayarlar Nasıl Duyar?<br>Duyduğumuzu da Anlamak Gerekir</h2>
                 <p class="inner-text">Yapay zeka (YZ) müfredatının son modülü bilgisayarların sesleri nasıl
@@ -82,7 +82,7 @@
                 <h2 class="inner-title">Sene Sonu Proje Formu ve Örneği</h2>
             </div>
         </div>
-        <div class="card item item-g">
+        <div id="workshops" class="card item item-g">
             <div class="card-content white-text">
                 <h2 class="inner-title">Tek Günlük Atölye Örnekleri</h2>
             </div>
@@ -92,13 +92,13 @@
                 <h2 class="inner-title">Tüm Etkileşimli İçerikler</h2>
             </div>
         </div>
-        <div class="card item item-i">
+        <div id="learning_goals" class="card item item-i">
             <div class="card-content white-text">
                 <h2 class="inner-title">İçerik ve Öğrenme Hedefleri Özeti</h2>
             </div>
         </div>
 
-        <div class="card item item-j">
+        <div id="assessment" class="card item item-j">
             <div class="card-content white-text">
                 <h2 class="inner-title">Kendimizi Değerlendirelim</h2>
                 <p>Google ve Oxford'un beraber hazırladığı bir websitesi olan <b>"A to Z AI"</b> websitesinden
@@ -106,7 +106,7 @@
                     olduklarını tartışalım. Farklı düşünceler çıkıyor mu?
                 </p>
                 <a href="https://atozofai.withgoogle.com/intl/en-US/">
-                    <img src="img/home/atozai.JPG" width="auto" height="200px" class="center">
+                    <img src="img/home/atozai.JPG" class="center">
                 </a>
             </div>
         </div>
@@ -129,11 +129,14 @@
     document.getElementById("twing").onclick = function () {
         window.open("./twing.html");
     };
-    document.getElementById("starter-card").onclick = function () {
+    document.getElementById("module0").onclick = function () {
         window.open("./module0.html");
     };
-    document.getElementById("module_iui").onclick = function () {
+    document.getElementById("module1").onclick = function () {
         window.open("./module1.html");
+    };
+    document.getElementById("module2").onclick = function () {
+        window.open("./module2.html");
     };
     document.getElementById("toolbox").onclick = function () {
         window.open("../index.html");

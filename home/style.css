@@ -138,7 +138,12 @@ a:hover:after {
 .center {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  object-fit: contain;
+  max-width: 60vh;
+  max-height: 18vh;
+  height: auto;
+  width:auto;
 }
 
 .card {
@@ -148,6 +153,15 @@ a:hover:after {
 }
 
 .item-a {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+.item-a-1{
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+.item-a-2 {
   grid-column-start: 1;
   grid-column-end: span 4;
 }
