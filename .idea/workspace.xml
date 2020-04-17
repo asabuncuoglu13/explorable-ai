@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/codelab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module0.html" beforeDir="false" afterPath="$PROJECT_DIR$/module0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twing.html" beforeDir="false" afterPath="$PROJECT_DIR$/twing.html" afterDir="false" />
-    </list>
+    <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +83,7 @@
       <workItem from="1586613955323" duration="4871000" />
       <workItem from="1586708865820" duration="285000" />
       <workItem from="1586711184494" duration="712000" />
-      <workItem from="1587132332644" duration="3401000" />
+      <workItem from="1587132332644" duration="3691000" />
     </task>
     <servers />
   </component>
