@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/codelab.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module0.html" beforeDir="false" afterPath="$PROJECT_DIR$/module0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twing.html" beforeDir="false" afterPath="$PROJECT_DIR$/twing.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +25,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,16 +36,17 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\css" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\pdf" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\css" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\js" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -83,7 +89,8 @@
       <workItem from="1586423621506" duration="1455000" />
       <workItem from="1586613955323" duration="4871000" />
       <workItem from="1586708865820" duration="285000" />
-      <workItem from="1586711184494" duration="676000" />
+      <workItem from="1586711184494" duration="712000" />
+      <workItem from="1587132332644" duration="3401000" />
     </task>
     <servers />
   </component>
@@ -91,6 +98,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587136737537">
+      <screen x="93" y="0" width="1827" height="1080" />
+    </state>
+    <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser/93.0.1827.1080@93.0.1827.1080" timestamp="1587136737537" />
     <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1585124246728">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
