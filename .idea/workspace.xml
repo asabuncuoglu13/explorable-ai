@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module2/datasets.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2.html" beforeDir="false" afterPath="$PROJECT_DIR$/module2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/ethics.html" beforeDir="false" afterPath="$PROJECT_DIR$/module2/ethics.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,7 @@
       <workItem from="1586708865820" duration="285000" />
       <workItem from="1586711184494" duration="712000" />
       <workItem from="1587132332644" duration="3691000" />
-      <workItem from="1587193148224" duration="1475000" />
+      <workItem from="1587193148224" duration="1532000" />
     </task>
     <servers />
   </component>
