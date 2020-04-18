@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yapay Zeka</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Yapay Zeka - Twin Müfredat">
+    <meta name="keywords" content="Yapay Zeka, Müfredat">
+    <meta name="author" content="Alpay Sabuncuoglu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png"/>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<div class="container">
+    <a href="javascript:window.history.back();"> << Geri Dön</a>
+    <div class="grid">
+        <div class="item item-a">
+            <h1 class="title">Bilgisayarlar Verilerden Öğrenebilir</h1>
+            <p class="light">Bilgisayarlar aracılığı ile çizim yapıtığımızda bu çizimleri tanıyabilen algoritmalar
+                yapay zekanın bir başka örneğidir.</p>
+        </div>
+        <div id="case1" class="card item item-b">
+            <div class="card-content white-text">
+                <p class="info">Önerilen Süre: 1 saat</p>
+                <h2 class="inner-title">Quick, Draw!</h2>
+                <p class="inner-text">Bu oyun tarzı uygulamada bilgisayar sizin yaptığınız çizimleri tahmin etmeye
+                    çalışır. Peki, bu çizimleri nasıl tanıyor olabilir?</p>
+            </div>
+        </div>
+        <div id="case2" class="card item item-c">
+            <div class="card-content white-text">
+                <p class="info">Önerilen Süre: 1 saat</p>
+                <h2 class="inner-title">Iconary</h2>
+                <p class="inner-text">Çizimler ile bir cümleyi nasıl anlatabilirsin? Peki bu cümlerleri bilgisayar
+                    nasıl tanıyabilir?</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("case1").onclick = function () {
+            window.open("https://quickdraw.withgoogle.com/");
+        };
+        document.getElementById("case2").onclick = function () {
+            window.open("https://iconary.allenai.org/");
+        };
+    </script>
+</body>
