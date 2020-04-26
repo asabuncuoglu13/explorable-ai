@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/module3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +23,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/module2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,18 +34,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\pdf" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\css" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\js" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -88,6 +91,10 @@
       <workItem from="1586711184494" duration="712000" />
       <workItem from="1587132332644" duration="3691000" />
       <workItem from="1587193148224" duration="1532000" />
+      <workItem from="1587300179419" duration="195000" />
+      <workItem from="1587485048321" duration="678000" />
+      <workItem from="1587836671844" duration="23000" />
+      <workItem from="1587883378169" duration="3925000" />
     </task>
     <servers />
   </component>
@@ -99,10 +106,10 @@
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
     <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser/93.0.1827.1080@93.0.1827.1080" timestamp="1587136737537" />
-    <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1585124246728">
+    <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1587836692006">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
-    <state x="786" y="295" key="FileChooserDialogImpl/93.0.1827.1080@93.0.1827.1080" timestamp="1585124246728" />
+    <state x="786" y="295" key="FileChooserDialogImpl/93.0.1827.1080@93.0.1827.1080" timestamp="1587836692006" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1584986478504">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>

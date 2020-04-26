@@ -216,6 +216,11 @@ a:hover:after {
   grid-column-end: span 4;
 }
 
+.item-l {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
 .border-interrupt {
   background-color: var(--background);
 }
@@ -309,6 +314,12 @@ a:hover:after {
     grid-column-end: 5;
     grid-row-start: 12;
     grid-row-end: 13;
+  }
+  .item-l {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 13;
+    grid-row-end: 14;
   }
   .mobile-message {
     display: none;
