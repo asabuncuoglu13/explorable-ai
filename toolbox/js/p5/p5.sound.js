@@ -311,7 +311,7 @@ master = function () {
     this.output.connect(this.fftMeter);
     // connect output to destination
     this.output.connect(this.audiocontext.destination);
-    // an array of all sounds in the sketch
+    // an array of all sample_sounds in the sketch
     this.soundArray = [];
     // an array of all musical parts in the sketch
     this.parts = [];
@@ -474,7 +474,7 @@ helpers = function () {
    *    soundFormats('mp3', 'ogg');
    *    
    *    // load either beatbox.mp3, or .ogg, depending on browser
-   *    mySound = loadSound('../sounds/beatbox.mp3');
+   *    mySound = loadSound('../sample_sounds/beatbox.mp3');
    *  }
    *
    *  function setup() {
@@ -1138,7 +1138,7 @@ soundfile = function () {
    */
   p5.SoundFile.prototype.playMode = function (str) {
     var s = str.toLowerCase();
-    // if restart, stop all other sounds from playing
+    // if restart, stop all other sample_sounds from playing
     if (s === 'restart' && this.buffer && this.bufferSourceNode) {
       for (var i = 0; i < this.bufferSourceNodes.length - 1; i++) {
         var now = p5sound.audiocontext.currentTime;
@@ -8550,7 +8550,7 @@ soundRecorder = function () {
   var p5sound = master;
   var ac = p5sound.audiocontext;
   /**
-   *  <p>Record sounds for playback and/or to save as a .wav file.
+   *  <p>Record sample_sounds for playback and/or to save as a .wav file.
    *  The p5.SoundRecorder records all sound output from your sketch,
    *  or can be assigned a specific source with setInput().</p>
    *  <p>The record() method accepts a p5.SoundFile as a parameter.

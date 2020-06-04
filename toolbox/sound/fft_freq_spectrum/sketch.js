@@ -7,7 +7,7 @@ var bins = new Array(binCount);
 
 
 function preload() {
-  soundFile = loadSound('../music/Broke_For_Free_-_01_-_As_Colorful_As_Ever.mp3')
+  soundFile = loadSound('../sample_sounds/Broke_For_Free_-_01_-_As_Colorful_As_Ever.mp3')
 }
 
 function setup() {
