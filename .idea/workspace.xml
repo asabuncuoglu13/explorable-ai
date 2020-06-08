@@ -20,43 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/tr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/js/p5/p5.sound.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/js/p5/p5.sound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/Music.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/Music.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/Tone.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/Tone.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/d3-color.v1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/d3-color.v1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/d3-interpolate.v1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/d3-interpolate.v1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/d3-scale.v1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/d3-scale.v1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/music-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/music-demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/music_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/music_icons.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/thumbs/blank.png" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/thumbs/blank.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/thumbs/fractal.png" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/thumbs/fractal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/thumbs/random.png" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/thumbs/random.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/thumbs/staircase.png" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/thumbs/staircase.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/music/thumbs/waves.png" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/music/thumbs/waves.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/fft_freq_spectrum/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/fft_freq_spectrum/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/Broke_For_Free_-_01_-_As_Colorful_As_Ever.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/Broke_For_Free_-_01_-_As_Colorful_As_Ever.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/Kick-707-b.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/Kick-707-b.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/Kick-707.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/Kick-707.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/Snare-707-b.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/Snare-707-b.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/Snare-707.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/Snare-707.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/beatbox.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/beatbox.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/beatbox.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/beatbox.ogg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/drum.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/drum.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/drum.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/drum.ogg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/flute.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/flute.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/my_first_piano.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/my_first_piano.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/piano_p6.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/piano_p6.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/thumb-piano_monotraum.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/thumb-piano_monotraum.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/triangle_01.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/triangle_01.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/violin-spiccato-g2.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/violin-spiccato-g2.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/whistle.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/whistle.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/sound/music/sounds/whistling__cemagar__.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/sound/sample_sounds/whistling__cemagar__.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/turtle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/turtle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/vision/Sobel-Laplacian-and-Canny-Edge-Detection-Algorithms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +34,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1XZJaAC3RyXXwT9weEhZbUfy3ek" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -74,6 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -84,7 +59,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -150,18 +125,21 @@
       <workItem from="1587836671844" duration="23000" />
       <workItem from="1587883378169" duration="3925000" />
       <workItem from="1591289501056" duration="3379000" />
+      <workItem from="1591471810527" duration="9043000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -176,10 +154,11 @@
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
     <state x="786" y="295" key="FileChooserDialogImpl/93.0.1827.1080@93.0.1827.1080" timestamp="1587836692006" />
-    <state x="469" y="179" key="SettingsEditor" timestamp="1591289948778">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="372" y="80" key="SettingsEditor" timestamp="1591473660898">
+      <screen x="93" y="0" width="1827" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1591289948778" />
+    <state x="372" y="80" key="SettingsEditor/93.0.1827.1080@93.0.1827.1080" timestamp="1591473660898" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1584986478504">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
