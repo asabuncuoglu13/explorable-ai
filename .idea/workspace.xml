@@ -20,11 +20,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/1-why.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/10-content.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/11-license.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/2-twing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/3-what.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/4-iui.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/5-vision.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/6-form.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/7-ml4kids.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/8-speech.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/9-toolbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/alpay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/cc-by-nc-sa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/scratchcat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/twing-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/twingo-anten.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/twingo-durbun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/home/twingo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module0/module0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/module1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/module2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/module3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/codelab-elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/css/codelab-elements.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/codelab.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/css/codelab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/home/atozai.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/12f96f17d2c00cc2.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/12f96f17d2c00cc2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/28d650415cd99532.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/28d650415cd99532.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/2bffdf4c54a5edd9.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/2bffdf4c54a5edd9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/2f72ac812767f0fa.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/2f72ac812767f0fa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/35548fd35ac9276e.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/35548fd35ac9276e.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/4042597bf65148f1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/4042597bf65148f1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/894582870de3eb70.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/894582870de3eb70.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/ec24a12b5d894f16.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/ec24a12b5d894f16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/f0358b306673eccc.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/f0358b306673eccc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iui/fd05659f15d9670.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/img/fd05659f15d9670.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/codelab/module1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/datasets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/ethics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/story/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/story/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/css/dragula.css" beforeDir="false" afterPath="$PROJECT_DIR$/story/css/dragula.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/css/night.css" beforeDir="false" afterPath="$PROJECT_DIR$/story/css/night.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/css/reveal.css" beforeDir="false" afterPath="$PROJECT_DIR$/story/css/reveal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/story/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/story/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/addtext.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/addtext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/checktext.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/checktext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/dragula.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/dragula.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/index.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/predict/data/exercise_todos.json" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/predict/data/exercise_todos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/predict/data/learn_todos.json" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/predict/data/learn_todos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/predict/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/predict/text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/js/reveal.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/js/reveal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/lib/css/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/story/lib/css/monokai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/lib/css/zenburn.css" beforeDir="false" afterPath="$PROJECT_DIR$/story/lib/css/zenburn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/lib/js/html5shiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/lib/js/html5shiv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/lib/js/promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/lib/js/promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/media/close_black.png" beforeDir="false" afterPath="$PROJECT_DIR$/story/media/close_black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/media/close_white.png" beforeDir="false" afterPath="$PROJECT_DIR$/story/media/close_white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/highlight/highlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/highlight/highlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/markdown/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/markdown/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/markdown/example.md" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/markdown/example.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/markdown/markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/markdown/markdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/markdown/marked.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/markdown/marked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/math/math.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/math/math.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/multiplex/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/multiplex/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/multiplex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/multiplex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/multiplex/master.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/multiplex/master.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/multiplex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/multiplex/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/notes-server/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/notes-server/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/notes-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/notes-server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/notes-server/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/notes-server/notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/notes/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/notes/notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/notes/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/notes/notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/story/plugin/zoom-js/zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/story/plugin/zoom-js/zoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twing.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/twing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twing.html" beforeDir="false" afterPath="$PROJECT_DIR$/twing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/why-and-how.html" beforeDir="false" afterPath="$PROJECT_DIR$/why-and-how.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +134,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/module1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,19 +146,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/toolbox/sound" />
-      <recent name="$PROJECT_DIR$/toolbox/sound/music/sounds" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\pdf" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module1" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\story\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module3" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module0" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -125,7 +209,9 @@
       <workItem from="1587836671844" duration="23000" />
       <workItem from="1587883378169" duration="3925000" />
       <workItem from="1591289501056" duration="3379000" />
-      <workItem from="1591471810527" duration="9043000" />
+      <workItem from="1591471810527" duration="9082000" />
+      <workItem from="1591705982500" duration="623000" />
+      <workItem from="1591775597377" duration="20159000" />
     </task>
     <servers />
   </component>
@@ -146,10 +232,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587136737537">
+    <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591798675194">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
-    <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser/93.0.1827.1080@93.0.1827.1080" timestamp="1587136737537" />
+    <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser/93.0.1827.1080@93.0.1827.1080" timestamp="1591798675194" />
+    <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591806311524">
+      <screen x="93" y="0" width="1827" height="1080" />
+    </state>
+    <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1591806311524" />
     <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1587836692006">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
