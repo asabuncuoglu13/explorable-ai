@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Twing AI Dersleri</title>
+    <title>Twing - AI</title>
     <meta charset="utf-8">
     <meta name="description" content="Twing Yapay Zeka Dersleri">
     <meta name="keywords" content="Twing, Yapay Zeka, Dersler">
@@ -32,195 +32,109 @@
             height: 100%;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="./lang/tr.js"></script>
 </head>
 
 <body>
-<div class="full yellow" id="mainScreen">
-    <div class="content">
-        <a href="index.html"> << Anasayfaya Geri Dön</a>
-        <h1 class="title">Twing ile Yapay Zeka Dersleri</h1>
-        <section id="1">
-            <div class="index">BT</div>
-            <h2>Bilgisayarların ve Teknolojinin Tarihi</h2>
-            <div>
-                <br>
-                Yapay zekanın gelişimi bilgisayarların gelişiminin önemli bir parçası. Çoğu bilgisayar bilimci,
-                makinelerin zeka geliştirebilmesi için bilgisayar bilimine yönelmiştir. Bu tarih, aslında şu anda
-                yapay zekanın konumunu ve olasılıkları gözler önüne seriyor.
-                <br><br>
-                Twing'in Gelecek Hakkında Öngörü Posterini Hazırla etkinliğinde öğrencilerin tıpkı yapay zekayı
-                geliştiren bilim insanları gibi hayallerini sistematik bir şekilde planlayıp, bu hayallerini
-                insanlara sunabilecekleri bir poster hazırlamalarını istedik.
-                <br><br>
-                Bu etkinliğe yardımcı olan quizde ise hayalleri olan bu bilim insanlarını tanıdık. Canlı yayında
-                anlattığımız bu quize aşağıdaki YouTube videosundan ulaşabilirsiniz:
-                <div class='embed-container'>
-                    <iframe src='https://www.youtube.com/embed/1scnD6LUPfY' frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation1" class="button">📝 Sunumu İndir</button>
-            <button id="notes1" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+<div class="content" id="mainScreen">
+    <a id="_back_home" href="./index.html"></a>
+    <h1 id="_twing_title" class="title"></h1>
+    <section id="1">
+        <div class="index">BT</div>
+        <div id="_vid_1"></div>
+        <div class='embed-container'>
+            <iframe src='https://www.youtube.com/embed/1scnD6LUPfY' frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section id="2">
-            <div class="index">YZ</div>
-            <h2>Yapay Zekaya Giriş</h2>
-            <div>
-                <br>
-                Bu içerikte, yapay zeka nedir? Yapay zekanın uygulama alanları nelerdir? Web üzerinden kolayca yapay
-                zeka oluşturabilir miyiz? gibi soruların cevabını bulacaksınız!
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/7_wklTzHGSk" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation2" class="button">📝 Sunumu İndir</button>
-            <button id="notes2" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="2">
+        <div class="index">YZ</div>
+        <div id="_vid_2"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/7_wklTzHGSk" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section id="3">
-            <div class="index">3</div>
-            <h2>Bilgisayarlı Görü ~ Yeşil Ekran</h2>
-            <div>
-                <br>
-                Bu bölümde ışık ve renk tanımlarından başlayıp, süper kahraman filmlerinin vazgeçilmezi yeşil ekran
-                tekniğinin arkasındaki algoritmanın nasıl çalıştığına kadar farklı bilgiayarlı görü bilgilerini
-                öğreneceğiz.
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/0z5j14F4F0Q?start=2439" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation3" class="button">📝 Sunumu İndir</button>
-            <button id="notes3" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="3">
+        <div class="index">BG</div>
+        <div id="_vid_3"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/0z5j14F4F0Q?start=2439" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section id="4-1">
-            <div class="index">TA</div>
-            <h2>Teachable Machine ile Oyun Kontrol Edelim</h2>
-            <div>
-                <br>
-                Teachable Machine ile kameradan çektiğimiz görüntüleri tanıyabilen bir algoritmayı hızlıca
-                hazırlayabilmiştik. Peki, bu hazırladığımız sınıflandırıcıyı hangi uygulamalarda kullanabiliriz?
-                Klavye yerine kamerayı bir kontrol mekanizması olarak kullanabilir miyiz?
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/O2XMlJ6-SAo" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation4-1" class="button">📝 Sunumu İndir</button>
-            <button id="notes4-1" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="4">
+        <div class="index">TA</div>
+        <div id="_vid_4"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/O2XMlJ6-SAo" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section id="4-2">
-            <div class="index">QD</div>
-            <h2>Quick, Draw! Çizim Veri Seti</h2>
-            <div>
-                <br>
-                Quick, Draw! çizdiğiniz şekilleri hızlıca algılayabilen bir oyun. Peki, bu çizimleri nasıl bu kadar
-                hızlı algılayabiliyor?
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/3DKwW04zIGU" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation4-2" class="button">📝 Sunumu İndir</button>
-            <button id="notes4-2" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="5">
+        <div class="index">QD</div>
+        <div id="_vid_5"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/3DKwW04zIGU" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
 
-        <section id="5">
-            <div class="index">5</div>
-            <h2>Google Arts and Culture: Teknoloji ve Sanat</h2>
-            <div>
-                <br><br>
-                Google, Arts and Culture projesi ile sanatı ve kültürü herkese daha erişilebilir sunmak için çok yoğun
-                bir çalışma yürütüyor. Bu çalışmanın paralelinde, bilgisayarlarları ve son nesil algoritmaları sanatın
-                ve deneyin bir deney malzemesi olarak kullanıyor!
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/oXfBmMH2d9E?start=857" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation5" class="button">📝 Sunumu İndir</button>
-            <button id="notes5" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    </section>
 
-        <section id="6">
-            <div class="index">6</div>
-            <h2>Yapay Zekanın Arkasındaki Matematik ile Oynayalım</h2>
-            <div>
-                <br><br>
-                İçinde yapay zekayı kullanan birçok farklı projeyi inceledik. Peki, bu projelerin arkasındaki kodlar
-                hangi matematiksel modellere dayanıyor? Bu matematiksel modeller ile oynayabilir miyiz?
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/AS4BRwYXk4M?start=1925" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation6" class="button">📝 Sunumu İndir</button>
-            <button id="notes6" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="6">
+        <div class="index">AC</div>
+        <div id="_vid_6"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/oXfBmMH2d9E?start=857" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section id="7">
-            <div class="index">7</div>
-            <h2>Yapay Zekayı Scratch Projelerimizde Kullanma</h2>
-            <div>
-                <br><br>
-                <a href="https://machinelearningforkids.co.uk">Machine Learning for Kids</a> websitesi ile makine
-                öğrenmesi modellerini oluşturup, bunları yapay zeka projelerimizde kullanabiliriz. Bu videoda ses
-                komutlarını nasıl kullanabileceğimizi göstereceğiz.
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/WJcWPoNbbTI?start=2434" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation7" class="button">📝 Sunumu İndir</button>
-            <button id="notes7" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="7">
+        <div class="index">PG</div>
+        <div id="_vid_7"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/AS4BRwYXk4M?start=1925" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section id="8">
-            <div class="index">8</div>
-            <h2>Machine Learning for Kids - Metin Eğitimi</h2>
-            <div>
-                <br><br>
-                <a href="https://machinelearningforkids.co.uk">Machine Learning for Kids</a> web sitesinin
-                daha detaylı bir incelemesi ile beraber, sınıfımız veya evimiz için nasıl bir yapay zeka asistan
-                hazırlayabilirizi inceledik.
-                <div class='embed-container'>
-                    <iframe src="https://www.youtube.com/embed/WJcWPoNbbTI?start=2434" frameborder='0'
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <button id="presentation8" class="button">📝 Sunumu İndir</button>
-            <button id="notes8" class="button">📝 Not Sayfasını İndir</button>
-        </section>
+    <section id="8">
+        <div class="index">ML4</div>
+        <div id="_vid_8"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/WJcWPoNbbTI?start=2434" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
 
-    </div>
+    <section id="9">
+        <div class="index">ML4</div>
+        <div id="_vid_9"></div>
+        <div class='embed-container'>
+            <iframe src="https://www.youtube.com/embed/WJcWPoNbbTI?start=2434" frameborder='0'
+                    allowfullscreen></iframe>
+        </div>
+    </section>
+
 </div>
 <script>
-    document.getElementById("presentation1").addEventListener('click', function () {
-        window.open("./docs/yz01_history_of_computers_and_intelligence.pdf");
-    });
-    document.getElementById("presentation2").addEventListener('click', function () {
-        window.open("./docs/yz02_introduction.pdf");
-    });
-
-    document.getElementById("notes1").addEventListener('click', function () {
-        window.open("./img/notes/yz_notlar1.jpg");
-    });
-    document.getElementById("notes2").addEventListener('click', function () {
-        window.open("./img/notes/yz_notlar2.jpg");
-    });
-    document.getElementById("notes3").addEventListener('click', function () {
-        window.open("./img/notes/yz_notlar3.jpg");
-    });
-    document.getElementById("notes4").addEventListener('click', function () {
-        window.open("./img/notes/yz_notlar4.jpg");
-    });
-    document.getElementById("notes5").addEventListener('click', function () {
-        window.open("./img/notes/yz_notlar5.jpg");
-    });
+    $("#_back_home").text(_back_home);
+    $("#_twing_title").text(_twing_title);
+    $("#_vid_1").html(_vid_1);
+    $("#_vid_2").html(_vid_2);
+    $("#_vid_3").html(_vid_3);
+    $("#_vid_4").html(_vid_4);
+    $("#_vid_5").html(_vid_5);
+    $("#_vid_6").html(_vid_6);
+    $("#_vid_7").html(_vid_7);
+    $("#_vid_8").html(_vid_8);
+    $("#_vid_9").html(_vid_9);
 </script>
 </body>
 </html>
