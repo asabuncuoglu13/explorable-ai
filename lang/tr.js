@@ -2,7 +2,7 @@
 const _back_home = " << Anasayfaya Geri Dön";
 
 // Home Page
-const _home_title = "Yapay Zekayı Keşdefelim";
+const _home_title = "Yapay Zekayı Keşfedelim";
 const _home_sub = "Twin Bilim içerik ekibinin UCL-EDUCATE partnerliği ile açık kaynak geliştirdiği ortaokullar için yapay zeka müfredatının tüm kaynaklarına ulaşın.";
 const _card_why_title = "Müfredatı Nasıl Uygulayalım?";
 const _card_twing_title = "Twing ile Yapay Zeka Dersleri";
@@ -69,9 +69,9 @@ const _vid_6 = "<h2>Google Arts and Culture: Teknoloji ve Sanat</h2>\n" +
 const _vid_7 = "<h2>Yapay Zekanın Arkasındaki Matematik ile Oynayalım</h2>\n" +
     "<p>İçinde yapay zekayı kullanan birçok farklı projeyi inceledik. Peki, bu projelerin arkasındaki kodlar hangi matematiksel modellere dayanıyor? Bu matematiksel modeller ile oynayabilir miyiz?</p>\n";
 const _vid_8 = " <h2>Yapay Zekayı Scratch Projelerimizde Kullanma</h2>\n" +
-    "<p><a href=\"https://machinelearningforkids.co.uk\">Machine Learning for Kids</a> web sitesi ile makine öğrenmesi modellerini oluşturup, bunları yapay zeka projelerimizde kullanabiliriz. Bu videoda ses komutlarını nasıl kullanabileceğimizi göstereceğiz.</p>\n";
+    "<p><a href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web sitesi ile makine öğrenmesi modellerini oluşturup, bunları yapay zeka projelerimizde kullanabiliriz. Bu videoda ses komutlarını nasıl kullanabileceğimizi göstereceğiz.</p>\n";
 const _vid_9 = " <h2>Machine Learning for Kids - Metin Eğitimi</h2>\n" +
-    "<p><a href=\"https://machinelearningforkids.co.uk\">Machine Learning for Kids</a> web sitesinin daha detaylı bir incelemesi ile beraber, sınıfımız veya evimiz için nasıl bir yapay zeka asistan hazırlayabilirizi inceledik.</p>\n";
+    "<p><a href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web sitesinin daha detaylı bir incelemesi ile beraber, sınıfımız veya evimiz için nasıl bir yapay zeka asistan hazırlayabilirizi inceledik.</p>\n";
 
 
 // Module 0 : Intelligent User Interfaces
@@ -217,37 +217,37 @@ const _tool_exp = " <p>Yapay zeka, insan üretimi materyaller ile tamamen insan 
     "gelişmesi sayesinde, farklı ürün tiplerinde insan hayatını kolaylaştıran ve bizi daha iyi anlayan makinelerin\n" +
     "üretimi oldukça kolaylaşmıştır.\n" +
     "</p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"https://teachablemachine.withgoogle.com/\">👀 Yapay zekanın nasıl çalıştığını hızlıca görmek için Teachable Machine ile hızlı bir deney yapabiliriz </a></p>\n";
+    "<p class='p_link'><a class='more' href='https://teachablemachine.withgoogle.com/'>👀 Yapay zekanın nasıl çalıştığını hızlıca görmek için Teachable Machine ile hızlı bir deney yapabiliriz </a></p>\n";
 const _tool_code = "<h2>👩‍💻 Kodlama Ortamı</h2>\n" +
-    "<p class=\"exp_text\">\n" +
+    "<p class='exp_text'>\n" +
     "Yapay zeka, bilgisayar biliminin bir alt dalı olarak sınıflandırılabilir. Bilgisayar ile iletişim kurmak\n" +
     "için programlama dillerini kullanırız. Kodlama ile tanışmak veya tamamlayacağımız aktivitelerde\n" +
     "kullanacağımız programlama ortamına alışmak için birkaç çizim yapalım.\n" +
     "</p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"turtle/index.html\">🐢 Kaplumbağa ile çizim </a></p>";
+    "<p class='p_link'><a class='more' href='turtle/index.html'>🐢 Kaplumbağa ile çizim </a></p>";
 const _tool_vision = "<h2>📷 Bilgisayarlar Nasıl Görür?</h2>\n" +
-    "<p class=\"exp_text\">Bilgisayarlı görü, cebimizdeki telefonlardan medikal cihazlara kadar her türlü görüntüleme\n" +
+    "<p class='exp_text'>Bilgisayarlı görü, cebimizdeki telefonlardan medikal cihazlara kadar her türlü görüntüleme\n" +
     "    teknolojisinde kullanılan algoritmaları kapsar. Başımızı çarptığımızda beynimizde hasar oluştuğunu anlayan\n" +
     "    taramalardan, Instagram filtrelerine kadar her algoritma bilgisayarlı görünün alanına girer.\n" +
     "</p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/eye/index.html\">👀 Gözümüz nasıl çalışır? Işığı ve renkleri nasıl algılarız? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/color/color.html\">🌈 Piksel nedir? Renkleri bilgisayarda nasıl temsil ederiz? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/color/colorwheel.html\">🍭 Renk tanımlarını kolayca nasıl buluruz? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/color_quiz/index.html\">🎆 Renklerin doğru tanımlarını bulmaya çalış! </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/color/colorschemes.html\">🏵️ Farklı renk sunumlarına neden ihtiyaç duyarız? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/grayscale/grayscale.html\">👵 Fotoğrafları renkliden gri tonlarına çevirmek ne işimize yarar?</a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/binarization/binarization.html\">🦓 Bitmap nedir? 0 ve 1 ler ile resim nasıl oluşur? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/chromakey/index.html\">🌈 Chroma Key Algoritması </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"vision/filter/index.html\">🖼️ Filtre nedir? Yapay zeka algoritmalarına katkısı nedir? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"https://transcranial.github.io/keras-js/#/mnist-cnn\">🕸️ Sinir ağları resimlerde ne görür?</a></p>";
+    "<p class='p_link'><a class='more' href='vision/eye/index.html'>👀 Gözümüz nasıl çalışır? Işığı ve renkleri nasıl algılarız? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/color/color.html'>🌈 Piksel nedir? Renkleri bilgisayarda nasıl temsil ederiz? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/color/colorwheel.html'>🍭 Renk tanımlarını kolayca nasıl buluruz? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/color_quiz/index.html'>🎆 Renklerin doğru tanımlarını bulmaya çalış! </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/color/colorschemes.html'>🏵️ Farklı renk sunumlarına neden ihtiyaç duyarız? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/grayscale/grayscale.html'>👵 Fotoğrafları renkliden gri tonlarına çevirmek ne işimize yarar?</a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/binarization/binarization.html'>🦓 Bitmap nedir? 0 ve 1 ler ile resim nasıl oluşur? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/chromakey/index.html'>🌈 Chroma Key Algoritması </a></p>\n" +
+    "<p class='p_link'><a class='more' href='vision/filter/index.html'>🖼️ Filtre nedir? Yapay zeka algoritmalarına katkısı nedir? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='https://transcranial.github.io/keras-js/#/mnist-cnn'>🕸️ Sinir ağları resimlerde ne görür?</a></p>";
 const _tool_music = "<h2>🎼 Müzik Bilgisi</h2>\n" +
-    "<p class=\"exp_text\">\n" +
+    "<p class='exp_text'>\n" +
     "Bilgisayarların nasıl duyduğuna geçmeden önce, temel müzik bilgimizi, müziğin fizik ile ilişkisini tekrarlayalım. Bunun için küçük bir müzik programlama egzerzisi ile başlayalım.\n" +
     "</p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"sound/music/index.html\">🎹 Müzik Programlama </a></p>";
+    "<p class='p_link'><a class='more' href='sound/music/index.html'>🎹 Müzik Programlama </a></p>";
 const _tool_speech = "<h2>👂 Bilgisayarlar Nasıl Duyar?</h2>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"sound/rounded_bars/index.html\">🔉 Ses Yüksekliği Bilgisayarda Nasıl Gözükür? </a></p>\n" +
-    "<p class=\"p_link\"><a class=\"more\" href=\"sound/fft_freq_spectrum/index.html\">📈 Duyduğumuz seslerin frekans analizi neye benzer? </a></p>";
+    "<p class='p_link'><a class='more' href='sound/rounded_bars/index.html'>🔉 Ses Yüksekliği Bilgisayarda Nasıl Gözükür? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='sound/fft_freq_spectrum/index.html'>📈 Duyduğumuz seslerin frekans analizi neye benzer? </a></p>";
 // Helper Methods
 
 // String Formatting
