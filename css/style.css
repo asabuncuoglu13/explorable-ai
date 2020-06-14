@@ -6,7 +6,7 @@
   --buton-bg : #b8c1ec;
   --font-color : #232946;
   --headline : #fffffe;
-  --link : #b8c1ec;
+  --link : #49ba70;
   --light : #fffffe;
 }
 
@@ -55,7 +55,8 @@ body {
 }
 
 .card a {
-  color: var(--background);
+  color: var(--link);
+  font-weight: bold;
   transition: all 0.25s ease;
   font-family: 'Quicksand', sans-serif;
 }

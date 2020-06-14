@@ -3,7 +3,7 @@ const _back_home = " << Anasayfaya Geri Dön";
 
 // Home Page
 const _home_title = "Yapay Zekayı Keşfedelim";
-const _home_sub = "Twin Bilim içerik ekibinin UCL-EDUCATE partnerliği ile açık kaynak geliştirdiği ortaokullar için yapay zeka müfredatının tüm kaynaklarına ulaşın.";
+const _home_sub = "<a href='https://twinscience.com/'>Twin Bilim</a> içerik ekibinin <a href='https://www.ucleducate.com/'>UCL-EDUCATE</a> partnerliği ile açık kaynak geliştirdiği ortaokullar için yapay zeka müfredatının tüm kaynaklarına ulaşın.";
 const _card_why_title = "Müfredatı Nasıl Uygulayalım?";
 const _card_twing_title = "Twing ile Yapay Zeka Dersleri";
 const _card_twing_sub = "Twing uygulaması ve diğer birçok etkileşimli içeriği kullanarak adım adım yapay zeka içeriğimizin üzerinden geçtik";
@@ -16,7 +16,8 @@ const _card_learning_goals_text = "Öğrenme hedeflerini ve yapay zeka ile bağl
 const _card_ml4kids = "Scratch'te Makine Öğrenmesi";
 const _card_ml4kids_content = "'Machine Learning for Kids' projesi öğrencilerin hızlıca makine öğrenmesi tekniklerini Scratch projeleri içinde kullanmalarına imkan veriyor.";
 const _card_license = "Lisans ve Paylaşım";
-const _card_license_content = "Bu websitesi içinde paylaşılan tüm içerik <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr'>Creative Commons Atıf-GayriTicari-AynıLisansla Paylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</a> Lisansı ile paylaşılmıştır.";
+const _card_license_content = "İçeriğin tamamı açık kaynak olarak geliştirildi ve sizden gelecek katkılara açığız! Projeyi GitHub'da <a href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> repo'muzda görünteleyebilirsiniz." +
+    "Bu websitesi içinde paylaşılan tüm içerik <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr'>Creative Commons Atıf-GayriTicari-AynıLisansla Paylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</a> Lisansı ile paylaşılmıştır.";
 
 const _module_dur = "Önerilen Ders Süresi: {0} saat";
 
@@ -28,6 +29,11 @@ const _module_2_title = "Bilgisayarlar Nasıl Görür: Kameradan Geleni Anlamlan
 const _module_2_sub = "Yapay zeka müfredatının ikinci modülü bilgisayarlı görü ile başlamaktadır. Bilgisayarlı görü, sinemadaki yeşil ekran tekniğinden, tıpta tümörlerin belirlenmesine kadar farklı uygulama alanlarına sahiptir. Yapay zekanın, çevre algısı geliştirmesinde önemli bir yere sahiptir. Bu aktivite ile, öğrencilerin yapay zekanın uygulama alanları hakkında bilgi sahibi olmasını, temel algoritmaları geliştirebilmelerini, çeşitli yapay zeka ürünlerini deneyimleyebilmelerini ve toplum için yapay zeka hakkında fikir yürütmelerini amaçladık.";
 const _module_3_title = "Bilgisayarlar Nasıl Duyar: Duyduklarını Nasıl Anlar?";
 const _module_3_sub = "Yapay zeka müfredatının son modülü bilgisayarların sesleri nasıl tanıdığını ve cümleleri nasıl anlamlandırabileceğini göstermeyi hedefler. Bu modülde öğrenciler, yapay zekanın farklı uygulama alanları hakkında bilgi sahibi olur, ses tanıma, sınıflandırma ve doğal dil işleme konusunda temel algoritmaları geliştirir, çeşitli yapay zeka ürünlerini deneyimler ve toplum için yapay zeka hakkında fikir yürütür.";
+
+// Summary
+
+const _summary_title = "Öğrenme Hedefleri ve İçerik Özeti";
+const _summary_text = "Aşağıdaki Google Sayfaları Dökümanında 36 Haftalık içeriğimizin özetini bulabilirsiniz. <a href='https://docs.google.com/spreadsheets/d/e/2PACX-1vTQBj2dCMH2jBv5bQALyxaKcb7HkhnV7I5eqhw1XVNGlKDOKy7pNaw3j4zeCOY4ONHGZib_horXp9BP/pubhtml?gid=0&single=true'>Yeni Sayfada Tam Ekran Olarak Aç</a>";
 
 // Why Page
 const _why_title = "Neden Bu Müfredatı Geliştirdik?";
@@ -194,9 +200,8 @@ const _module_2_content =
 // Module 3
 const _module_3_content =
     "<p class='inner-text'>\n" +
-    "Müfredatımızdaki her modül bilgisayarların çevrelerindeki fiziksel değişimleri nasıl algıladığı üzerine\n" +
-    "yapılan çalışmaları toparlar. Yukarıdaki sunum, 12 haftalık içeriğimizin özeti niteliğindedir. Bu modülün 5\n" +
-    "ana parçası aşağıdaki gibidir:\n" +
+    "Müfredatımızın son modülü bilgisayarların sesleri nasıl algıladığını ve anlamlandırdığını inceler. " +
+    "Yukarıdaki sunum, 12 haftalık içeriğimizin özeti niteliğindedir. Bu modülü oluşturan beş ana soru ile \n" +
     "</p>\n" +
     "<ol>\n" +
     "<li><a href='#'>Sesler nasıl oluşur, kulağımız sesleri nasıl algılar?</a> </li>\n" +
@@ -205,7 +210,7 @@ const _module_3_content =
     "<li><a href='#'>Yeni nesil algoritmalar verilerden öğrenebilir.</a> </li>\n" +
     "<li><a href='#'>Bu yeni teknoloji nasıl kullanılmalı</a> </li>\n" +
     "</ol>\n" +
-    "<p>gibi soruların cevaplarını tartışmaya çalışalım.</p>";
+    "<p>yapay zeka destekli ses ve konuşma sistemlerini anlamaya çalışacağız.</p>";
 
 
 // Toolbox

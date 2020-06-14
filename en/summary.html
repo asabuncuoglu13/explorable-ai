@@ -13,25 +13,24 @@
     <link rel="shortcut icon" type="image/png" href="../img/favicon.png"/>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script src="../lang/tr.js"></script>
+    <script src="../lang/en.js"></script>
 </head>
 
 <body>
 <div class="container light">
     <a id="_back_home" href="../index.html"></a>
-    <h1 id="_module_3_title" class="title"></h1>
+    <h1 id="_summary_title" class="title"></h1>
+    <p id="_summary_text"></p>
     <div class="google-slides-container">
-        <iframe
-                src="https://docs.google.com/presentation/d/e/2PACX-1vSRFHEwB7RhC6n9DHbp1GGwX2j8fSEkTBd8qNRNSz_fNs2xxTkXvtKG8h2AQwaT63LjGRvWHO7vkBrz/embed?start=false&loop=false&delayms=3000"
-                frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3grB_f3cu4qWOwJk5rAuvIP5hU_fGqRo9kH1LHf_b67B6lMxC8j-yYGgOUbO5SIizaIR7vlQaO99J/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                 frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
                 webkitallowfullscreen="true"></iframe>
     </div>
-    <div id="_module_3_content"></div>
 </div>
 
 <script>
-    $("#_back_home").text(_back_home);
-    $("#_module_3_title").text(_module_3_title);
-    $("#_module_3_content").html(_module_3_content);
+    $("#_back_home").html(_back_home);
+    $("#_summary_title").html(_summary_title);
+    $("#_summary_text").html(_summary_text);
 </script>
 </body>

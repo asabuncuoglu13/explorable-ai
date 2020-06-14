@@ -20,8 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/en/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/module0/module0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/module1/module1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/module2/module2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/module3/module3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/twing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/why-and-how.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/Asset 8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/assets/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toolbox/en/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tr/summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/home/11-license.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/home/11-license.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module0/module0.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module0/module0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module1/module1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/module2.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module2/module2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module3/module3.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module3/module3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twing.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/twing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/why-and-how.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/why-and-how.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +66,20 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1XZJaAC3RyXXwT9weEhZbUfy3ek" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/module1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tr" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,19 +91,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module1" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\home" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module3" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module0" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox\en" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module1" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -124,7 +156,8 @@
       <workItem from="1591289501056" duration="3379000" />
       <workItem from="1591471810527" duration="9082000" />
       <workItem from="1591705982500" duration="623000" />
-      <workItem from="1591775597377" duration="26036000" />
+      <workItem from="1591775597377" duration="29283000" />
+      <workItem from="1592036844767" duration="8827000" />
     </task>
     <servers />
   </component>
@@ -144,15 +177,18 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591798675194">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
     <state x="770" y="331" key="#com.intellij.fileTypes.FileTypeChooser/93.0.1827.1080@93.0.1827.1080" timestamp="1591798675194" />
-    <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591806311524">
+    <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592130087398">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
-    <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1591806311524" />
+    <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1592130087398" />
     <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1587836692006">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
