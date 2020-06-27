@@ -15,6 +15,8 @@ const _card_learning_goals = "Learning Goals and Content Summary";
 const _card_learning_goals_text = "Open the Google Sheets document, which contains learning objectives and its links to artificial intelligence.";
 const _card_ml4kids = "Machine Learning with Scratch";
 const _card_ml4kids_content = "'Machine Learning for Kids' project allows students to quickly use machine learning techniques in Scratch projects.";
+const _card_research_title = "Our Research";
+const _card_research_content = "This curriculum is designed in our research and development process of developing a new AI kit. It is open for contribution, you can download our latest paper: <a href='https://dl.acm.org/doi/abs/10.1145/3341525.3387364'>Designing One Year Curriculum to Teach Artificial Intelligence for Middle School</a> from ACM Digital Library";
 const _card_license = "License and Sharing";
 const _card_license_content = "This work is open-source and open for contribution. You can visit our Github repository <a href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> to contribute to this project." +
     "This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.";

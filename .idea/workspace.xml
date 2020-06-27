@@ -20,36 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/en/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/module0/module0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/module1/module1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/module2/module2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/module3/module3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/twing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/en/why-and-how.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/Asset 8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/assets/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toolbox/en/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tr/summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/home/11-license.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/home/11-license.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/en/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/tr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module0/module0.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module0/module0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module1/module1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/module2.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module2/module2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module3/module3.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/module3/module3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twing.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/twing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/why-and-how.html" beforeDir="false" afterPath="$PROJECT_DIR$/tr/why-and-how.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +134,9 @@
       <workItem from="1591471810527" duration="9082000" />
       <workItem from="1591705982500" duration="623000" />
       <workItem from="1591775597377" duration="29283000" />
-      <workItem from="1592036844767" duration="8827000" />
+      <workItem from="1592036844767" duration="9724000" />
+      <workItem from="1592487671036" duration="608000" />
+      <workItem from="1593257415765" duration="878000" />
     </task>
     <servers />
   </component>
@@ -202,5 +181,9 @@
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/93.0.1827.1080@93.0.1827.1080" timestamp="1591821938747" />
+    <state x="624" y="207" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593257529115">
+      <screen x="93" y="0" width="1827" height="1080" />
+    </state>
+    <state x="624" y="207" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/93.0.1827.1080@93.0.1827.1080" timestamp="1593257529115" />
   </component>
 </project>

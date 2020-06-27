@@ -11,3 +11,16 @@ We integrated several open-source projects into our curriculum and copied follow
 3. [Edge Detection Algorithms](https://cse442-17f.github.io/Sobel-Laplacian-and-Canny-Edge-Detection-Algorithms/): Edge Detection is a key feature to recognize an image. Understanding the math behind the edge detection help students to open the black-box definition of AI. 
 
 4. [FFT Spectrogram](https://therewasaguy.github.io/p5-music-viz/demos/04b_fft_spectrograph/): The science and art behind the speech recognition is incredible. Computers can process 44.000 samples in one second and precisely recognize if you say "Spectrogram" or "Fourier Transform"! This is only possible with a technique called spectrogram. 
+
+## Notes on Contribution
+It is an active project, we are actively updating our resources and would like to see any feedback and ideas on developing new paths for the project. 
+
+Currently we are collaborating with marvelous high schools students to check the content and translate the resources. Contributor list:
+
+- Berke Yılmaz
+- Deran Akın
+- Ervin Nur Doğuş
+- Hafize Hilal Kaya
+- Pınar Katkat
+
+If you would like to contribute on developing new content or updating current content let me know!

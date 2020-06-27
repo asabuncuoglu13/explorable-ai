@@ -15,6 +15,8 @@ const _card_learning_goals = "İçerik ve Öğrenme Hedefleri Özeti";
 const _card_learning_goals_text = "Öğrenme hedeflerini ve yapay zeka ile bağlantılarını içeren Google Sheets dökümanını açın.";
 const _card_ml4kids = "Scratch'te Makine Öğrenmesi";
 const _card_ml4kids_content = "'Machine Learning for Kids' projesi öğrencilerin hızlıca makine öğrenmesi tekniklerini Scratch projeleri içinde kullanmalarına imkan veriyor.";
+const _card_research_title = "Araştırmalarımız";
+const _card_research_content = "Bu müfredat Twin'in araştırma ve geliştirme projeleri sürecinde hazırlanmıştır ve bu sürece katkı sunmak herkesin desteğine açıktır. Araştırma sürecimizi yayınladığımız: <a href='https://dl.acm.org/doi/abs/10.1145/3341525.3387364'>Designing One Year Curriculum to Teach Artificial Intelligence for Middle School</a> makelesini ACM Dijital Kütüphanesinden indirin.";
 const _card_license = "Lisans ve Paylaşım";
 const _card_license_content = "İçeriğin tamamı açık kaynak olarak geliştirildi ve sizden gelecek katkılara açığız! Projeyi GitHub'da <a href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> repo'muzda görünteleyebilirsiniz." +
     "Bu websitesi içinde paylaşılan tüm içerik <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr'>Creative Commons Atıf-GayriTicari-AynıLisansla Paylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</a> Lisansı ile paylaşılmıştır.";
