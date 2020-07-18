@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en/cc-ai.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/tr.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/en" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,19 +65,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox\en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module3" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module0" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox\en" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module1" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -132,6 +133,9 @@
       <workItem from="1591775597377" duration="29283000" />
       <workItem from="1592036844767" duration="8827000" />
       <workItem from="1592314971692" duration="228000" />
+      <workItem from="1594903547072" duration="1368000" />
+      <workItem from="1595019651969" duration="51000" />
+      <workItem from="1595058418133" duration="1677000" />
     </task>
     <servers />
   </component>
@@ -143,13 +147,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
