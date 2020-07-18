@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf6fd55-b951-4477-ad7e-72a610827316" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tfjs-examples" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -132,11 +130,12 @@
       <workItem from="1591775597377" duration="29283000" />
       <workItem from="1592036844767" duration="8827000" />
       <workItem from="1592314971692" duration="228000" />
+      <workItem from="1594036682545" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -163,10 +162,10 @@
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
     <state x="736" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1592130087398" />
-    <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1587836692006">
+    <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1594036717648">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
-    <state x="786" y="295" key="FileChooserDialogImpl/93.0.1827.1080@93.0.1827.1080" timestamp="1587836692006" />
+    <state x="786" y="295" key="FileChooserDialogImpl/93.0.1827.1080@93.0.1827.1080" timestamp="1594036717648" />
     <state x="372" y="80" key="SettingsEditor" timestamp="1591473660898">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
