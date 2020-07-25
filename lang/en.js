@@ -250,7 +250,17 @@ const _tool_music = "<h2>🎼 Music Knowledge</h2>\n" +
 const _tool_speech = "<h2>👂 How Computers Hear? </h2>\n" +
     "<p class='p_link'><a class='more' href='../sound/rounded_bars/index.html'>🔉 How Loudness Looks on the Computer? </a></p>\n" +
     "<p class='p_link'><a class='more' href='../sound/fft_freq_spectrum/index.html'>📈 What does the frequency analysis of the sounds we hear look like? </a></p>";
-// Helper Methods
+
+
+// Creative Coding and AI
+const _cc_title = "Creative Coding and AI";
+const _cc_sub = "We designed this course for the beginners to give an introduction to coding with Javascript and develop creative and intelligent web applications with p5.js and tensorflow.js frameworks. In this course, you will use p5.js and its support libraries to express your creative ideas through coding. This course will introduce you to a variety of concepts in programming, and how they can be applied creatively to work in a variety of media. At the end of the course, you will use ml5.js and tensorflow.js artificial intelligence libraries to add intelligence in your creative applications.\n";
+const _cc1 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1_-PDjyAADl_Z8rM0X7kCjb7hQAPuWoYq6u86kVhZ7eY/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 1</a>";
+const _cc2 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1uDJf8TLOf32dfCWkJMgGFps4sLbnUkdGJt8ii2JvCBY/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 2</a>";
+const _cc3 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/15INkvrhci1yY4I4heTNvR2AfoC2eZqs9Rsw9xWdW4Bs/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 3</a>";
+const _cc4 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1zehmyWFsUnxoTGipt-yYKXKyt7vNgV5CKLemweULUt4/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 4</a>";
+const _cc5 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1yk3ZJEFmaEomhHiheaiOWvtFSGrlQ1op2Usp8mo59qE/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 5</a>";
+const _cc6 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1xfPZewfjMnPTPiS1SaaSV17FP5SErH3a9FF5a8n1idw/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 6</a>";
 
 
 // Helper Methods

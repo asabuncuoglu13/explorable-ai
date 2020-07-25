@@ -62,19 +62,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox\en" />
+      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module3" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module2" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module0" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\tr" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\en" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\toolbox\en" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\explorable-ai\module1" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -142,13 +142,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -118,7 +118,10 @@ const _module_1_content =
     "   <p>öğreneceğiz. Yapay zeka kullanarak insanlara ve topluma katkı sağlamayı amaçlayan projelere hızlıca göz atmak istersen, " +
     "   <a href='https://experiments.withgoogle.com/'>Experiments with Google</a> sayfasındaki " +
     "   <a href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> koleksiyonuna göz atabilirsin." +
-    "Bu koleksiyonda senin gibi işe öğrenerek ve en temelden başlayan insanların, toplumu değiştirebilecek projelerini bulacaksın.</p>\n";
+    "Bu koleksiyonda senin gibi, işe en temelden başlayan insanların, toplumu değiştirebilecek projelerini bulacaksın.</p>\n";
+
+const _module_1_dt_card_title = "Tasarım Odaklı Düşünme Yöntemi";
+const _module_1_dt_card_content = "Bu yöntem ile öğrencilerin problemler karşısında daha sistematik düşünmelerini sağlayabilirsiniz. Tabii ki bir problemi çözmenin birden çok yolu vardır. Biz burada sıklıkla kullanılan bir yöntemi kullanarak öğrencilere bir probleme sistematik yaklaşmanın, o problemi çözme konusunda nasıl yararlar saplayacağını aktarmaya çalışacağız. <a href='https://designthinkingforeducators.com/toolkit/'>Eğitim içeriklerinin orjinal versiyonlarını IDEO'nun web sitesinden sağlayabilirsiniz.</a>";
 
 // Module 2
 const _module_2_content =
