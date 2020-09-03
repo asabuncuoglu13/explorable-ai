@@ -1,5 +1,0 @@
-Why did we develop this curriculum?
-======================================
-
-We have started to meet with AI-powered devices such as phones, home assistant or autonomous cars in the very early years of our childhood. Our curriculum aims to inform students about the science behind AI-powered devices, techniques that lie on its basis, development of these technologies for the good of the society.
-

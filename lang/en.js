@@ -3,9 +3,9 @@ const _back_home = " << Return to Home Page";
 
 // Home Page
 const _home_title = "Explore Artificial Intelligence";
-const _home_sub = "Access all the resources of our artificial intelligence curriculum for middle schools where <a href='https://twinscience.com/'>Twin Science</a> content team developed open source with the partnership of <a href='https://www.ucleducate.com/'>UCL-EDUCATE</a>.";
-const _card_why_title = "How can we follow this curriculum?";
-const _card_twing_title = "Artificial Intelligence Courses with Twing";
+const _home_sub = "Access all the resources of our artificial intelligence curriculum for middle schools where <a class='linkt' href='https://twinscience.com/'>Twin Science</a> content team developed open source with the partnership of <a class='linkt' href='https://www.ucleducate.com/'>UCL-EDUCATE</a>.";
+const _card_why_title = "Curriculum Philosophy";
+const _card_twing_title = "AI Concepts on Twing Application";
 const _card_twing_sub = "We went over our artificial intelligence content step by step using the Twing app and many other interactive content.";
 const _card_project_form = "Term Project Form";
 const _card_project_form_text = "In the term project of the curriculum, we asked students to design an interdisciplinary project which they would use artificial intelligence.";
@@ -16,10 +16,11 @@ const _card_learning_goals_text = "Open the Google Sheets document, which contai
 const _card_ml4kids = "Machine Learning with Scratch";
 const _card_ml4kids_content = "'Machine Learning for Kids' project allows students to quickly use machine learning techniques in Scratch projects.";
 const _card_research_title = "Our Research";
-const _card_research_content = "This curriculum is designed in our research and development process of developing a new AI kit. It is open for contribution, you can download our latest paper: <a href='https://dl.acm.org/doi/abs/10.1145/3341525.3387364'>Designing One Year Curriculum to Teach Artificial Intelligence for Middle School</a> from ACM Digital Library";
+const _card_research_content = "This curriculum is designed in our research and development process of developing a new AI kit. It is open for contribution, you can download our latest paper: <a class='linkt' href='https://dl.acm.org/doi/abs/10.1145/3341525.3387364'>Designing One Year Curriculum to Teach Artificial Intelligence for Middle School</a> from ACM Digital Library";
 const _card_license = "License and Sharing";
-const _card_license_content = "This work is open-source and open for contribution. You can visit our Github repository <a href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> to contribute to this project." +
+const _card_license_content = "This work is open-source and open for contribution. You can visit our Github repository <a class='linkt' href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> to contribute to this project." +
     "This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.";
+const _download_twing = "You can follow all the content of this curriculum with quizzes and challenges, via downloading our Twing mobile application from <a class='linkt' href='https://play.google.com/store/apps/details?id=com.twinscience.arcadia.android'>Android Play Store</a> or <a class='linkt' href='https://apps.apple.com/us/app/arcadia-for-curious-minds/id1479559635'>iOS App Store</a>. It is free!"
 
 const _module_dur = "Recommended Course Duration: {0} hours";
 
@@ -33,24 +34,23 @@ const _module_3_title = "How Computers Hear: How Do They Recognize Sounds?";
 const _module_3_sub = "The final module of the AI curriculum aims to introduce how computers recognize sounds and how they can make sense of sentences. In this module, students learn about different application areas of artificial intelligence, develop basic algorithms in voice recognition, classification and natural language processing, experience various artificial intelligence products and develop ideas about artificial intelligence for society.";
 
 // Summary
-
 const _summary_title = "Learning Goals and Content Summary";
-const _summary_text = "Below, you can find the Google Sheets table for our 36 week content. <a href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3grB_f3cu4qWOwJk5rAuvIP5hU_fGqRo9kH1LHf_b67B6lMxC8j-yYGgOUbO5SIizaIR7vlQaO99J/pubhtml?gid=0&single=true'>Open in Full Screen</a>";
+const _summary_text = "Below, you can find the Google Sheets table for our 36 week content. <a class='linkt' href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3grB_f3cu4qWOwJk5rAuvIP5hU_fGqRo9kH1LHf_b67B6lMxC8j-yYGgOUbO5SIizaIR7vlQaO99J/pubhtml?gid=0&single=true'>Open in Full Screen</a>";
 
 // Why Page
 const _why_title = "Why Did We Developed This Curriculum?";
-const _why_content = "<p>First of all, let's clarify what different industries mean when it comes to artificial intelligence (AI). As a branch of science, artificial intelligence tries to imitate the human way of thinking. For this, it acquires the techniques used in computer science. But now we are quite far from machines that think and act like people. When we say that there is artificial intelligence in a product at the moment, we are actually referring to machine learning which is a sub-branch of artificial intelligence. For example, an AI-powered home combi system creates a learning algorithm in itself by matching the average temperature of the house and the movements of people with each other on an hourly basis.</p>\n" +
-    "<p>For example, in combi, cars, toys, and in many more products different techniques are used for the development of artificial intelligence. As soon as we were born, we started to meet with these products. Our aim in developing this artificial intelligence curriculum is to get students familiar with the answers to questions like how these devices work, what techniques underlie them, how to make it possible to develop these technologies for goodness and humanity.</p>\n" +
+const _why_content = "<p>Let's start with clarifying what different industries mean when it comes to artificial intelligence (AI). As a branch of science, artificial intelligence tries to imitate the human way of thinking. For this, it acquires the techniques used in computer science. But now we are quite far from machines that think and act like people. When we say that there is artificial intelligence in a product at the moment, we are referring to machine learning which is a sub-branch of artificial intelligence. For example, an AI-powered home thermostate system creates a learning algorithm in itself by matching the average temperature of the house and the movements of people with each other on an hourly basis.</p>\n" +
+    "<p>For example, in thermostates, cars, toys, and in many more products different techniques are used for the development of artificial intelligence. As soon as we were born, we started to meet with these products. Our aim in developing this artificial intelligence curriculum is to get students familiar with the answers to questions like how these devices work, what techniques underlie them, how to make it possible to develop these technologies for goodness and humanity.</p>\n" +
     "<p>This curriculum consists of three modules and a term project.</p>\n" +
-    "<h3>How Intelligence Interfaces Are Developed?</h3>\n" +
-    "<p>How can interfaces that students already see on the screen be more intelligent? For example, how does the keyboard application on our mobile phones offer us suggestions? Are the results that Youtube suggests to us ethical? What should we consider if we want to design an interface? How does the process of designing an artificial intelligence-supported product take place?</p>\n" +
-    "<h3>How Computers See?</h3>\n" +
+    "<h3>How do Intelligent Interfaces Work?</h3>\n" +
+    "<p>How can interfaces that students already see on the screen be more intelligent? For example, how does the keyboard application on our mobile phones offer us suggestions? Are the results that Youtube suggests to us ethically? What should we consider if we want to design an interface? How does the process of designing an artificial intelligence-supported product take place?</p>\n" +
+    "<h3>How do Computers See?</h3>\n" +
     "<p>If artificial intelligence is trying to imitate the human, we must first understand our own eyes. How do our eyes see? What is the similarity between the sensors and our eyes? How do computers perceive physical changes and how do they represent numerically? How do we use these numerical values in algorithms? What is the data set? What do we do with collecting datasets? What are the ethical discussions in computer vision?</p>\n" +
-    "<h3>How Computers Hear?</h3>\n" +
-    "<p>How does the human ear work? What are the similarities between a microphone and our ear? How can we classify human voices? How can we promote human language to computers? Can computers make music?</p>\n" +
+    "<h3>How do Computers Hear?</h3>\n" +
+    "<p>How does the human ear work? What are the similarities between a microphone and our ear? How can we classify human voices? How can we promote the human language to computers? Can computers make music?</p>\n" +
     "<h3>Term Project: AI for Good</h3>\n" +
-    "<p>Students complete many activities on the implementation of artificial intelligence and technology for 33 weeks. To observe the efficiency of these activities, they develop solutions for one of the United Nations Sustainability Goals with AI.</p>\n" +
-    "<p>After all modules, you may have notice that the modules are following a loop:</p>\n" +
+    "<p>Students complete many activities on the theory and practice of artificial intelligence and technology through the curriculum. To observe the efficiency of these activities, they develop solutions for one of the United Nations Sustainability Goals with AI.</p>\n" +
+    "<p>After all modules, you may have noticed that the modules are following a loop:</p>\n" +
     "<ol>\n" +
     "<li>Computers use sensors to detect physical environments.</li>\n" +
     "<li>Physical changes, with the help of sensors, turn into numerical values that can be used in the algorithm.</li>\n" +
@@ -61,26 +61,10 @@ const _why_content = "<p>First of all, let's clarify what different industries m
     "</ol>";
 
 // Twing Youtube Videos Page
-const _twing_title = "Youtube Videos with Twing";
-const _vid_1 = "<h2>History of Computers and Technology</h2>\n" +
-    "<p>The development of artificial intelligence is an important part of the development of computers. Most computer scientists have head toward computer science so that machines can develop intelligence. This history actually reveals the position and possibilities of artificial intelligence right now.<br> In Twing's Prepare for the Future Poster, we asked students to systematically plan their dreams, like scientists who developed artificial intelligence, and create a poster that they can present their dreams to people.<br> In the quiz that helped this event, we got acquainted with these scientists who had dreams. You can reach this quiz that we talked about in the following live YouTube video:</p>\n";
-const _vid_2 = "<h2>Introduction to Artificial Intelligence</h2>\n" +
-    "<p>In this content, you will find the answer to questions such as: What is artificial intelligence? What are the applications of artificial intelligence? Can we easily create artificial intelligence on the web?</p>\n";
-const _vid_3 = "<h2>Computer Vision ~ Green Screen</h2>\n" +
-    "<p>In this section, we will learn different computer vision information from light and color definitions to how the algorithm behind the green screen works.</p>\n";
-const _vid_4 = "<h2>Let's Control the Game with Teachable Machine</h2>\n" +
-    "<p>With Teachable Machine, we were able to write an algorithm that could recognize the images we took from the camera. So in which applications can we use this classifier? Can we use the camera as a control mechanism instead of the keyboard?</p>\n";
-const _vid_5 = "<h2>Quick, Draw! Drawing Data Set</h2>\n" +
-    "<p>Quick, Draw! a game that can quickly detect the shapes we draw. So how can it recognize drawings so quickly?</p>";
-const _vid_6 = "<h2>Google Arts and Culture: Technology and Art</h2>\n" +
-    "<p>With the Arts and Culture project, Google is working hard to make art and culture more accessible to everyone. In addition to this work, Google uses computers and latest generation algorithms as a material of art and experiment!</p>";
-const _vid_7 = "<h2>Let's Work with Math Behind Artificial Intelligence</h2>\n" +
-    "<p>We examined many different projects using artificial intelligence. So which mathematical models are the codes behind these projects based on? Can we work with these mathematical models?</p>\n";
+const _twing_title = "AI Concepts at Twing";
+const _twing_exp = "Twing is a free STEAM application for children. Thousands of DIY projects with step-by-step videos help kids discover new passions and bring out their unique talents.\br\br The content of the curriculum is included as a built-in concept at Twing application. You can watch animations, complete challenges and solve quizzes to learn more about AI!"
 
-const _vid_8 = " <h2>Using Artificial Intelligence in our Scratch Projects</h2>\n" +
-    "At <a href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a>, we can create machine learning models and use them for our AI-powered projects. In this video, we'll demonstrate how we can use voice commands.</p>\n";
-const _vid_9 = " <h2>Machine Learning for Kids - Text Education</h2>\n" +
-    "In this video, we created a new AI model for text classification with <a href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web page and built an AI assistant to use it in our classroom or at home.</p>\n";
+
 
 // Module 0 : Intelligent User Interfaces
 const _module_0_content =
@@ -92,13 +76,13 @@ const _module_0_content =
     "<li>What are the application areas of Artificial Intelligence?</li>\n" +
     "<li>What are the differences between coding with AI and standard coding?</li>\n" +
     "</ol>\n" +
-    "<p>An example explanatory video is available at <a href='twing.html'>Twing AI Introduction</a>.</p>\n" +
+    "<p>An example explanatory video is available at <a class='linkt' href='twing.html'>Twing AI Introduction</a>.</p>\n" +
     "<p>To experiment with an image classification model and use the model in an arcade game, visit:</p>\n" +
     "<ol>\n" +
-    "<li><a href='https://teachablemachine.withgoogle.com/'>Teachable Machine</a> .</li>\n" +
+    "<li><a class='linkt' href='https://teachablemachine.withgoogle.com/'>Teachable Machine</a> .</li>\n" +
     "<li>Create an Image Project.</li>\n" +
     "<li>Copy the link of the model.</li>\n" +
-    "<li>Use the link in this game <a href='https://teachable-arcade-remix.glitch.me/'>Teachable Arcade</a> .</li>\n" +
+    "<li>Use the link in this game <a class='linkt' href='https://teachable-arcade-remix.glitch.me/'>Teachable Arcade</a> .</li>\n" +
     "</ol>";
 
 // Module 1
@@ -114,9 +98,11 @@ const _module_1_content =
     "<li>Which examples we can get inspired from while developing artificial intelligence for the society</li>\n" +
     "   </ol>\n" +
     "   <p>If you would like to take a look at the projects that use artificial intelligence that aim to be beneficial for humans and the society, go to" +
-    "   <a href='https://experiments.withgoogle.com/'>Experiments with Google</a> and check the collection at " +
-    "   <a href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> ." +
+    "   <a class='linkt' href='https://experiments.withgoogle.com/'>Experiments with Google</a> and check the collection at " +
+    "   <a class='linkt' href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> ." +
     "You'll find the beneficial projects of people who once started it with learning the very basics, just like you.</p>\n";
+
+const _module_1_activities = "";
 
 // Module 2
 const _module_2_content =
@@ -127,12 +113,14 @@ const _module_2_content =
     "We addressed the activities of the module in the following titles:\n" +
     "</p>\n" +
     "<ol>\n" +
-    "<li><a href='#'>Firstly, let's get to know light since we need light to see.</a></li>\n" +
-    "<li><a href='#'>The similarities between computer cameras and our eyes</a></li>\n" +
-    "<li><a href='#'>How is the image coming from the cameras used in algorithms</a></li>\n" +
-    "<li><a href='#_dataset_title'>Next-generation algorithms can learn from data.</a></li>\n" +
-    "<li><a href='#_ethics_title'>How should this new technology be used</a></li>\n" +
-    "</ol>\n" +
+    "<li><a class='linkt' href='#'>Firstly, let's get to know light since we need light to see.</a></li>\n" +
+    "<li><a class='linkt' href='#'>The similarities between computer cameras and our eyes</a></li>\n" +
+    "<li><a class='linkt' href='#'>How is the image coming from the cameras used in algorithms</a></li>\n" +
+    "<li><a class='linkt' href='#_dataset_title'>Next-generation algorithms can learn from data.</a></li>\n" +
+    "<li><a class='linkt' href='#_ethics_title'>How should this new technology be used</a></li>\n" +
+    "</ol>\n";
+
+const _module_2_activities = 
     "<h2 id='_dataset_title'>Data Sets</h2>\n" +
     "<div class='grid'>\n" +
     "<div class='item item-a'>\n" +
@@ -203,11 +191,11 @@ const _module_3_content =
     "The presentation above is a summary of our 12 weeks of content. The 5 main parts of this module are as follows:\n" +
     "</p>\n" +
     "<ol>\n" +
-    "<li><a href='#'>How does sound form, how could our ear detect them?</a> </li>\n" +
-    "<li><a href='#'>How do microphones mimic our ears?</a> </li>\n" +
-    "<li><a href='#'>How do algorithms use the data coming from microphones?</a> </li>\n" +
-    "<li><a href='#'>How do we interact with computers using speech systems?</a> </li>\n" +
-    "<li><a href='#'>Does Alexa listen to you? How should we interact with assistant systems?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>How does sound form, how could our ear detect them?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>How do microphones mimic our ears?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>How do algorithms use the data coming from microphones?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>How do we interact with computers using speech systems?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>Does Alexa listen to you? How should we interact with assistant systems?</a> </li>\n" +
     "</ol>\n";
 
 // Toolbox
@@ -255,12 +243,12 @@ const _tool_speech = "<h2>👂 How Computers Hear? </h2>\n" +
 // Creative Coding and AI
 const _cc_title = "Creative Coding and AI";
 const _cc_sub = "We designed this course for the beginners to give an introduction to coding with Javascript and develop creative and intelligent web applications with p5.js and tensorflow.js frameworks. In this course, you will use p5.js and its support libraries to express your creative ideas through coding. This course will introduce you to a variety of concepts in programming, and how they can be applied creatively to work in a variety of media. At the end of the course, you will use ml5.js and tensorflow.js artificial intelligence libraries to add intelligence in your creative applications.\n";
-const _cc1 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1_-PDjyAADl_Z8rM0X7kCjb7hQAPuWoYq6u86kVhZ7eY/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 1</a>";
-const _cc2 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1uDJf8TLOf32dfCWkJMgGFps4sLbnUkdGJt8ii2JvCBY/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 2</a>";
-const _cc3 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/15INkvrhci1yY4I4heTNvR2AfoC2eZqs9Rsw9xWdW4Bs/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 3</a>";
-const _cc4 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1zehmyWFsUnxoTGipt-yYKXKyt7vNgV5CKLemweULUt4/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 4</a>";
-const _cc5 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1yk3ZJEFmaEomhHiheaiOWvtFSGrlQ1op2Usp8mo59qE/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 5</a>";
-const _cc6 = "Read our presenter notes from <a href ='https://docs.google.com/document/d/1xfPZewfjMnPTPiS1SaaSV17FP5SErH3a9FF5a8n1idw/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 6</a>";
+const _cc1 = "Read our presenter notes from <a class='linkt' href ='https://docs.google.com/document/d/1_-PDjyAADl_Z8rM0X7kCjb7hQAPuWoYq6u86kVhZ7eY/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 1</a>";
+const _cc2 = "Read our presenter notes from <a class='linkt' href ='https://docs.google.com/document/d/1uDJf8TLOf32dfCWkJMgGFps4sLbnUkdGJt8ii2JvCBY/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 2</a>";
+const _cc3 = "Read our presenter notes from <a class='linkt' href ='https://docs.google.com/document/d/15INkvrhci1yY4I4heTNvR2AfoC2eZqs9Rsw9xWdW4Bs/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 3</a>";
+const _cc4 = "Read our presenter notes from <a class='linkt' href ='https://docs.google.com/document/d/1zehmyWFsUnxoTGipt-yYKXKyt7vNgV5CKLemweULUt4/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 4</a>";
+const _cc5 = "Read our presenter notes from <a class='linkt' href ='https://docs.google.com/document/d/1yk3ZJEFmaEomhHiheaiOWvtFSGrlQ1op2Usp8mo59qE/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 5</a>";
+const _cc6 = "Read our presenter notes from <a class='linkt' href ='https://docs.google.com/document/d/1xfPZewfjMnPTPiS1SaaSV17FP5SErH3a9FF5a8n1idw/edit?usp=sharing'>Google Docs Presenter Notes for Lecture 6</a>";
 
 
 // Helper Methods

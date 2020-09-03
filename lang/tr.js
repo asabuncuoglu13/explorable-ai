@@ -3,7 +3,7 @@ const _back_home = " << Anasayfaya Geri Dön";
 
 // Home Page
 const _home_title = "Yapay Zekayı Keşfedelim";
-const _home_sub = "<a href='https://twinscience.com/'>Twin Bilim</a> içerik ekibinin <a href='https://www.ucleducate.com/'>UCL-EDUCATE</a> partnerliği ile açık kaynak geliştirdiği ortaokullar için yapay zeka müfredatının tüm kaynaklarına ulaşın.";
+const _home_sub = "<a class='linkt' href='https://twinscience.com/'>Twin Bilim</a> içerik ekibinin <a class='linkt' href='https://www.ucleducate.com/'>UCL-EDUCATE</a> partnerliği ile açık kaynak geliştirdiği ortaokullar için yapay zeka müfredatının tüm kaynaklarına ulaşın.";
 const _card_why_title = "Müfredatı Nasıl Uygulayalım?";
 const _card_twing_title = "Twing ile Yapay Zeka Dersleri";
 const _card_twing_sub = "Twing uygulaması ve diğer birçok etkileşimli içeriği kullanarak adım adım yapay zeka içeriğimizin üzerinden geçtik";
@@ -16,10 +16,11 @@ const _card_learning_goals_text = "Öğrenme hedeflerini ve yapay zeka ile bağl
 const _card_ml4kids = "Scratch'te Makine Öğrenmesi";
 const _card_ml4kids_content = "'Machine Learning for Kids' projesi öğrencilerin hızlıca makine öğrenmesi tekniklerini Scratch projeleri içinde kullanmalarına imkan veriyor.";
 const _card_research_title = "Araştırmalarımız";
-const _card_research_content = "Bu müfredat Twin'in araştırma ve geliştirme projeleri sürecinde hazırlanmıştır ve bu sürece katkı sunmak herkesin desteğine açıktır. Araştırma sürecimizi yayınladığımız: <a href='https://dl.acm.org/doi/abs/10.1145/3341525.3387364'>Designing One Year Curriculum to Teach Artificial Intelligence for Middle School</a> makelesini ACM Dijital Kütüphanesinden indirin.";
+const _card_research_content = "Bu müfredat Twin'in araştırma ve geliştirme projeleri sürecinde hazırlanmıştır ve bu sürece katkı sunmak herkesin desteğine açıktır. Araştırma sürecimizi yayınladığımız: <a class='linkt' href='https://dl.acm.org/doi/abs/10.1145/3341525.3387364'>Designing One Year Curriculum to Teach Artificial Intelligence for Middle School</a> makelesini ACM Dijital Kütüphanesinden indirin.";
 const _card_license = "Lisans ve Paylaşım";
-const _card_license_content = "İçeriğin tamamı açık kaynak olarak geliştirildi ve sizden gelecek katkılara açığız! Projeyi GitHub'da <a href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> repo'muzda görünteleyebilirsiniz." +
-    "Bu websitesi içinde paylaşılan tüm içerik <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr'>Creative Commons Atıf-GayriTicari-AynıLisansla Paylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</a> Lisansı ile paylaşılmıştır.";
+const _card_license_content = "İçeriğin tamamı açık kaynak olarak geliştirildi ve sizden gelecek katkılara açığız! Projeyi GitHub'da <a class='linkt' href='https://github.com/asabuncuoglu13/explorable-ai'>Explorable AI</a> repo'muzda görünteleyebilirsiniz." +
+    "Bu websitesi içinde paylaşılan tüm içerik <a class='linkt' href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr'>Creative Commons Atıf-GayriTicari-AynıLisansla Paylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</a> Lisansı ile paylaşılmıştır.";
+const _download_twing = "Bu müfredatın tüm içeriğini sırası ile veren, quizler ve challenge'lar ile destekleyen Twing mobil uygulamasını <a class='linkt' href='https://play.google.com/store/apps/details?id=com.twinscience.arcadia.android'>Android Play Store'dan</a> veya <a class='linkt' href='https://apps.apple.com/us/app/arcadia-for-curious-minds/id1479559635'>iOS App Store'dan</a> indirip, yapay zekayı keşfetmeye ücretsiz başlayabilirsiniz!"
 
 const _module_dur = "Önerilen Ders Süresi: {0} saat";
 
@@ -35,7 +36,7 @@ const _module_3_sub = "Yapay zeka müfredatının son modülü bilgisayarların 
 // Summary
 
 const _summary_title = "Öğrenme Hedefleri ve İçerik Özeti";
-const _summary_text = "Aşağıdaki Google Sayfaları Dökümanında 36 Haftalık içeriğimizin özetini bulabilirsiniz. <a href='https://docs.google.com/spreadsheets/d/e/2PACX-1vTQBj2dCMH2jBv5bQALyxaKcb7HkhnV7I5eqhw1XVNGlKDOKy7pNaw3j4zeCOY4ONHGZib_horXp9BP/pubhtml?gid=0&single=true'>Yeni Sayfada Tam Ekran Olarak Aç</a>";
+const _summary_text = "Aşağıdaki Google Sayfaları Dökümanında 36 Haftalık içeriğimizin özetini bulabilirsiniz. <a class='linkt' href='https://docs.google.com/spreadsheets/d/e/2PACX-1vTQBj2dCMH2jBv5bQALyxaKcb7HkhnV7I5eqhw1XVNGlKDOKy7pNaw3j4zeCOY4ONHGZib_horXp9BP/pubhtml?gid=0&single=true'>Yeni Sayfada Tam Ekran Olarak Aç</a>";
 
 // Why Page
 const _why_title = "Neden Bu Müfredatı Geliştirdik?";
@@ -49,7 +50,7 @@ const _why_content = "<p>Öncelikle, yapay zeka (YZ) dendiğinde farklı endüst
     "<h3>Bilgisayarlar Nasıl Duyar?</h3>\n" +
     "<p>İnsan kulağı nasıl çalışır? Bir mikrofon ile kulağımız arasındaki benzerlikler nelerdir? İnsan seslerini nasıl sınıflandırabiliriz? İnsan dilini bilgisayarlara nasıl tanıtabiliriz? Bilgisayarlar müzik yapabilir mi?</p>\n" +
     "<h3>Sene Sonu Projesi: İyilik için YZ</h3>\n" +
-    "<p>Öğrenciler 33 hafta boyunca yapay zeka ve teknolojinin uygulanışı konusunda birçok aktivite tamamlar. Bu aktivitelerin öğrenimini ölçmek için Birleşmiş Milletlerin Sürdürülebilirlik Hedefleri'nden birini YZ ile nasıl çözebileceğinin önerisini verirler.</p>\n" +
+    "<p>Öğrenciler tüm bu süreç boyunca yapay zeka ve teknolojinin uygulanışı konusunda birçok aktivite tamamlar. Bu aktivitelerin öğrenimini ölçmek için Birleşmiş Milletlerin Sürdürülebilirlik Hedefleri'nden birini YZ ile nasıl çözebileceğinin önerisini verirler.</p>\n" +
     "<p>Tüm modüllerden sonra fark etmiş olabilirsiniz, modüller kendi içinde bir döngüyü takip ediyorlar:</p>\n" +
     "<ol>\n" +
     "<li>Bilgisayarlar fiziksel ortamları algılamak için sensörleri kullanır.</li>\n" +
@@ -61,7 +62,10 @@ const _why_content = "<p>Öncelikle, yapay zeka (YZ) dendiğinde farklı endüst
     "</ol>";
 
 // Twing Youtube Videos Page
-const _twing_title = "Twing ile Youtube Videolarımız";
+const _twing_title = "Twing ile Deneyerek Öğren";
+const _twing_exp = "Twing mobil uygulaması çocuklara, zengin bilimsel içeriklerden faydalanarak güvenilir, öğretici ve eğlenceli aktiviteler yapacakları bir platform sunar. Gördüklerinden ilham alan çocuklar, daha fazlasını merak edip, daha iyisi için birlikte üretmeye başlar. Yapay zeka içeriğimizi animasyon izleyerek, deneylere katılarak ve sorular çözerek öğrenebileceğiniz bir yolculuğa çıkmak isterseniz, Twing mobil uygulamasını indirebilirsiniz."
+const _twing_youtube_title = "Eski Youtube Videolarımız"
+const _twing_youtube_exp = "16 Mart-30 Haziran 2020 tarihleri arasında gerçekleştirdiğimiz Youtube Yapay Zeka Yayınları"
 const _vid_1 = "<h2>Bilgisayarların ve Teknolojinin Tarihi</h2>\n" +
     "<p>Yapay zekanın gelişimi bilgisayarların gelişiminin önemli bir parçası. Çoğu bilgisayar bilimci, makinelerin zeka geliştirebilmesi için bilgisayar bilimine yönelmiştir. Bu tarih, aslında şu anda yapay zekanın konumunu ve olasılıkları gözler önüne seriyor.<br> Twing'in Gelecek Hakkında Öngörü Posterini Hazırla etkinliğinde öğrencilerin tıpkı yapay zekayı geliştiren bilim insanları gibi hayallerini sistematik bir şekilde planlayıp, bu hayallerini insanlara sunabilecekleri bir poster hazırlamalarını istedik.<br> Bu etkinliğe yardımcı olan quizde ise hayalleri olan bu bilim insanlarını tanıdık. Canlı yayında anlattığımız bu quize aşağıdaki YouTube videosundan ulaşabilirsiniz:</p>\n";
 const _vid_2 = "<h2>Yapay Zekaya Giriş</h2>\n" +
@@ -77,9 +81,9 @@ const _vid_6 = "<h2>Google Arts and Culture: Teknoloji ve Sanat</h2>\n" +
 const _vid_7 = "<h2>Yapay Zekanın Arkasındaki Matematik ile Oynayalım</h2>\n" +
     "<p>İçinde yapay zekayı kullanan birçok farklı projeyi inceledik. Peki, bu projelerin arkasındaki kodlar hangi matematiksel modellere dayanıyor? Bu matematiksel modeller ile oynayabilir miyiz?</p>\n";
 const _vid_8 = " <h2>Yapay Zekayı Scratch Projelerimizde Kullanma</h2>\n" +
-    "<p><a href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web sitesi ile makine öğrenmesi modellerini oluşturup, bunları yapay zeka projelerimizde kullanabiliriz. Bu videoda ses komutlarını nasıl kullanabileceğimizi göstereceğiz.</p>\n";
+    "<p><a class='linkt' href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web sitesi ile makine öğrenmesi modellerini oluşturup, bunları yapay zeka projelerimizde kullanabiliriz. Bu videoda ses komutlarını nasıl kullanabileceğimizi göstereceğiz.</p>\n";
 const _vid_9 = " <h2>Machine Learning for Kids - Metin Eğitimi</h2>\n" +
-    "<p><a href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web sitesinin daha detaylı bir incelemesi ile beraber, sınıfımız veya evimiz için nasıl bir yapay zeka asistan hazırlayabilirizi inceledik.</p>\n";
+    "<p><a class='linkt' href='https://machinelearningforkids.co.uk'>Machine Learning for Kids</a> web sitesinin daha detaylı bir incelemesi ile beraber, sınıfımız veya evimiz için nasıl bir yapay zeka asistan hazırlayabilirizi inceledik.</p>\n";
 
 
 // Module 0 : Intelligent User Interfaces
@@ -92,15 +96,15 @@ const _module_0_content =
     "<li>Yapay Zekanın Kullanım Alanları Nelerdir?</li>\n" +
     "<li>Yapay Zeka Kodlama ile Normal Kodlama Arasındaki Farklar Nelerdir?</li>\n" +
     "</ol>\n" +
-    "<p>gibi soruların cevaplarını tartışmaya çalışalım. Örnek bir anlatım videosuna <a href='twing.html'>Twing\n" +
+    "<p>gibi soruların cevaplarını tartışmaya çalışalım. Örnek bir anlatım videosuna <a class='linkt' href='twing.html'>Twing\n" +
     "YZ Konu Anlatımı</a> videosundan erişebilirsiniz.</p>\n" +
     "<p>Yapay Zekanın araştırma alanlarından biri olan kamera ile görüntüleri tanıma ve bu görüntüler\n" +
     "yardımı ile bir oyun kodlama için:</p>\n" +
     "<ol>\n" +
-    "<li><a href='https://teachablemachine.withgoogle.com/'>Teachable Machine</a> adresine gidelim.</li>\n" +
+    "<li><a class='linkt' href='https://teachablemachine.withgoogle.com/'>Teachable Machine</a> adresine gidelim.</li>\n" +
     "<li>Image Project oluşturalım.</li>\n" +
     "<li>Oluşturduğumuz modelin linkini kopyalayalım.</li>\n" +
-    "<li><a href='https://teachable-arcade-remix.glitch.me/'>Teachable Arcade</a> oyununda bu linki kullanalım.</li>\n" +
+    "<li><a class='linkt' href='https://teachable-arcade-remix.glitch.me/'>Teachable Arcade</a> oyununda bu linki kullanalım.</li>\n" +
     "</ol>";
 
 // Module 1
@@ -116,12 +120,36 @@ const _module_1_content =
     "<li>Toplum için yapay zeka geliştirirken hangi örneklerden yola çıkabileceğimi</li>\n" +
     "   </ol>\n" +
     "   <p>öğreneceğiz. Yapay zeka kullanarak insanlara ve topluma katkı sağlamayı amaçlayan projelere hızlıca göz atmak istersen, " +
-    "   <a href='https://experiments.withgoogle.com/'>Experiments with Google</a> sayfasındaki " +
-    "   <a href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> koleksiyonuna göz atabilirsin." +
+    "   <a class='linkt' href='https://experiments.withgoogle.com/'>Experiments with Google</a> sayfasındaki " +
+    "   <a class='linkt' href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> koleksiyonuna göz atabilirsin." +
     "Bu koleksiyonda senin gibi, işe en temelden başlayan insanların, toplumu değiştirebilecek projelerini bulacaksın.</p>\n";
 
 const _module_1_dt_card_title = "Tasarım Odaklı Düşünme Yöntemi";
-const _module_1_dt_card_content = "Bu yöntem ile öğrencilerin problemler karşısında daha sistematik düşünmelerini sağlayabilirsiniz. Tabii ki bir problemi çözmenin birden çok yolu vardır. Biz burada sıklıkla kullanılan bir yöntemi kullanarak öğrencilere bir probleme sistematik yaklaşmanın, o problemi çözme konusunda nasıl yararlar saplayacağını aktarmaya çalışacağız. <a href='https://designthinkingforeducators.com/toolkit/'>Eğitim içeriklerinin orjinal versiyonlarını IDEO'nun web sitesinden sağlayabilirsiniz.</a>";
+const _module_1_dt_card_content = "Bu yöntem ile öğrencilerin problemler karşısında daha sistematik düşünmelerini sağlayabilirsiniz. Tabii ki bir problemi çözmenin birden çok yolu vardır. Biz burada sıklıkla kullanılan bir yöntemi kullanarak öğrencilere bir probleme sistematik yaklaşmanın, o problemi çözme konusunda nasıl yararlar saplayacağını aktarmaya çalışacağız. <a class='linkt' href='https://designthinkingforeducators.com/toolkit/'>Eğitim içeriklerinin orjinal versiyonlarını IDEO'nun web sitesinden sağlayabilirsiniz.</a>";
+const _module_1_activities =
+    "<h2 id='_timemapper_title'>Bilgisayarlar ve Zekanın Tarihi</h2>\n" +
+    "<div class='grid'>\n" +
+    "<div class='item item-a'>\n" +
+    "<p class='light'>Bilgisayarlar, akıllı arayüzler ve yapay zeka... Bilimin nasıl birbirine konan parçalar ve birlikte çalışma sayesinde geliştiğini bu aktiviteler ile daha iyi anlayacağız.</p>\n" +
+    "</div>\n" +
+    "<div class='card item item-b'>\n" +
+    "<div class='card-content white-text'>\n" +
+    "<p class='info'>Önerilen Süre: 1 saat</p>\n" +
+    "<h2 class='inner-title'>Time Mapper</h2>\n" +
+    "<p class='inner-text'>Time Mapper ile Google Sheets'te hazırladığımız tarih konulu dökümanlar interaktif hikayelere dönüşür.</p>\n" +
+    "</div>\n" +
+    "<a class='card-link' href='https://timemapper.okfnlabs.org/'>Siteyi ziyaret et</a>\n" +
+    "</div>\n" +
+    "<div class='card item item-c'>\n" +
+    "<div class='card-content white-text'>\n" +
+    "<p class='info'>Önerilen Süre: 1 saat</p>\n" +
+    "<h2 class='inner-title'>Öngörüler</h2>\n" +
+    "<p class='inner-text'>Gelecek hakkındaki öngörüler, geçmişte gerçekleşen ve günümüzde yaşanan tüm gelişmeleri dikkatlice analiz etmeyi gerektirir. Ama bunu yaptığımızda artık gelecek hakkında öngörüler sunabilmek sandığımızdan çok daha kolay olacaktır.</p>\n" +
+    "\n" +
+    "<a class='card-link' href='http://web.mit.edu/STS.035/www/PDFs/think.pdf'>Siteyi ziyaret et</a>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "</div>\n";
 
 // Module 2
 const _module_2_content =
@@ -133,12 +161,13 @@ const _module_2_content =
     "Modül içindeki aktiviteleri aşağıdaki başlıklar altında topladık:\n" +
     "</p>\n" +
     "<ol>\n" +
-    "<li><a href='#'>Önce ışığı tanıyalım, sonuçta görmek için ışığa ihtiyaç vardır.</a></li>\n" +
-    "<li><a href='#'>Bilgisayarların kamerası ile gözlerimiz arasındaki benzerlikler</a></li>\n" +
-    "<li><a href='#'>Kameralardan gelen görüntü, algoritmalarda nasıl kullanılır.</a></li>\n" +
-    "<li><a href='#_dataset_title'>Yeni nesil algoritmalar verilerden öğrenebilir.</a></li>\n" +
-    "<li><a href='#_ethics_title'>Bu yeni teknoloji nasıl kullanılmalı</a></li>\n" +
-    "</ol>\n" +
+    "<li><a class='linkt' href='#'>Önce ışığı tanıyalım, sonuçta görmek için ışığa ihtiyaç vardır.</a></li>\n" +
+    "<li><a class='linkt' href='#'>Bilgisayarların kamerası ile gözlerimiz arasındaki benzerlikler</a></li>\n" +
+    "<li><a class='linkt' href='#'>Kameralardan gelen görüntü, algoritmalarda nasıl kullanılır.</a></li>\n" +
+    "<li><a class='linkt' href='#_dataset_title'>Yeni nesil algoritmalar verilerden öğrenebilir.</a></li>\n" +
+    "<li><a class='linkt' href='#_ethics_title'>Bu yeni teknoloji nasıl kullanılmalı</a></li>\n" +
+    "</ol>\n";
+const _module_2_activities =
     "<h2 id='_dataset_title'>Veri Setleri</h2>\n" +
     "<div class='grid'>\n" +
     "<div class='item item-a'>\n" +
@@ -209,11 +238,11 @@ const _module_3_content =
     "Yukarıdaki sunum, 12 haftalık içeriğimizin özeti niteliğindedir. Bu modülü oluşturan beş ana soru ile \n" +
     "</p>\n" +
     "<ol>\n" +
-    "<li><a href='#'>Sesler nasıl oluşur, kulağımız sesleri nasıl algılar?</a> </li>\n" +
-    "<li><a href='#'>Mikrofonlar kulağımızdan nasıl ilham alır?</a> </li>\n" +
-    "<li><a href='#'>Mikrofonlardan gelen veri, algoritmalarda nasıl kullanılır.</a> </li>\n" +
-    "<li><a href='#'>Yeni nesil algoritmalar verilerden öğrenebilir.</a> </li>\n" +
-    "<li><a href='#'>Bu yeni teknoloji nasıl kullanılmalı</a> </li>\n" +
+    "<li><a class='linkt' href='#'>Sesler nasıl oluşur, kulağımız sesleri nasıl algılar?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>Mikrofonlar kulağımızdan nasıl ilham alır?</a> </li>\n" +
+    "<li><a class='linkt' href='#'>Mikrofonlardan gelen veri, algoritmalarda nasıl kullanılır.</a> </li>\n" +
+    "<li><a class='linkt' href='#'>Yeni nesil algoritmalar verilerden öğrenebilir.</a> </li>\n" +
+    "<li><a class='linkt' href='#'>Bu yeni teknoloji nasıl kullanılmalı</a> </li>\n" +
     "</ol>\n" +
     "<p>yapay zeka destekli ses ve konuşma sistemlerini anlamaya çalışacağız.</p>";
 

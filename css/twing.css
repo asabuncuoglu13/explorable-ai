@@ -18,18 +18,18 @@ p {
     line-height: 1.5;
 }
 
-a {
+.link {
     font-weight: bold;
     transition: color 0.2s linear;
 }
 
-a:link, a:visited {
+.link:link, a:visited {
     color: var(--link);
     text-decoration: none;
     border-bottom: 2px solid var(--link);
 }
 
-a:hover {
+.link:hover {
     background: var(--background);
     color: var(--link);
     text-decoration: none;
