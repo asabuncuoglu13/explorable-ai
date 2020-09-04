@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Quicksand:400,700&display=swap&subset=latin-ext');
-
-:root{
-  --background : #232946;
+:root {
+  --background: #232946;
   --card-bg: #f9bc60;
-  --buton-bg : #b8c1ec;
-  --font-color : #232946;
-  --headline : #fffffe;
-  --link : #49ba70;
-  --light : #fffffe;
+  --buton-bg: #b8c1ec;
+  --font-color: #232946;
+  --headline: #fffffe;
+  --link: #49ba70;
+  --light: #fffffe;
 }
 
 .light {
@@ -25,14 +24,14 @@ body {
   font-size: 16px;
 }
 
-.google-slides-container{
+.google-slides-container {
   position: relative;
   width: 100%;
   padding-top: 60%;
   overflow: hidden;
 }
 
-.google-slides-container iframe{
+.google-slides-container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,7 +39,7 @@ body {
   height: 100%;
 }
 
-.title{
+.title {
   font-family: 'Quicksand', sans-serif;
   color: var(--headline);
   font-size: 40px;
@@ -61,7 +60,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-google-codelab #drawer ol li a:hover{
+google-codelab #drawer ol li a:hover {
   background-color: var(--background);
   color: var(--link);
   transition: all 0.25s ease;
@@ -110,7 +109,15 @@ google-codelab #drawer ol li a {
   color: var(--font-color);
 }
 
-.item{
+.grid-table {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 50px auto;
+  color: var(--font-color);
+}
+
+.item {
   margin-right: 30px;
   margin-bottom: 30px;
   border-radius: 5px;
@@ -121,6 +128,14 @@ google-codelab #drawer ol li a {
 .card {
   background: var(--card-bg);
   cursor: pointer;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.card .card-link {
+  justify-content: flex-end;
+  display: flex;
 }
 
 .card img {
@@ -147,7 +162,7 @@ google-codelab #drawer ol li a {
 
 .inner-text {
   font-weight: 600;
-  font-size:16px;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -161,10 +176,11 @@ google-codelab #drawer ol li a {
   grid-column-end: span 4;
 }
 
-.item-a-1{
+.item-a-1 {
   grid-column-start: 1;
   grid-column-end: span 4;
 }
+
 .item-a-2 {
   grid-column-start: 1;
   grid-column-end: span 4;
@@ -225,6 +241,14 @@ google-codelab #drawer ol li a {
 }
 
 @media (min-width: 980px) {
+  .grid-table {
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 30px auto;
+  }
+
   .grid {
     max-width: 960px;
     display: grid;
@@ -232,14 +256,13 @@ google-codelab #drawer ol li a {
     grid-template-rows: 1fr;
     margin: 30px auto;
   }
-
   .item-a {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
   }
-  .item-a-1{
+  .item-a-1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -263,21 +286,18 @@ google-codelab #drawer ol li a {
     grid-row-start: 3;
     grid-row-end: 5;
   }
-
   .item-d {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 8;
   }
-  
   .item-e {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 8;
     grid-row-end: 11;
   }
-  
   .item-f {
     grid-column-start: 3;
     grid-column-end: 4;

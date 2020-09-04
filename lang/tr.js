@@ -109,47 +109,47 @@ const _module_0_content =
 
 // Module 1
 const _module_1_content =
-    " <p>\n" +
-    "   Yapay zekanın temel tanımını ve uygulama alanlarını aktardıktan sonra kodlama müfredatındaki önceki konularla bağlantılar kurmak için Akıllı Arayüzler modülü ile devam ediyoruz. Bu modülde:\n" +
-    "   </p>\n" +
-    "   <ol>\n" +
+    "<p>\n" +
+    "Yapay zekanın temel tanımını ve uygulama alanlarını aktardıktan sonra kodlama müfredatındaki önceki konularla bağlantılar kurmak için Akıllı Arayüzler modülü ile devam ediyoruz. Bu modülde:\n" +
+    "</p>\n" +
+    "<ol>\n" +
     "<li>İnsan ile bilgisayarın etkileşimi için tasarlanan yeni arayüzlerin bilgisayar ve yapay zeka tarihine nasıl yön verdiğini,</li>\n" +
     "<li>Kendi teknolojimizi geliştirmek için prototipleme yapmanın temellerini,</li>\n" +
     "<li>Prototip oluşturma sürecinde tasarım odaklı düşünme yönteminin nasıl kullanılabileceğini,</li>\n" +
     "<li>Tasarladığımı ürüne yapay zeka yerleştirirken hangi konularda dikkatli olmamız gerektiğini ve</li>\n" +
     "<li>Toplum için yapay zeka geliştirirken hangi örneklerden yola çıkabileceğimi</li>\n" +
-    "   </ol>\n" +
-    "   <p>öğreneceğiz. Yapay zeka kullanarak insanlara ve topluma katkı sağlamayı amaçlayan projelere hızlıca göz atmak istersen, " +
-    "   <a class='linkt' href='https://experiments.withgoogle.com/'>Experiments with Google</a> sayfasındaki " +
-    "   <a class='linkt' href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> koleksiyonuna göz atabilirsin." +
+    "</ol>\n" +
+    "<p>öğreneceğiz. Yapay zeka kullanarak insanlara ve topluma katkı sağlamayı amaçlayan projelere hızlıca göz atmak istersen, " +
+    "<a class='linkt' href='https://experiments.withgoogle.com/'>Experiments with Google</a> sayfasındaki " +
+    "<a class='linkt' href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> koleksiyonuna göz atabilirsin." +
     "Bu koleksiyonda senin gibi, işe en temelden başlayan insanların, toplumu değiştirebilecek projelerini bulacaksın.</p>\n";
 
 const _module_1_dt_card_title = "Tasarım Odaklı Düşünme Yöntemi";
 const _module_1_dt_card_content = "Bu yöntem ile öğrencilerin problemler karşısında daha sistematik düşünmelerini sağlayabilirsiniz. Tabii ki bir problemi çözmenin birden çok yolu vardır. Biz burada sıklıkla kullanılan bir yöntemi kullanarak öğrencilere bir probleme sistematik yaklaşmanın, o problemi çözme konusunda nasıl yararlar saplayacağını aktarmaya çalışacağız. <a class='linkt' href='https://designthinkingforeducators.com/toolkit/'>Eğitim içeriklerinin orjinal versiyonlarını IDEO'nun web sitesinden sağlayabilirsiniz.</a>";
 const _module_1_activities =
     "<h2 id='_timemapper_title'>Bilgisayarlar ve Zekanın Tarihi</h2>\n" +
-    "<div class='grid'>\n" +
-    "<div class='item item-a'>\n" +
-    "<p class='light'>Bilgisayarlar, akıllı arayüzler ve yapay zeka... Bilimin nasıl birbirine konan parçalar ve birlikte çalışma sayesinde geliştiğini bu aktiviteler ile daha iyi anlayacağız.</p>\n" +
-    "</div>\n" +
-    "<div class='card item item-b'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 1 saat</p>\n" +
-    "<h2 class='inner-title'>Time Mapper</h2>\n" +
-    "<p class='inner-text'>Time Mapper ile Google Sheets'te hazırladığımız tarih konulu dökümanlar interaktif hikayelere dönüşür.</p>\n" +
-    "</div>\n" +
-    "<a class='card-link' href='https://timemapper.okfnlabs.org/'>Siteyi ziyaret et</a>\n" +
-    "</div>\n" +
-    "<div class='card item item-c'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 1 saat</p>\n" +
-    "<h2 class='inner-title'>Öngörüler</h2>\n" +
-    "<p class='inner-text'>Gelecek hakkındaki öngörüler, geçmişte gerçekleşen ve günümüzde yaşanan tüm gelişmeleri dikkatlice analiz etmeyi gerektirir. Ama bunu yaptığımızda artık gelecek hakkında öngörüler sunabilmek sandığımızdan çok daha kolay olacaktır.</p>\n" +
-    "\n" +
-    "<a class='card-link' href='http://web.mit.edu/STS.035/www/PDFs/think.pdf'>Siteyi ziyaret et</a>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "</div>\n";
+    "<p class='light'>Bilgisayarlar, akıllı arayüzler ve yapay zeka... Bilimin nasıl birbirine konan parçalar ve birlikte çalışma sayesinde geliştiğini bu aktiviteler ile daha iyi anlayacağız. </p>\n" +
+    "<div class='grid-table'>\n" +
+    _module_tr_table_card.format(1, "Time Mapper",
+        "Hazırladığımız çalışma kağıdındaki soruları cevapladıktan sonra, Google Sheets'te hazırladığımız tarih konulu dökümanları Time Mapper ile interaktif hikayelere dönüştürün.",
+        "https://timemapper.okfnlabs.org/") +
+    _module_tr_table_card.format(1, "Öngörüler",
+        "Gelecek hakkındaki öngörüler, geçmişte gerçekleşen ve günümüzde yaşanan tüm gelişmeleri dikkatlice analiz etmeyi gerektirir. Time Mapper aktivitesinden sonra, gelecek hakkındaki öngörüleriniz nasıl şekillendi?",
+        "http://web.mit.edu/STS.035/www/PDFs/think.pdf") +
+    _module_tr_table_card.format(2, "Ürün Tasarımı",
+        "Sınıfımız için akıllı bir iklimlendirme aracı tasarlasak, nasıl bir ürün ortaya çıkarmak isterdik? Bu araçtan gelen bilgileri nasıl yorumlardık?",
+        "") +
+    _module_tr_table_card.format(1, "Poster Tasarımı",
+        "Tasarladığımız ürünün posterini nasıl hazırlamalıyız? İnsanlara bu ürünün gerçekten müthiş bir araç olduğuna nasıl inandırabiliriz?",
+        "") +
+    _module_tr_table_card.format(1, "Youtube Yapay Zeka Avı",
+        "Youtube yapay zeka sayesinde senin ilgilendiğin konulardaki videoları önüne çıkarabiliyor. Peki, bu tasarımda yanlış olan bir şeyler olabilir mi? Hadi bu yanlışları bulup düzeltmeye çalışalım.",
+        "") +
+    _module_tr_table_card.format(1, "Yapay Zekalı Ürün Tasarımı",
+        "Çok tanıdık olan Office uygulamalarında belki biz hiç fark etmeden sürekli yapay zekayı kullanıyoruz. Peki, bu araçlar nasıl tasarlanıyor?",
+        "") +
+    "</div>"
+
 
 // Module 2
 const _module_2_content =
@@ -169,66 +169,27 @@ const _module_2_content =
     "</ol>\n";
 const _module_2_activities =
     "<h2 id='_dataset_title'>Veri Setleri</h2>\n" +
-    "<div class='grid'>\n" +
-    "<div class='item item-a'>\n" +
-    "<p class='light'>Bilgisayarlar aracılığı ile çizim yapıtığımızda bu çizimleri tanıyabilen algoritmalar\n" +
-    "yapay zekanın bir başka örneğidir.</p>\n" +
-    "</div>\n" +
-    "<div class='card item item-b'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 1 saat</p>\n" +
-    "<h2 class='inner-title'>Quick, Draw!</h2>\n" +
-    "<p class='inner-text'>Bu oyun tarzı uygulamada bilgisayar sizin yaptığınız çizimleri tahmin etmeye\n" +
-    "çalışır. Peki, bu çizimleri nasıl tanıyor olabilir?</p>\n" +
-    "</div>\n" +
-    "<a class='card-link' href='https://quickdraw.withgoogle.com/'>Siteyi ziyaret et</a>\n" +
-    "</div>\n" +
-    "<div class='card item item-c'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 1 saat</p>\n" +
-    "<h2 class='inner-title'>Iconary</h2>\n" +
-    "<p class='inner-text'>Çizimler ile bir cümleyi nasıl anlatabilirsin? Peki bu cümlerleri bilgisayar\n" +
-    "nasıl tanıyabilir?</p>\n" +
-    "\n" +
-    "<a class='card-link' href='https://iconary.allenai.org/'>Siteyi ziyaret et</a>\n" +
-    "</div>\n" +
-    "</div>\n" +
+    "<p class='light'>Bilgisayarlar aracılığı ile çizim yapıtığımızda bu çizimleri tanıyabilen algoritmalar yapay zekanın bir başka örneğidir.</p>\n" +
+    "<div class='grid-table'>\n" +
+    _module_tr_table_card.format(1, "Quick, Draw!",
+        "Bu oyun tarzı uygulamada bilgisayar sizin yaptığınız çizimleri tahmin etmeye çalışır. Peki, bu çizimleri nasıl tanıyor olabilir?",
+        "https://quickdraw.withgoogle.com/") +
+    _module_tr_table_card.format(1, "Iconary",
+        "Çizimler ile bir cümleyi nasıl anlatabilirsin? Peki bu cümlerleri bilgisayar nasıl tanıyabilir?",
+        "https://iconary.allenai.org/") +
     "</div>\n" +
     "<h2 id='_ethics_title'>Toplum ve Etik</h2>\n" +
-    "<div class='grid'>\n" +
-    "<div class='item item-a'>\n" +
-    "<p class='light'>Yapay zeka ile ilgili neden bu kadar fazla endişe var? Bu endişeler bizim\n" +
-    "yetersizliğimizden kaynaklanıyor olabilir mi? Yapay zeka öğrenirken birçok farklı veriye ihtiyaç\n" +
-    "duyduğu için, bu verileri sağlayacak insanların dikkatli olmaları gerekmektedir. Tüm bu süreçteki\n" +
-    "farklı vakaları incelemek ister misin?</p>\n" +
-    "</div>\n" +
-    "<div id='case1' class='card item item-b'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 2 saat</p>\n" +
-    "<h2 class='inner-title'>Bir Şehrin Geleceği</h2>\n" +
-    "<p class='inner-text'>Bilgisayarlı görü teknolojileri geliştikçe, şehirlerin farklı noktalarında bu\n" +
-    "teknolojiler kendine uygulama alanı buluyor. Peki, bu teknolojilerin varlığını nasıl\n" +
-    "değerlendirmek gerekir?</p>\n" +
-    "<a class='card-link' href='https://densitydesign.github.io/teaching-dd15/course-results/es03/group10/'>Siteyi ziyaret et</a>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "<div id='case2' class='card item item-c'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 2 saat</p>\n" +
-    "<h2 class='inner-title'>Nasıl Veri Toplanır?</h2>\n" +
-    "<p class='inner-text'>Farklı durumlar için farklı veri kaynakları gerekir. Bu verileri toplarken,\n" +
-    "tüm durumları düşündüğümüzden nasıl emin olabiliriz?</p>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "<div id='case3' class='card item item-d'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Önerilen Süre: 2 saat</p>\n" +
-    "<h2 class='inner-title'>Projelerimiz İnsanları Nasıl Etkiliyor?</h2>\n" +
-    "<p class='inner-text'>Bilgisayarlı görü sayesinde, insanların duygularını bile anlamak mümkün\n" +
-    "olabiliyor. Reklamcılar, bu teknolojiyi kullanarak, yeni ürünlerin insanların algısında neler\n" +
-    "değiştirdiğini merak ediyor.</p>\n" +
-    "</div>\n" +
-    "</div>\n" +
+    "<p class='light'>Yapay zeka ile ilgili neden bu kadar fazla endişe var? Bu endişeler bizim yetersizliğimizden kaynaklanıyor olabilir mi? Yapay zeka öğrenirken birçok farklı veriye ihtiyaç duyduğu için, bu verileri sağlayacak insanların dikkatli olmaları gerekmektedir. Tüm bu süreçteki farklı vakaları incelemek ister misin?</p>\n" +
+    "<div class='grid-table'>\n" +
+    _module_tr_table_card.format(1, "Bir Şehrin Geleceği",
+        "Bilgisayarlı görü teknolojileri geliştikçe, şehirlerin farklı noktalarında bu teknolojiler kendine uygulama alanı buluyor. Peki, bu teknolojilerin varlığını nasıl değerlendirmek gerekir?",
+        "https://densitydesign.github.io/teaching-dd15/course-results/es03/group10/") +
+    _module_tr_table_card.format(1, "Nasıl Veri Toplanır?",
+        "Farklı durumlar için farklı veri kaynakları gerekir. Bu verileri toplarken, tüm durumları düşündüğümüzden nasıl emin olabiliriz?",
+        "") +
+    _module_tr_table_card.format(1, "Projelerimiz İnsanları Nasıl Etkiliyor?",
+        "Bilgisayarlı görü sayesinde, insanların duygularını bile anlamak mümkün olabiliyor. Reklamcılar, bu teknolojiyi kullanarak, yeni ürünlerin insanların algısında neler değiştirdiğini merak ediyor.",
+        "") +
     "</div>";
 
 // Module 3

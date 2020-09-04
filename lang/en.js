@@ -102,7 +102,29 @@ const _module_1_content =
     "   <a class='linkt' href='https://experiments.withgoogle.com/collection/startwithone'>Start with One</a> ." +
     "You'll find the beneficial projects of people who once started it with learning the very basics, just like you.</p>\n";
 
-const _module_1_activities = "";
+const _module_1_activities =
+    "<h2 id='_timemapper_title'>The History of Computers and Intelligence</h2>\n" +
+    "<p class='light'>Computers, intelligent interfaces and artificial intelligence... You will learn and understand how scientific knowledge is produced bit by bit and how we construct knowledge together.</p>\n" +
+    "<div class='grid-table'>\n" +
+    _module_en_table_card.format(1, "Time Mapper",
+        "Complete the worksheet, create a Google Sheets and build an interactive history documentation on Time Mapper.",
+        "https://timemapper.okfnlabs.org/") +
+    _module_en_table_card.format(1, "Visions for the Future",
+        "To foresee what will happen in the tech industry, you need to understand what has happened and what is happening currently. After completing the Time Mapper activity, you might be able to see the future!",
+        "http://web.mit.edu/STS.035/www/PDFs/think.pdf") +
+    _module_en_table_card.format(2, "Product Design",
+        "Design a new product to control the weather in your classroom. What does your product look like? How would you interpret the data and visualize it in the communication?",
+        "") +
+    _module_en_table_card.format(1, "Poster Design",
+        "How would you communicate with your user via poster? Now, it is time to tell your product is awesome and it will change the future!",
+        "") +
+    _module_en_table_card.format(1, "Youtube AI Hunt",
+        "Youtube can recommend new videos based on your watch history. Do you think it is ethical? Maybe, we should change some aspects of the design.",
+        "") +
+    _module_en_table_card.format(1, "Design a Product with AI",
+        "Maybe you are using Office products everyday, but, have you realised that these products use AI in many aspects?",
+        "") +
+    "</div>"
 
 // Module 2
 const _module_2_content =
@@ -120,68 +142,30 @@ const _module_2_content =
     "<li><a class='linkt' href='#_ethics_title'>How should this new technology be used</a></li>\n" +
     "</ol>\n";
 
-const _module_2_activities = 
+const _module_2_activities =
     "<h2 id='_dataset_title'>Data Sets</h2>\n" +
-    "<div class='grid'>\n" +
-    "<div class='item item-a'>\n" +
     "<p class='light'>The algorithms that can recognize the hand-drawn sketches are\n" +
     "another example of artificial intelligence.</p>\n" +
-    "</div>\n" +
-    "<div class='card item item-b'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Recommended time: 1 hour</p>\n" +
-    "<h2 class='inner-title'>Quick, Draw!</h2>\n" +
-    "<p class='inner-text'>In this kind of applications, the computer tries to guess your\n" +
-    "drawings. But, how could it recognize these drawings?</p>\n" +
-    "</div>\n" +
-    "<a class='card-link' href='https://quickdraw.withgoogle.com/'>Visit the web page</a>\n" +
-    "</div>\n" +
-    "<div class='card item item-c'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Recommended time: 1 hour</p>\n" +
-    "<h2 class='inner-title'>Iconary</h2>\n" +
-    "<p class='inner-text'>How can you describe a sentence by your drawings? But how could the computer\n" +
-    "understand these sentences?</p>\n" +
-    "\n" +
-    "<a class='card-link' href='https://iconary.allenai.org/'>Visit the web page</a>\n" +
-    "</div>\n" +
-    "</div>\n" +
+    "<div class='grid-table'>\n" +
+    _module_en_table_card.format(1, "Quick, Draw!",
+        "The computer tries to guess your drawings, and it is doing great! But, how could it recognize these drawings?",
+        "https://quickdraw.withgoogle.com/") +
+    _module_en_table_card.format(1, "Iconary",
+        "How can you describe a sentence by your drawings? But how could the computer understand these sentences?",
+        "https://iconary.allenai.org/") +
     "</div>\n" +
     "<h2 id='_ethics_title'>Society and Ethics</h2>\n" +
-    "<div class='grid'>\n" +
-    "<div class='item item-a'>\n" +
-    "<p class='light'>Why is there that much concern about artificial intelligence? Could these concerns\n" +
-    "stem from our inadequacy? Since artificial intelligence needs many different kinds of\n" +
-    "data while learning, the people who will provide this data should be careful. Would you like to\n" +
-    "examine different cases of this whole process?</p>\n" +
-    "</div>\n" +
-    "<div id='case1' class='card item item-b'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Recommended time: 2 hours</p>\n" +
-    "<h2 class='inner-title'>Future of a Town</h2>\n" +
-    "<p class='inner-text'>As computer vision technologies develop,\n" +
-    "these technologies find their application areas in different parts of cities. But, how should we evaluate\n" +
-    "the existence of these technologies?</p>\n" +
-    "<a class='card-link' href='https://densitydesign.github.io/teaching-dd15/course-results/es03/group10/'>Visit the web page</a>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "<div id='case2' class='card item item-c'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Recommended time: 2 hours</p>\n" +
-    "<h2 class='inner-title'>How to collect data?</h2>\n" +
-    "<p class='inner-text'>Different data sources are required for different situations. How can we be sure\n" +
-    "to thought about all the situations while we are collecting these data?</p>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "<div id='case3' class='card item item-d'>\n" +
-    "<div class='card-content white-text'>\n" +
-    "<p class='info'>Recommended time: 2 hours</p>\n" +
-    "<h2 class='inner-title'>How do our projects affect people?</h2>\n" +
-    "<p class='inner-text'>Computer vision makes it possible to even understand people's\n" +
-    "feelings. Advertisers wonder what the new products are changing in people's perception\n" +
-    "while using this technology.</p>\n" +
-    "</div>\n" +
-    "</div>\n" +
+    "<p class='light'>Why is there that much concern about artificial intelligence? Could these concerns stem from our inadequacy? Since artificial intelligence needs many different kinds of data while learning, the people who will provide this data should be careful. Would you like to examine different cases of this whole process?</p>\n" +
+    "<div class='grid-table'>\n" +
+    _module_en_table_card.format(1, "Future of a Town",
+        "As computer vision technologies develop, these technologies find their application areas in different parts of cities. But, how should we evaluate the existence of these technologies?",
+        "https://densitydesign.github.io/teaching-dd15/course-results/es03/group10/") +
+    _module_en_table_card.format(2, "How to collect data?",
+        "Different data sources are required for different situations. How can we be sure to thought about all the situations while we are collecting these data?",
+        "") +
+    _module_en_table_card.format(2, "How do our projects affect people?",
+        "Computer vision makes it possible to even understand people's feelings. Advertisers wonder what the new products are changing in people's perception while using this technology.",
+        "") +
     "</div>";
 
 // Module 3
