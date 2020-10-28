@@ -224,30 +224,30 @@ const _tool_code = "<h2>👩‍💻 Kodlama Ortamı</h2>\n" +
     "için programlama dillerini kullanırız. Kodlama ile tanışmak veya tamamlayacağımız aktivitelerde\n" +
     "kullanacağımız programlama ortamına alışmak için birkaç çizim yapalım.\n" +
     "</p>\n" +
-    "<p class='p_link'><a class='more' href='turtle/index.html'>🐢 Kaplumbağa ile çizim </a></p>";
+    "<p class='p_link'><a class='more' href='../toolbox/turtle/index.html'>🐢 Kaplumbağa ile çizim </a></p>";
 const _tool_vision = "<h2>📷 Bilgisayarlar Nasıl Görür?</h2>\n" +
     "<p class='exp_text'>Bilgisayarlı görü, cebimizdeki telefonlardan medikal cihazlara kadar her türlü görüntüleme\n" +
     "    teknolojisinde kullanılan algoritmaları kapsar. Başımızı çarptığımızda beynimizde hasar oluştuğunu anlayan\n" +
     "    taramalardan, Instagram filtrelerine kadar her algoritma bilgisayarlı görünün alanına girer.\n" +
     "</p>\n" +
-    "<p class='p_link'><a class='more' href='vision/eye/index.html'>👀 Gözümüz nasıl çalışır? Işığı ve renkleri nasıl algılarız? </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/color/color.html'>🌈 Piksel nedir? Renkleri bilgisayarda nasıl temsil ederiz? </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/color/colorwheel.html'>🍭 Renk tanımlarını kolayca nasıl buluruz? </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/color_quiz/index.html'>🎆 Renklerin doğru tanımlarını bulmaya çalış! </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/color/colorschemes.html'>🏵️ Farklı renk sunumlarına neden ihtiyaç duyarız? </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/grayscale/grayscale.html'>👵 Fotoğrafları renkliden gri tonlarına çevirmek ne işimize yarar?</a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/binarization/binarization.html'>🦓 Bitmap nedir? 0 ve 1 ler ile resim nasıl oluşur? </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/chromakey/index.html'>🌈 Chroma Key Algoritması </a></p>\n" +
-    "<p class='p_link'><a class='more' href='vision/filter/index.html'>🖼️ Filtre nedir? Yapay zeka algoritmalarına katkısı nedir? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/eye/index.html'>👀 Gözümüz nasıl çalışır? Işığı ve renkleri nasıl algılarız? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/color/color.html'>🌈 Piksel nedir? Renkleri bilgisayarda nasıl temsil ederiz? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/color/colorwheel.html'>🍭 Renk tanımlarını kolayca nasıl buluruz? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/color_quiz/index.html'>🎆 Renklerin doğru tanımlarını bulmaya çalış! </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/color/colorschemes.html'>🏵️ Farklı renk sunumlarına neden ihtiyaç duyarız? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/grayscale/grayscale.html'>👵 Fotoğrafları renkliden gri tonlarına çevirmek ne işimize yarar?</a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/binarization/binarization.html'>🦓 Bitmap nedir? 0 ve 1 ler ile resim nasıl oluşur? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/chromakey/index.html'>🌈 Chroma Key Algoritması </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/filter/index.html'>🖼️ Filtre nedir? Yapay zeka algoritmalarına katkısı nedir? </a></p>\n" +
     "<p class='p_link'><a class='more' href='https://transcranial.github.io/keras-js/#/mnist-cnn'>🕸️ Sinir ağları resimlerde ne görür?</a></p>";
 const _tool_music = "<h2>🎼 Müzik Bilgisi</h2>\n" +
     "<p class='exp_text'>\n" +
     "Bilgisayarların nasıl duyduğuna geçmeden önce, temel müzik bilgimizi, müziğin fizik ile ilişkisini tekrarlayalım. Bunun için küçük bir müzik programlama egzerzisi ile başlayalım.\n" +
     "</p>\n" +
-    "<p class='p_link'><a class='more' href='sound/music/index.html'>🎹 Müzik Programlama </a></p>";
+    "<p class='p_link'><a class='more' href='../toolbox/sound/music/index.html'>🎹 Müzik Programlama </a></p>";
 const _tool_speech = "<h2>👂 Bilgisayarlar Nasıl Duyar?</h2>\n" +
-    "<p class='p_link'><a class='more' href='sound/rounded_bars/index.html'>🔉 Ses Yüksekliği Bilgisayarda Nasıl Gözükür? </a></p>\n" +
-    "<p class='p_link'><a class='more' href='sound/fft_freq_spectrum/index.html'>📈 Duyduğumuz seslerin frekans analizi neye benzer? </a></p>";
+    "<p class='p_link'><a class='more' href='../toolbox/sound/rounded_bars/index.html'>🔉 Ses Yüksekliği Bilgisayarda Nasıl Gözükür? </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/sound/fft_freq_spectrum/index.html'>📈 Duyduğumuz seslerin frekans analizi neye benzer? </a></p>";
 // Helper Methods
 
 // String Formatting
