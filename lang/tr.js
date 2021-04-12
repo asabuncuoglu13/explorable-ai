@@ -234,6 +234,7 @@ const _tool_vision = "<h2>📷 Bilgisayarlar Nasıl Görür?</h2>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color/color.html'>🌈 Piksel nedir? Renkleri bilgisayarda nasıl temsil ederiz? </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color/colorwheel.html'>🍭 Renk tanımlarını kolayca nasıl buluruz? </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color_quiz/index.html'>🎆 Renklerin doğru tanımlarını bulmaya çalış! </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/rgb-mixer/index.html'>🌈 RGB Renk Tanımları ile Oyna </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color/colorschemes.html'>🏵️ Farklı renk sunumlarına neden ihtiyaç duyarız? </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/grayscale/grayscale.html'>👵 Fotoğrafları renkliden gri tonlarına çevirmek ne işimize yarar?</a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/binarization/binarization.html'>🦓 Bitmap nedir? 0 ve 1 ler ile resim nasıl oluşur? </a></p>\n" +
@@ -252,13 +253,12 @@ const _tool_speech = "<h2>👂 Bilgisayarlar Nasıl Duyar?</h2>\n" +
 
 // String Formatting
 if (!String.prototype.format) {
-    String.prototype.format = function () {
+    String.prototype.format = function() {
         var args = arguments;
-        return this.replace(/{(\d+)}/g, function (match, number) {
-            return typeof args[number] != 'undefined'
-                ? args[number]
-                : match
-                ;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+            return typeof args[number] != 'undefined' ?
+                args[number] :
+                match;
         });
     };
 }
