@@ -208,6 +208,7 @@ const _tool_vision = "<h2>📷 How Computers See?</h2>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color/color.html'>🌈 What is a pixel? How do we represent colors on the computer? </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color/colorwheel.html'>🍭 How do we easily find color definitions?  </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color_quiz/index.html'>🎆 Try to find the right definitions of colors! </a></p>\n" +
+    "<p class='p_link'><a class='more' href='../toolbox/vision/rgb-mixer/index.html'>🌈 Exploe the RGB Color Space </a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/color/colorschemes.html'>🏵️ Why do we need different color presentations?</a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/grayscale/grayscale.html'>👵 What are the benefits of turning a photo from colorful to gray shades?</a></p>\n" +
     "<p class='p_link'><a class='more' href='../toolbox/vision/binarization/binarization.html'>🦓 What is a bitmap? How to create a picture with 0's and 1's?  </a></p>\n" +
@@ -239,13 +240,12 @@ const _cc6 = "Read our presenter notes from <a class='linkt' href ='https://docs
 
 // String Formatting
 if (!String.prototype.format) {
-    String.prototype.format = function () {
+    String.prototype.format = function() {
         var args = arguments;
-        return this.replace(/{(\d+)}/g, function (match, number) {
-            return typeof args[number] != 'undefined'
-                ? args[number]
-                : match
-                ;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+            return typeof args[number] != 'undefined' ?
+                args[number] :
+                match;
         });
     };
 }
